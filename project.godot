@@ -59,6 +59,15 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Red"
+2d_render/layer_2="Yellow"
+2d_render/layer_3="Green"
+2d_render/layer_4="Cyan"
+2d_render/layer_5="Blue"
+2d_render/layer_6="Magenta"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

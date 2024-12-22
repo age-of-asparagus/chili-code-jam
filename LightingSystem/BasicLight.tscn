@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://clvkgk13i6gtp" path="res://LightingSystem/BasicLightGradientTexture.tres" id="1_fk03e"]
 
 [node name="PointLight2D" type="PointLight2D"]
-shadow_enabled = true
 shadow_color = Color(0.442911, 0.442911, 0.442911, 0)
 texture = ExtResource("1_fk03e")
 texture_scale = 2.0

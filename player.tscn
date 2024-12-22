@@ -10,6 +10,7 @@ radius = 63.3877
 script = ExtResource("1_w1kno")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 63
 texture = ExtResource("2_incig")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

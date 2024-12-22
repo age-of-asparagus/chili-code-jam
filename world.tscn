@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnypnav0ckumg"]
+
+[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="1_1n0kl"]
+[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="2_ixb4d"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ota0r"]
+vertices = PackedVector2Array(1128.04, 640.82, 21.9063, 621.172, 17.0781, 38.8594, 1130.95, 24.1328)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(7, 29, 12, 631, 1138, 651, 1141, 14)])
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_1n0kl")]
+position = Vector2(367, 274)
+
+[node name="Enemy" parent="." instance=ExtResource("2_ixb4d")]
+position = Vector2(634, 270)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_ota0r")

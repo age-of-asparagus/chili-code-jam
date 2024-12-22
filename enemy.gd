@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 300
+var speed = 150
 @onready var navigation = $NavigationAgent2D
 @onready var player = get_parent().get_node("Player")
 

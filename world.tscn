@@ -1,20 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnypnav0ckumg"]
+[gd_scene load_steps=6 format=3 uid="uid://cs26ourwgjhd"]
 
-[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="1_1n0kl"]
-[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="2_ixb4d"]
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_0tysx"]
+[ext_resource type="PackedScene" uid="uid://dicw2plihs8to" path="res://player.tscn" id="1_1n0kl"]
+[ext_resource type="PackedScene" uid="uid://c3u8uesabnv5a" path="res://enemy.tscn" id="2_ixb4d"]
+[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/FlashLight.tscn" id="3_qnify"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ota0r"]
-vertices = PackedVector2Array(1128.04, 640.82, 21.9063, 621.172, 17.0781, 38.8594, 1130.95, 24.1328)
+vertices = PackedVector2Array(1133.95, 636.969, 18.0391, 634.023, 20.9531, 18.9688, 1131.04, 16.0234)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(7, 29, 12, 631, 1138, 651, 1141, 14)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(11, 9, 8, 644, 1144, 647, 1141, 6)])
 
 [node name="World" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_ota0r")
+metadata/_edit_group_ = true
+
+[node name="Lighting" type="Node2D" parent="."]
+
+[node name="Background" type="ColorRect" parent="Lighting"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.0199, 16.3978)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+color = Color(0, 0, 0, 1)
+
+[node name="Lights" type="Node2D" parent="Lighting"]
+
+[node name="PointLight2D" parent="Lighting/Lights" instance=ExtResource("1_0tysx")]
+position = Vector2(154, 123)
+color = Color(1, 0, 0, 1)
+
+[node name="PointLight2D2" parent="Lighting/Lights" instance=ExtResource("1_0tysx")]
+position = Vector2(526, 463)
+color = Color(0, 1, 0, 1)
+
+[node name="PointLight2D3" parent="Lighting/Lights" instance=ExtResource("1_0tysx")]
+position = Vector2(975, 269)
+color = Color(0, 0, 1, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_1n0kl")]
 position = Vector2(367, 274)
 
+[node name="PointLight2D" parent="Player" instance=ExtResource("3_qnify")]
+color = Color(1, 0, 0, 1)
+
 [node name="Enemy" parent="." instance=ExtResource("2_ixb4d")]
 position = Vector2(634, 270)
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_ota0r")

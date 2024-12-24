@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://da8eqnkcsw16v"]
 
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_k2p86"]
-[ext_resource type="PackedScene" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_u51xg"]
+[ext_resource type="PackedScene" uid="uid://dw51vtpswbgop" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_u51xg"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="2_35kop"]
 [ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="3_q60gc"]
 [ext_resource type="Script" path="res://LightingSystem/Flashlights/flash_light_base.gd" id="5_dplii"]
@@ -12,7 +12,7 @@ vertices = PackedVector2Array(270, -135, -390.227, -135, -389.344, -160.938, 129
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(6, 8, 9, 7), PackedInt32Array(9, 10, 11, 7), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 3), PackedInt32Array(18, 19, 20, 3), PackedInt32Array(20, 21, 0, 3), PackedInt32Array(16, 3, 22, 23), PackedInt32Array(24, 23, 22, 25), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(27, 26, 28, 29), PackedInt32Array(29, 28, 30, 31), PackedInt32Array(15, 31, 30), PackedInt32Array(12, 15, 30, 7, 11), PackedInt32Array(32, 33, 34, 35, 36), PackedInt32Array(37, 38, 39, 40, 41), PackedInt32Array(42, 43, 44, 45, 46), PackedInt32Array(47, 48, 49, 50), PackedInt32Array(51, 52, 47, 50, 53, 45), PackedInt32Array(54, 46, 45, 53, 55, 56), PackedInt32Array(57, 58, 59, 60, 61, 62), PackedInt32Array(63, 64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(71, 72, 73, 68), PackedInt32Array(74, 75, 76), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(79, 80, 36, 74), PackedInt32Array(81, 82, 83, 84, 85), PackedInt32Array(86, 87, 88, 89), PackedInt32Array(90, 91, 92, 93), PackedInt32Array(92, 94, 95, 93), PackedInt32Array(95, 96, 93), PackedInt32Array(89, 81, 85, 86), PackedInt32Array(88, 90, 93), PackedInt32Array(41, 40, 97, 98, 99), PackedInt32Array(89, 88, 93), PackedInt32Array(74, 76, 79), PackedInt32Array(53, 62, 61, 55), PackedInt32Array(32, 100, 101, 89, 93, 102, 33), PackedInt32Array(74, 36, 35), PackedInt32Array(103, 104, 74, 35, 105), PackedInt32Array(106, 68, 73, 105), PackedInt32Array(63, 67, 105, 35), PackedInt32Array(105, 73, 103), PackedInt32Array(107, 108, 63, 35, 41), PackedInt32Array(35, 109, 110, 41), PackedInt32Array(111, 107, 41), PackedInt32Array(111, 41, 99, 112), PackedInt32Array(112, 99, 113, 114), PackedInt32Array(113, 115, 116, 54), PackedInt32Array(55, 117, 118, 56), PackedInt32Array(54, 56, 114, 113), PackedInt32Array(112, 114, 119, 120), PackedInt32Array(121, 122, 123, 124), PackedInt32Array(125, 126, 127, 128), PackedInt32Array(129, 130, 131, 132), PackedInt32Array(133, 134, 135, 136, 137), PackedInt32Array(138, 139, 140, 141), PackedInt32Array(141, 142, 138)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-399, -171, 1305, -162, 1288, 529, 2805, 580, 2894, 1554, 491, 1559, 441, 753, -428, 677)])
 
-[node name="World" type="Node2D"]
+[node name="World2" type="Node2D"]
 visibility_layer = 3
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]

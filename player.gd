@@ -37,7 +37,7 @@ func shoot_bullet():
 	can_shoot = false
 	$firerate_timer.start()
 	var bullet = Bullet_Scene.instantiate()
-	bullet.direction = Vector2(1,0).rotated(rotation)
+	bullet.direction = Vector2(1,0).rotated($gun_sprite.global_rotation)
 	bullet.global_position = $bullet_spawn.global_position
 	get_parent().add_child(bullet)
 

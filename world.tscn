@@ -48,9 +48,23 @@ range_item_cull_mask = 16
 [node name="Player" parent="." instance=ExtResource("1_1n0kl")]
 position = Vector2(367, 274)
 
-[node name="PointLight2D" parent="Player" instance=ExtResource("3_qnify")]
+[node name="RedFlashlight" parent="Player" instance=ExtResource("3_qnify")]
 position = Vector2(336, -25)
 color = Color(1, 0, 0, 1)
+texture = ExtResource("4_2tucr")
+
+[node name="GreenFlashlight" parent="Player" instance=ExtResource("3_qnify")]
+visible = false
+position = Vector2(336, -25)
+color = Color(0, 1, 0, 1)
+range_item_cull_mask = 4
+texture = ExtResource("4_2tucr")
+
+[node name="BlueFlashlight" parent="Player" instance=ExtResource("3_qnify")]
+visible = false
+position = Vector2(336, -25)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 texture = ExtResource("4_2tucr")
 
 [node name="Enemy" parent="." instance=ExtResource("2_ixb4d")]

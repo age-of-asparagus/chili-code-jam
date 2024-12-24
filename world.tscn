@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_0tysx"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="1_1n0kl"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="2_ixb4d"]
-[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/FlashLight.tscn" id="3_qnify"]
+[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="3_qnify"]
 [ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="4_2tucr"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ota0r"]

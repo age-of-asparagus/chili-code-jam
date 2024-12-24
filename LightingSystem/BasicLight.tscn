@@ -4,5 +4,6 @@
 
 [node name="PointLight2D" type="PointLight2D"]
 shadow_color = Color(0.442911, 0.442911, 0.442911, 0)
+shadow_item_cull_mask = 63
 texture = ExtResource("1_fk03e")
 texture_scale = 2.0

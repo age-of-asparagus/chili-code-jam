@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bib4cesr80xcr"]
+[gd_scene load_steps=7 format=3 uid="uid://da8eqnkcsw16v"]
 
-[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_glxkd"]
-[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="2_ht7r4"]
-[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/FlashLight.tscn" id="3_1t61t"]
-[ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="4_aj10d"]
-[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="5_ju5yr"]
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_k2p86"]
+[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="2_35kop"]
+[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/FlashLight.tscn" id="3_q60gc"]
+[ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="4_r06pc"]
+[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="5_etmia"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ota0r"]
 vertices = PackedVector2Array(1133.95, 636.969, 18.0391, 634.023, 20.9531, 18.9688, 1131.04, 16.0234)
@@ -31,26 +31,28 @@ scale = Vector2(29.0199, 16.3978)
 
 [node name="Lights" type="Node2D" parent="Lighting"]
 
-[node name="Red" parent="Lighting/Lights" instance=ExtResource("1_glxkd")]
+[node name="Red" parent="Lighting/Lights" instance=ExtResource("1_k2p86")]
 position = Vector2(154, 123)
 color = Color(1, 0, 0, 1)
 
-[node name="Green" parent="Lighting/Lights" instance=ExtResource("1_glxkd")]
+[node name="Green" parent="Lighting/Lights" instance=ExtResource("1_k2p86")]
 position = Vector2(526, 463)
 color = Color(0, 1, 0, 1)
 range_item_cull_mask = 4
 
-[node name="Blue" parent="Lighting/Lights" instance=ExtResource("1_glxkd")]
+[node name="Blue" parent="Lighting/Lights" instance=ExtResource("1_k2p86")]
 position = Vector2(975, 269)
 color = Color(0, 0, 1, 1)
 range_item_cull_mask = 16
 
-[node name="Player" parent="." instance=ExtResource("2_ht7r4")]
+[node name="Player" parent="." instance=ExtResource("2_35kop")]
 position = Vector2(367, 274)
 
-[node name="PointLight2D" parent="Player" instance=ExtResource("3_1t61t")]
+[node name="PointLight2D" parent="Player" instance=ExtResource("3_q60gc")]
 position = Vector2(336, -25)
 color = Color(1, 0, 0, 1)
-texture = ExtResource("4_aj10d")
+texture = ExtResource("4_r06pc")
 
-[node name="Enemy" parent="." instance=ExtResource("5_ju5yr")]
+[node name="Enemy" parent="." instance=ExtResource("5_etmia")]
+
+[editable path="Enemy"]

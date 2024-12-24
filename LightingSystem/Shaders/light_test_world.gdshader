@@ -17,7 +17,7 @@ void fragment() {
     float luminance = (tex_color.r + tex_color.g + tex_color.b)/3.0;
     // set the alpha based on darkness at that point
 	
-    COLOR.a = luminance;
+    //COLOR.a = luminance;
 }
 
 //void light() {

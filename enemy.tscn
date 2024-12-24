@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bong5i513sa8s"]
+[gd_scene load_steps=6 format=3 uid="uid://bong5i513sa8s"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_auvvt"]
 [ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_31dpu"]
+[ext_resource type="Material" path="res://LightingSystem/Materials/Enemy.tres" id="2_43682"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mk4i"]
 radius = 48.0416
@@ -15,6 +16,7 @@ collision_mask = 4
 script = ExtResource("1_auvvt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_43682")
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_31dpu")
 

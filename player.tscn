@@ -27,11 +27,12 @@ shape = SubResource("CircleShape2D_vjqci")
 [node name="gun_sprite" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_807db")
 position = Vector2(72, 48)
+rotation = -0.0863617
 scale = Vector2(0.421875, 0.125)
 texture = ExtResource("2_incig")
 
 [node name="bullet_spawn" type="Marker2D" parent="."]
-position = Vector2(105, 49)
+position = Vector2(110, 44)
 
 [node name="firerate_timer" type="Timer" parent="."]
 wait_time = 0.25

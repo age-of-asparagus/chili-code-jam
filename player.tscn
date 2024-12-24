@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://lv7u48txlta5"]
+[gd_scene load_steps=6 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
 [ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_incig"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oys56"]
+light_mode = 1
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjqci"]
 radius = 63.3877
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_807db"]
+light_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 4
@@ -12,12 +18,14 @@ script = ExtResource("1_w1kno")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 light_mask = 63
+material = SubResource("CanvasItemMaterial_oys56")
 texture = ExtResource("2_incig")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vjqci")
 
 [node name="gun_sprite" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_807db")
 position = Vector2(72, 48)
 scale = Vector2(0.421875, 0.125)
 texture = ExtResource("2_incig")

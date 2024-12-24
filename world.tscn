@@ -34,6 +34,7 @@ scale = Vector2(29.0199, 16.3978)
 [node name="Red" parent="Lighting/Lights" instance=ExtResource("1_0tysx")]
 position = Vector2(154, 123)
 color = Color(1, 0, 0, 1)
+energy = 0.5
 
 [node name="Green" parent="Lighting/Lights" instance=ExtResource("1_0tysx")]
 position = Vector2(526, 463)

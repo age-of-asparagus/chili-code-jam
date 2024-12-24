@@ -12,11 +12,11 @@ void fragment() {
 
     // Sample the screen texture at this fragment's position.
     vec4 light_color = texture(screen_texture, SCREEN_UV);
-    
+
 	// https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
     float luminance = (tex_color.r + tex_color.g + tex_color.b)/3.0;
     // set the alpha based on darkness at that point
-	
+
     //COLOR.a = luminance;
 }
 

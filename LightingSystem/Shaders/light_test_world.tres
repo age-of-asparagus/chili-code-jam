@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cgq32rmut44ba"]
+
+[ext_resource type="Shader" path="res://LightingSystem/Shaders/light_only_black_transp.gdshader" id="1_p761p"]
+
+[resource]
+shader = ExtResource("1_p761p")

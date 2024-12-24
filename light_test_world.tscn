@@ -1,28 +1,160 @@
-[gd_scene load_steps=4 format=3 uid="uid://ca3koqq4dsll1"]
+[gd_scene load_steps=8 format=3 uid="uid://ca3koqq4dsll1"]
 
 [ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="1_4wuoe"]
-[ext_resource type="Texture2D" uid="uid://clvkgk13i6gtp" path="res://LightingSystem/BasicLightGradientTexture.tres" id="2_iacfg"]
-[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="3_fdyyi"]
+[ext_resource type="Texture2D" uid="uid://c20vukxr1tw81" path="res://LightingSystem/LightTextures/2d_lights_and_shadows_neutral_point_light.webp" id="1_uan8t"]
+[ext_resource type="Shader" path="res://LightingSystem/Shaders/light_only_black_transp.gdshader" id="3_q7oil"]
+[ext_resource type="Material" uid="uid://bt6a801u6ho7x" path="res://LightingSystem/Shaders/black_alpha_zero.tres" id="4_1h05j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0wfx"]
+shader = ExtResource("3_q7oil")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pxcr2"]
+light_mode = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b383f"]
+shader = ExtResource("3_q7oil")
 
 [node name="LightTestsWorld" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
-color = Color(0, 0, 0, 1)
+color = Color(0.838897, 0.838897, 0.838897, 1)
 
-[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer"]
-position = Vector2(206, 79)
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(34.2907, 53.8754)
+
+[node name="Node" type="Node2D" parent="CanvasLayer"]
+position = Vector2(-112, -123)
+
+[node name="PointLight2D Mix" type="PointLight2D" parent="CanvasLayer/Node"]
+position = Vector2(298, 306)
+color = Color(1, 0, 0, 1)
+energy = 8.01
+blend_mode = 2
 range_layer_min = -1
 range_layer_max = 1
-texture = ExtResource("2_iacfg")
+texture = ExtResource("1_uan8t")
 
-[node name="PointLight2D2" parent="CanvasLayer" instance=ExtResource("3_fdyyi")]
-position = Vector2(81, 204)
-range_layer_min = -1
-range_layer_max = 1
-texture_scale = 1.0
-
-[node name="Icon" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(132, 139)
+[node name="IconWhite" type="Sprite2D" parent="CanvasLayer/Node"]
+material = SubResource("ShaderMaterial_j0wfx")
+position = Vector2(209, 215)
+scale = Vector2(1.01523, 1.01162)
 texture = ExtResource("1_4wuoe")
+
+[node name="IconRed" type="Sprite2D" parent="CanvasLayer/Node"]
+modulate = Color(1, 0, 0, 1)
+material = ExtResource("4_1h05j")
+position = Vector2(405, 211)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconBlue" type="Sprite2D" parent="CanvasLayer/Node"]
+modulate = Color(0, 0, 1, 1)
+light_mask = 16
+material = SubResource("CanvasItemMaterial_pxcr2")
+position = Vector2(209, 402)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconGreen" type="Sprite2D" parent="CanvasLayer/Node"]
+modulate = Color(0, 1, 0, 1)
+material = ExtResource("4_1h05j")
+position = Vector2(406, 400)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="Node3" type="Node2D" parent="CanvasLayer"]
+position = Vector2(255, 162)
+
+[node name="IconWhite" type="Sprite2D" parent="CanvasLayer/Node3"]
+position = Vector2(209, 215)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconRed" type="Sprite2D" parent="CanvasLayer/Node3"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(405, 212)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconBlue" type="Sprite2D" parent="CanvasLayer/Node3"]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(209, 402)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconGreen" type="Sprite2D" parent="CanvasLayer/Node3"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(405, 400)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="PointLight2D Subtract" type="PointLight2D" parent="CanvasLayer/Node3"]
+position = Vector2(304, 312)
+energy = 8.01
+blend_mode = 1
+range_layer_min = -1
+range_layer_max = 1
+texture = ExtResource("1_uan8t")
+
+[node name="Node2" type="Node2D" parent="CanvasLayer"]
+position = Vector2(610, -127)
+
+[node name="IconWhite" type="Sprite2D" parent="CanvasLayer/Node2"]
+position = Vector2(236, 240)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconRed" type="Sprite2D" parent="CanvasLayer/Node2"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(389, 237)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconBlue" type="Sprite2D" parent="CanvasLayer/Node2"]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(233, 378)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="IconGreen" type="Sprite2D" parent="CanvasLayer/Node2"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(388, 412)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="PointLight2D Add" type="PointLight2D" parent="CanvasLayer/Node2"]
+position = Vector2(304, 312)
+energy = 8.01
+blend_mode = 2
+range_layer_max = 1
+texture = ExtResource("1_uan8t")
+
+[node name="Node4" type="Node2D" parent="CanvasLayer"]
+position = Vector2(1967, 215)
+
+[node name="IconWhite" type="Sprite2D" parent="CanvasLayer/Node4"]
+material = SubResource("ShaderMaterial_b383f")
+position = Vector2(236, 240)
+scale = Vector2(1.01523, 1.01162)
+texture = ExtResource("1_4wuoe")
+
+[node name="PointLight2D Add" type="PointLight2D" parent="CanvasLayer/Node4"]
+visible = false
+position = Vector2(334, 334)
+energy = 8.01
+blend_mode = 2
+range_layer_max = 1
+texture = ExtResource("1_uan8t")
+
+[node name="PointLight2D Add2" type="PointLight2D" parent="CanvasLayer/Node4"]
+position = Vector2(150, 154)
+energy = 3.74
+range_layer_max = 1
+texture = ExtResource("1_uan8t")

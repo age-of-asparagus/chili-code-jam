@@ -20,11 +20,7 @@ position = Vector2(-124, 3)
 navigation_polygon = SubResource("NavigationPolygon_3i1l4")
 
 [node name="TileMapLayer2" parent="NavigationRegion2D" instance=ExtResource("1_u51xg")]
-visible = false
 position = Vector2(0, 0)
-navigation_enabled = false
-
-[node name="TileMapLayer" parent="." instance=ExtResource("1_u51xg")]
 navigation_enabled = false
 
 [node name="Lighting" type="Node2D" parent="."]

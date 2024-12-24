@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dicw2plihs8to"]
+[gd_scene load_steps=4 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
 [ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_incig"]
@@ -7,6 +7,7 @@
 radius = 63.3877
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 4
 script = ExtResource("1_w1kno")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,3 +16,17 @@ texture = ExtResource("2_incig")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vjqci")
+
+[node name="gun_sprite" type="Sprite2D" parent="."]
+position = Vector2(72, 48)
+scale = Vector2(0.421875, 0.125)
+texture = ExtResource("2_incig")
+
+[node name="bullet_spawn" type="Marker2D" parent="."]
+position = Vector2(105, 49)
+
+[node name="firerate_timer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="timeout" from="firerate_timer" to="." method="_on_firerate_timer_timeout"]

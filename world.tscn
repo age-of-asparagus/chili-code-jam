@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs26ourwgjhd"]
+[gd_scene load_steps=7 format=3 uid="uid://c27yxrswbfb4f"]
 
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_0tysx"]
-[ext_resource type="PackedScene" uid="uid://dicw2plihs8to" path="res://player.tscn" id="1_1n0kl"]
-[ext_resource type="PackedScene" uid="uid://c3u8uesabnv5a" path="res://enemy.tscn" id="2_ixb4d"]
+[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="1_1n0kl"]
+[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="2_ixb4d"]
 [ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/FlashLight.tscn" id="3_qnify"]
 [ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="4_2tucr"]
 
@@ -54,4 +54,3 @@ color = Color(1, 0, 0, 1)
 texture = ExtResource("4_2tucr")
 
 [node name="Enemy" parent="." instance=ExtResource("2_ixb4d")]
-position = Vector2(634, 270)

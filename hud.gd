@@ -1,5 +1,7 @@
 extends Control
 
+@onready var flashlight_battery = $flashlight_battery
+
 @onready var r_texture = $MarginContainer/VBoxContainer/R
 @onready var g_texture = $MarginContainer/VBoxContainer/G
 @onready var b_texture = $MarginContainer/VBoxContainer/B
@@ -17,6 +19,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	flashlight_battery.value = Global.flashlight_battery
+	
 	if Input.is_action_just_pressed("key_red"):
 		if not red_light:
 			r_texture.modulate = Color.RED

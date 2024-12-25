@@ -9,6 +9,20 @@ var can_shoot = true
 
 func _physics_process(delta):
 	
+	if Global.color == Color.RED or Global.color == Color.BLUE or Global.color == Color.GREEN:
+		flashlight_battery -= 0.01
+	
+	if Global.color == Color.MAGENTA or Global.color == Color.YELLOW or Global.color == Color.CYAN:
+		flashlight_battery -= 0.02
+		
+	if Global.color == Color.WHITE:
+		flashlight_battery -= 0.03
+	
+	Global.flashlight_battery = flashlight_battery
+	
+	print(flashlight_battery)
+	
+	
 	if health <= 0:
 		queue_free()
 	

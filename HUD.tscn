@@ -49,3 +49,11 @@ layout_mode = 2
 button_mask = 0
 texture_normal = ExtResource("5_ygdwd")
 texture_disabled = ExtResource("6_gukxe")
+
+[node name="flashlight_battery" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 34.0
+offset_right = 874.0
+offset_bottom = 61.0
+show_percentage = false

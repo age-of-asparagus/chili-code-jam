@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://b4172ro0dbqjw"]
+[gd_scene load_steps=7 format=4 uid="uid://da8eqnkcsw16v"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_x5ue7"]
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="2_80qoq"]

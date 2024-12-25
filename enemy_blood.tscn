@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://v4r4klc5xj14"]
+[gd_scene load_steps=3 format=3 uid="uid://v4r4klc5xj14"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2t3r4"]
+light_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_p5ykh"]
 offsets = PackedFloat32Array(0, 0.432432, 1)
 colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 0.823529, 1, 1, 1, 0)
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
+material = SubResource("CanvasItemMaterial_2t3r4")
 emitting = false
 amount = 25
 one_shot = true

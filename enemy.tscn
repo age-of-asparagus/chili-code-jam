@@ -1,19 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://bong5i513sa8s"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_auvvt"]
-[ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_31dpu"]
 [ext_resource type="Material" uid="uid://clcwuoiilg8t8" path="res://LightingSystem/Materials/Enemy.tres" id="2_43682"]
+[ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="3_6ahqx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mk4i"]
-radius = 31.0644
+radius = 22.0227
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xypht"]
-radius = 33.3766
+radius = 23.0
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_auvvt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_43682")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6ahqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0mk4i")
@@ -25,10 +30,5 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_zone"]
 shape = SubResource("CircleShape2D_xypht")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-material = ExtResource("2_43682")
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_31dpu")
 
 [connection signal="body_entered" from="Attack_zone" to="." method="_on_attack_zone_body_entered"]

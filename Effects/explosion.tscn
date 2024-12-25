@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://i4pi2ym4qeq5"]
+
+[ext_resource type="Texture2D" uid="uid://dasvq02erjhw8" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/explosion1.png" id="1_xjbt6"]
+[ext_resource type="Texture2D" uid="uid://cchj16q5thn61" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/explosion2.png" id="2_0bnkw"]
+[ext_resource type="Texture2D" uid="uid://clumr2lgkt2sv" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/explosion3.png" id="3_bt6fd"]
+[ext_resource type="Texture2D" uid="uid://cqjjf4ws3bnpu" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/explosion4.png" id="4_a24nc"]
+[ext_resource type="Texture2D" uid="uid://40lg0d828hgd" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/explosion5.png" id="5_na03u"]
+[ext_resource type="Script" path="res://Effects/explosion.gd" id="6_td5up"]
+[ext_resource type="AudioStream" uid="uid://bsa4mpaeguisy" path="res://Audio/Sounds/276968__hoffy1138__my-first-recorded-explosion.wav" id="7_8ecaa"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jic1g"]
+light_mode = 1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nuf2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xjbt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0bnkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bt6fd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a24nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_na03u")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+material = SubResource("CanvasItemMaterial_jic1g")
+sprite_frames = SubResource("SpriteFrames_nuf2u")
+autoplay = "default"
+script = ExtResource("6_td5up")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_8ecaa")
+pitch_scale = 2.0
+autoplay = true
+attenuation = 2.14355
+panning_strength = 10.0
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

@@ -23,8 +23,6 @@ func _process(delta):
 
 func update_color(c: Color):
 	# Set the color property on this PointLight2D
-	print(c)
-	print(Global.color)
 	self.color = c
 	# Set the light to only interact with new color layer
 	range_item_cull_mask = color_mask_dict[c]

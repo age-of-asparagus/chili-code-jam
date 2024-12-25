@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
-var health = 10
-var speed = 150
+@export var health = 10
+@export var speed = 150
+@export var Explosion : PackedScene
+
 @onready var navigation = $NavigationAgent2D
 @onready var player = get_parent().get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
@@ -21,7 +23,6 @@ var color_options = [
 ]
 
 
-
 func _ready():
 	color_picked = color_options.pick_random()
 	$Sprite2D.light_mask = color_picked[0]
@@ -37,7 +38,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if health <= 0:
-		queue_free()
+		die()
 
 func hit():
 	var blood : CPUParticles2D = blood_splatter.instantiate()
@@ -46,10 +47,18 @@ func hit():
 	blood.emitting = true
 	get_parent().add_child(blood)
 
+func die():
+	var explosion: Node2D = Explosion.instantiate()
+	explosion.global_position = global_position
+	get_parent().add_child(explosion)
+	
+	queue_free()
+
 func _on_attack_zone_body_entered(body):
 	body.health -= 1
 	queue_free()
 	#Sound.stop()
+
 
 
 func _on_audio_stream_player_2d_finished():

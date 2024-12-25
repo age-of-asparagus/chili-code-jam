@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://lv7u48txlta5"]
+[gd_scene load_steps=8 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
 [ext_resource type="Texture2D" uid="uid://6q28yigbw4ur" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Survivor 1/survivor1_stand.png" id="2_y7ik0"]
 [ext_resource type="Texture2D" uid="uid://b5bgbxfn1kxh1" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/weapon_machine.png" id="3_8lygj"]
+[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="4_uv0tw"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oys56"]
 light_mode = 1
@@ -16,6 +17,10 @@ light_mode = 1
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 4
 script = ExtResource("1_w1kno")
+
+[node name="Flashlight" parent="." instance=ExtResource("4_uv0tw")]
+position = Vector2(324, -6)
+rotation = 0.0388671
 
 [node name="Player_sprite" type="Sprite2D" parent="."]
 light_mask = 63
@@ -40,5 +45,18 @@ wait_time = 0.25
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Lighting (to see flashlight)" type="Node2D" parent="."]
+visible = false
+position = Vector2(60, -179)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting (to see flashlight)"]
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="ColorRect" parent="Lighting (to see flashlight)"]
+light_mask = 63
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.0199, 16.3978)
 
 [connection signal="timeout" from="firerate_timer" to="." method="_on_firerate_timer_timeout"]

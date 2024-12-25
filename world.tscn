@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c27yxrswbfb4f"]
+[gd_scene load_steps=6 format=3 uid="uid://c27yxrswbfb4f"]
 
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_0tysx"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="1_1n0kl"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_d6k14"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="2_ixb4d"]
-[ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="3_qnify"]
-[ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="4_2tucr"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ota0r"]
 vertices = PackedVector2Array(1133.95, 636.969, 18.0391, 634.023, 20.9531, 18.9688, 1131.04, 16.0234)
@@ -51,24 +49,5 @@ range_item_cull_mask = 16
 
 [node name="Player" parent="." instance=ExtResource("1_1n0kl")]
 position = Vector2(367, 274)
-
-[node name="RedFlashlight" parent="Player" instance=ExtResource("3_qnify")]
-position = Vector2(336, -25)
-color = Color(1, 0, 0, 1)
-texture = ExtResource("4_2tucr")
-
-[node name="GreenFlashlight" parent="Player" instance=ExtResource("3_qnify")]
-visible = false
-position = Vector2(336, -25)
-color = Color(0, 1, 0, 1)
-range_item_cull_mask = 4
-texture = ExtResource("4_2tucr")
-
-[node name="BlueFlashlight" parent="Player" instance=ExtResource("3_qnify")]
-visible = false
-position = Vector2(336, -25)
-color = Color(0, 0, 1, 1)
-range_item_cull_mask = 16
-texture = ExtResource("4_2tucr")
 
 [node name="Enemy" parent="." instance=ExtResource("2_ixb4d")]

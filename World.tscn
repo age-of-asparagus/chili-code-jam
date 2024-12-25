@@ -39,18 +39,41 @@ scale = Vector2(29.0199, 16.3978)
 position = Vector2(293, 80)
 color = Color(1, 0, 0, 1)
 
+[node name="Red2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(-44, 135)
+color = Color(1, 0, 0, 1)
+
+[node name="Red3" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(1768, 679)
+color = Color(1, 0, 0, 1)
+
 [node name="Green" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
-position = Vector2(447, 501)
+position = Vector2(610, 508)
+color = Color(0, 1, 0, 1)
+range_item_cull_mask = 4
+
+[node name="Green2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(1506, 1356)
 color = Color(0, 1, 0, 1)
 range_item_cull_mask = 4
 
 [node name="Blue" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
-position = Vector2(975, 269)
+position = Vector2(1108, 221)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
+
+[node name="Blue2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(2436, 669)
 color = Color(0, 0, 1, 1)
 range_item_cull_mask = 16
 
 [node name="Cyan" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
-position = Vector2(732, 607)
+position = Vector2(668, 992)
+color = Color(0, 1, 1, 1)
+range_item_cull_mask = 28
+
+[node name="Cyan2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(2108, 1388)
 color = Color(0, 1, 1, 1)
 range_item_cull_mask = 28
 
@@ -59,13 +82,26 @@ position = Vector2(69, 498)
 color = Color(1, 1, 0, 1)
 range_item_cull_mask = 7
 
+[node name="Yellow2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(2737, 1390)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
+
 [node name="Magenta" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
-position = Vector2(1073, 647)
+position = Vector2(1198, 652)
 color = Color(1, 0, 1, 1)
 range_item_cull_mask = 49
 
 [node name="White" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
 position = Vector2(606, 81)
+range_item_cull_mask = 63
+
+[node name="White2" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(-298, -109)
+range_item_cull_mask = 63
+
+[node name="White3" parent="Lighting/Lights" instance=ExtResource("2_80qoq")]
+position = Vector2(938, 1383)
 range_item_cull_mask = 63
 
 [node name="Player" parent="." instance=ExtResource("3_5gp8q")]

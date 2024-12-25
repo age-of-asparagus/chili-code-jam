@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://dshrfu271rirs"]
 
 [ext_resource type="Script" path="res://player_bullet.gd" id="1_t4st5"]
-[ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_o4ikj"]
+[ext_resource type="Texture2D" uid="uid://cohvhkffcyoqd" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/bulletSand3_outline.png" id="2_it5hf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvwgs"]
-size = Vector2(65, 26)
+size = Vector2(13, 4)
 
 [node name="Player_Bullet" type="Area2D"]
 collision_layer = 0
@@ -12,11 +12,12 @@ collision_mask = 6
 script = ExtResource("1_t4st5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.351563, 0.15625)
-texture = ExtResource("2_o4ikj")
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_it5hf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12.5, -2)
+position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_hvwgs")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

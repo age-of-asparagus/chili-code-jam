@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://da8eqnkcsw16v"]
+[gd_scene load_steps=7 format=4 uid="uid://da8eqnkcsw16v"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_x5ue7"]
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="2_80qoq"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="3_5gp8q"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="4_g5buv"]
+[ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="5_p3hd7"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(1125.43, 406.43, 1125.43, 233.57, 1178.57, 165.43, 1178.57, 662.43, 1065.57, 165.43, 1110.43, 218.57, 1050.57, 150.43, 937.57, 218.57, 489.57, 101.43, 1110.43, 421.43, 805.43, 534.43, 937.57, 421.43, 677.43, 681.57, 790.43, 549.43, 805.43, 361.57, 922.57, 406.43, 922.57, 233.57, 790.43, 346.57, 361.57, -26.5703, 474.57, -26.5703, 474.57, 86.4297, 1050.57, 101.43, 681.57, 346.57, 1193.57, 677.43, 2714.57, 677.43, 2714.57, 1370.57, 677.43, 1370.57, 681.57, 549.43, 662.43, 666.57, 613.43, 666.57, 613.43, 489.57, 666.57, 534.43, 666.57, 361.57, 598.43, 474.57, -101.43, 489.57, -101.43, 538.57, -154.57, 538.57, -154.57, 489.57, -169.57, 474.57, -218.57, 474.57, -218.57, 233.57, 346.57, -41.5703, -233.57, 218.57, -282.57, 218.57, -282.57, -90.5703, 346.57, -90.5703, -86.4297, 474.57)
@@ -110,3 +111,7 @@ position = Vector2(117, 205)
 [node name="Enemy" parent="." instance=ExtResource("4_g5buv")]
 position = Vector2(-185, -15)
 metadata/_edit_group_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_p3hd7")]

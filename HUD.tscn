@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3uclqwegwhlx"]
+
+[ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
+[ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
+[ext_resource type="Texture2D" uid="uid://dp2qh53vqmwad" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_g_outline.png" id="2_o602v"]
+[ext_resource type="Texture2D" uid="uid://b8uvxs3svedpj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_b_outline.png" id="3_q8g5o"]
+[ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
+[ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xq6nd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="R" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_dmiul")
+
+[node name="G" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_o602v")
+
+[node name="B" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_q8g5o")
+
+[node name="Color" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("5_ygdwd")
+texture_disabled = ExtResource("6_gukxe")

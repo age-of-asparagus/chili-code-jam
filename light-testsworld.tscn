@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://da8eqnkcsw16v"]
+[gd_scene load_steps=9 format=3 uid="uid://da8eqnkcsw16v"]
 
 [ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_k2p86"]
-[ext_resource type="PackedScene" uid="uid://dw51vtpswbgop" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_u51xg"]
+[ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="1_mf833"]
+[ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_u51xg"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="2_35kop"]
 [ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="3_q60gc"]
 [ext_resource type="Script" path="res://LightingSystem/Flashlights/flash_light_base.gd" id="5_dplii"]
@@ -15,12 +16,13 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-399, -171, 1305, -162,
 [node name="World2" type="Node2D"]
 visibility_layer = 3
 
+[node name="HUD" parent="." instance=ExtResource("1_mf833")]
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-124, 3)
 navigation_polygon = SubResource("NavigationPolygon_3i1l4")
 
 [node name="TileMapLayer" parent="NavigationRegion2D" instance=ExtResource("1_u51xg")]
-navigation_enabled = false
 
 [node name="Lighting" type="Node2D" parent="."]
 visible = false

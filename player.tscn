@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
-[ext_resource type="Texture2D" uid="uid://6q28yigbw4ur" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Survivor 1/survivor1_stand.png" id="2_y7ik0"]
 [ext_resource type="Texture2D" uid="uid://b5bgbxfn1kxh1" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/weapon_machine.png" id="3_8lygj"]
+[ext_resource type="Texture2D" uid="uid://mvr7mhkvwik3" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Survivor 1/survivor1_hold.png" id="3_tglly"]
 [ext_resource type="PackedScene" uid="uid://0slhet8daytj" path="res://LightingSystem/Flashlights/FlashLightBase.tscn" id="4_uv0tw"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oys56"]
 light_mode = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjqci"]
-radius = 29.0172
+radius = 14.1421
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_807db"]
 light_mode = 1
@@ -19,26 +19,28 @@ collision_mask = 4
 script = ExtResource("1_w1kno")
 
 [node name="Flashlight" parent="." instance=ExtResource("4_uv0tw")]
-position = Vector2(324, -6)
+position = Vector2(281, -2.08616e-06)
 rotation = 0.0388671
+scale = Vector2(0.987278, 1.0125)
 
 [node name="Player_sprite" type="Sprite2D" parent="."]
 light_mask = 63
 material = SubResource("CanvasItemMaterial_oys56")
-scale = Vector2(2, 2)
-texture = ExtResource("2_y7ik0")
+texture = ExtResource("3_tglly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_vjqci")
 
 [node name="gun_sprite" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_807db")
-position = Vector2(34, 29)
-rotation = -0.0863617
+position = Vector2(22, 12)
+rotation = -0.0305486
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_8lygj")
 
 [node name="bullet_spawn" type="Marker2D" parent="."]
-position = Vector2(58, 26)
+position = Vector2(35, 11)
 
 [node name="firerate_timer" type="Timer" parent="."]
 wait_time = 0.25
@@ -48,7 +50,7 @@ one_shot = true
 
 [node name="Lighting (to see flashlight)" type="Node2D" parent="."]
 visible = false
-position = Vector2(60, -179)
+position = Vector2(41, -254)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting (to see flashlight)"]
 color = Color(0, 0, 0, 1)

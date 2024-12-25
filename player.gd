@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var flashlight_battery = 100
 var health = 1
 var speed = 300
 var moving_direction = Vector2.ZERO

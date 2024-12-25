@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dshrfu271rirs"]
+[gd_scene load_steps=5 format=3 uid="uid://dshrfu271rirs"]
 
 [ext_resource type="Script" path="res://player_bullet.gd" id="1_t4st5"]
 [ext_resource type="Texture2D" uid="uid://cohvhkffcyoqd" path="res://Assets/Kenny/kenney_top-down-tanks-redux/PNG/Default size/bulletSand3_outline.png" id="2_it5hf"]
+[ext_resource type="AudioStream" uid="uid://qlqorpqedili" path="res://Assets/Sounds/402009__eardeer__gunshot__high_2.wav" id="3_yxoxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvwgs"]
 size = Vector2(13, 4)
@@ -19,5 +20,8 @@ texture = ExtResource("2_it5hf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_hvwgs")
+
+[node name="AudioStreamPlayer-Gunshot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yxoxj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

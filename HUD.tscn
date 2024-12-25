@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=9 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b8uvxs3svedpj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_b_outline.png" id="3_q8g5o"]
 [ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
+[ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Assets/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xn6b"]
 bg_color = Color(0.236476, 0.716234, 0, 1)
@@ -61,3 +62,7 @@ offset_right = 934.0
 offset_bottom = 62.0
 theme_override_font_sizes/font_size = 20
 theme_override_styles/background = SubResource("StyleBoxFlat_0xn6b")
+
+[node name="AudioStreamPlayer-flashlight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_55521")
+volume_db = 10.0

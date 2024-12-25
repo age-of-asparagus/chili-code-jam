@@ -30,6 +30,9 @@ func _process(delta):
 	Global.flashlight_battery = flashlight_battery
 	$flashlight_battery.value = flashlight_battery
 	
+	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
+		$"AudioStreamPlayer-flashlight".play()
+	
 	if flashlight_battery > 0:
 		if Input.is_action_just_pressed("key_red"):
 			if not red_light:
@@ -38,7 +41,6 @@ func _process(delta):
 				r_texture.modulate = Color.WHITE
 			# toggle variable
 			red_light = not red_light
-			update_color()
 			
 		if Input.is_action_just_pressed("key_green"):
 			if not green_light:
@@ -47,7 +49,6 @@ func _process(delta):
 				g_texture.modulate = Color.WHITE
 			# toggle variable
 			green_light = not green_light
-			update_color()
 		if Input.is_action_just_pressed("key_blue"):
 			if not blue_light:
 				b_texture.modulate = Color.BLUE
@@ -55,12 +56,13 @@ func _process(delta):
 				b_texture.modulate = Color.WHITE
 			# toggle variable
 			blue_light = not blue_light
-			update_color()
 	else:
 		red_light = false
 		blue_light = false
 		green_light = false
-		update_color()
+	
+	update_color()
+		
 func update_color():
 	var c = Color.BLACK
 	if red_light:

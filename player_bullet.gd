@@ -6,6 +6,7 @@ var direction : Vector2
 
 func _ready():
 	look_at(global_position+direction)
+	$"AudioStreamPlayer-Gunshot".play()
 
 func _process(delta):
 	velocity = direction*speed

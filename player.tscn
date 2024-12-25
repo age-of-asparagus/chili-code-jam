@@ -39,4 +39,6 @@ position = Vector2(58, 26)
 wait_time = 0.25
 one_shot = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="timeout" from="firerate_timer" to="." method="_on_firerate_timer_timeout"]

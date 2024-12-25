@@ -14,4 +14,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	body.health -= 1
+	body.hit()
 	queue_free()

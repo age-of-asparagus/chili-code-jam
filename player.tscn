@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://lv7u48txlta5"]
+[gd_scene load_steps=7 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
-[ext_resource type="Texture2D" uid="uid://bhxwi07oy7bb4" path="res://icon.svg" id="2_incig"]
+[ext_resource type="Texture2D" uid="uid://6q28yigbw4ur" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Survivor 1/survivor1_stand.png" id="2_y7ik0"]
+[ext_resource type="Texture2D" uid="uid://b5bgbxfn1kxh1" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/weapon_machine.png" id="3_8lygj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oys56"]
 light_mode = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vjqci"]
-radius = 63.3877
+radius = 29.0172
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_807db"]
 light_mode = 1
@@ -16,23 +17,23 @@ light_mode = 1
 collision_mask = 4
 script = ExtResource("1_w1kno")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Player_sprite" type="Sprite2D" parent="."]
 light_mask = 63
 material = SubResource("CanvasItemMaterial_oys56")
-texture = ExtResource("2_incig")
+scale = Vector2(2, 2)
+texture = ExtResource("2_y7ik0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vjqci")
 
 [node name="gun_sprite" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_807db")
-position = Vector2(72, 48)
+position = Vector2(34, 29)
 rotation = -0.0863617
-scale = Vector2(0.421875, 0.125)
-texture = ExtResource("2_incig")
+texture = ExtResource("3_8lygj")
 
 [node name="bullet_spawn" type="Marker2D" parent="."]
-position = Vector2(110, 44)
+position = Vector2(58, 26)
 
 [node name="firerate_timer" type="Timer" parent="."]
 wait_time = 0.25

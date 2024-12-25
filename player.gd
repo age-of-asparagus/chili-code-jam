@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var health = 1
-var speed = 500
+var speed = 300
 var moving_direction = Vector2.ZERO
 var Bullet_Scene = preload("res://player_bullet.tscn")
 var can_shoot = true

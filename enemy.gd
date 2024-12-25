@@ -6,6 +6,25 @@ var speed = 150
 @onready var player = get_parent().get_node("Player")
 var blood_splatter = preload("res://enemy_blood.tscn")
 
+var sprite_red = preload("res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png")
+var sprite_blue = preload("res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoBlue.png") 
+var sprite_green = preload("res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoGreen.png")
+
+var color_picked
+
+var color_options = [
+	[1,sprite_red,Color.RED],
+	[4,sprite_green,Color.GREEN],
+	[16,sprite_blue,Color.BLUE]
+]
+
+
+
+func _ready():
+	color_picked = color_options.pick_random()
+	$Sprite2D.light_mask = color_picked[0]
+	$Sprite2D.texture = color_picked[1]
+
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)
 	look_at(player.global_position)
@@ -19,6 +38,7 @@ func _physics_process(delta):
 func hit():
 	var blood : CPUParticles2D = blood_splatter.instantiate()
 	blood.global_position = global_position
+	blood.color = color_picked[2]
 	blood.emitting = true
 	get_parent().add_child(blood)
 

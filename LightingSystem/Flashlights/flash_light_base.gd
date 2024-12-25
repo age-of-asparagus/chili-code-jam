@@ -1,5 +1,5 @@
 extends PointLight2D
-
+@export var light_color: int
 # dictionary mapping colors to the Item Cull Mask value
 var color_mask_dict = {
 	Color.BLACK: 0,

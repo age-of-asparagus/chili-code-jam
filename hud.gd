@@ -1,6 +1,6 @@
 extends Control
 
-var flashlight_battery = 10
+var flashlight_battery = 100
 
 @export var r_texture : Control
 @export var g_texture : Control

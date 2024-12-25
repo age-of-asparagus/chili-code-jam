@@ -8,6 +8,7 @@ var flashlight_battery = 10
 @export var color_texture : Control
 
 @export var battery_progress : Control
+@export var battery_label : Label
 
 var red_light = false
 var green_light = false
@@ -31,6 +32,7 @@ func _process(delta):
 	
 	Global.flashlight_battery = flashlight_battery
 	battery_progress.value = flashlight_battery
+	battery_label.text = "%3d" % flashlight_battery + "%"
 	
 	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
 		$"AudioStreamPlayer-flashlight".play()

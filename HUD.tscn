@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
 [ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
 
-[node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress")]
+[node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,8 @@ r_texture = NodePath("MarginContainer/VBoxContainer/R")
 g_texture = NodePath("MarginContainer/VBoxContainer/G")
 b_texture = NodePath("MarginContainer/VBoxContainer/B")
 color_texture = NodePath("MarginContainer/VBoxContainer/Color")
-battery_progress = NodePath("MarginContainer3/flashlight_battery")
+battery_progress = NodePath("MarginContainer3/HBoxContainer/flashlight_battery")
+battery_label = NodePath("MarginContainer3/HBoxContainer/power_label")
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -31,16 +32,30 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -264.5
-offset_right = 264.5
-offset_bottom = 44.0
+offset_right = 235.5
+offset_bottom = 43.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3"]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+text = "BATTERY POWER: "
+
+[node name="power_label" type="Label" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+uppercase = true
+visible_characters = 4
+
+[node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 nine_patch_stretch = true
 stretch_margin_left = 10
 stretch_margin_top = 10

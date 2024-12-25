@@ -2,10 +2,12 @@ extends Control
 
 var flashlight_battery = 10
 
-@onready var r_texture = $MarginContainer/VBoxContainer/R
-@onready var g_texture = $MarginContainer/VBoxContainer/G
-@onready var b_texture = $MarginContainer/VBoxContainer/B
-@onready var color_texture = $MarginContainer/VBoxContainer/Color
+@export var r_texture : Control
+@export var g_texture : Control
+@export var b_texture : Control
+@export var color_texture : Control
+
+@export var battery_progress : Control
 
 var red_light = false
 var green_light = false
@@ -28,7 +30,7 @@ func _process(delta):
 		flashlight_battery -= 0.03
 	
 	Global.flashlight_battery = flashlight_battery
-	$flashlight_battery.value = flashlight_battery
+	battery_progress.value = flashlight_battery
 	
 	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
 		$"AudioStreamPlayer-flashlight".play()

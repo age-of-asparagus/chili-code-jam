@@ -4,6 +4,8 @@ var health = 10
 var speed = 150
 @onready var navigation = $NavigationAgent2D
 @onready var player = get_parent().get_node("Player")
+@onready var Sound = $AudioStreamPlayer2D
+
 var blood_splatter = preload("res://enemy_blood.tscn")
 
 var sprite_red = preload("res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png")
@@ -24,6 +26,8 @@ func _ready():
 	color_picked = color_options.pick_random()
 	$Sprite2D.light_mask = color_picked[0]
 	$Sprite2D.texture = color_picked[1]
+	
+	Sound.play()
 
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)
@@ -45,3 +49,8 @@ func hit():
 func _on_attack_zone_body_entered(body):
 	body.health -= 1
 	queue_free()
+	#Sound.stop()
+
+
+func _on_audio_stream_player_2d_finished():
+	Sound.play()

@@ -1,0 +1,14 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlpcgs36ke577"]
+
+[ext_resource type="Script" path="res://Audio/multi_audio_stream_player_2d.gd" id="1_e6oan"]
+[ext_resource type="AudioStream" uid="uid://dkedsol6qnmpr" path="res://Audio/kenney_impact-sounds/Audio/footstep_concrete_000.ogg" id="2_6anhi"]
+[ext_resource type="AudioStream" uid="uid://c1a75im2w1y0u" path="res://Audio/kenney_impact-sounds/Audio/footstep_concrete_001.ogg" id="3_bj62v"]
+[ext_resource type="AudioStream" uid="uid://cx5ljj2t0qfjr" path="res://Audio/kenney_impact-sounds/Audio/footstep_concrete_002.ogg" id="4_wrgre"]
+[ext_resource type="AudioStream" uid="uid://b0avrtmv0uijt" path="res://Audio/kenney_impact-sounds/Audio/footstep_concrete_003.ogg" id="5_6rkrs"]
+[ext_resource type="AudioStream" uid="uid://crlimblym3jyo" path="res://Audio/kenney_impact-sounds/Audio/footstep_concrete_004.ogg" id="6_t6lgy"]
+
+[node name="MultiAudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+script = ExtResource("1_e6oan")
+sounds = Array[AudioStream]([ExtResource("2_6anhi"), ExtResource("3_bj62v"), ExtResource("4_wrgre"), ExtResource("5_6rkrs"), ExtResource("6_t6lgy")])
+
+[connection signal="finished" from="." to="." method="_on_finished"]

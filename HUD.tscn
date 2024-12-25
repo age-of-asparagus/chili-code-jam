@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=8 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b8uvxs3svedpj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_b_outline.png" id="3_q8g5o"]
 [ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xn6b"]
+bg_color = Color(0.236476, 0.716234, 0, 1)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -52,8 +55,9 @@ texture_disabled = ExtResource("6_gukxe")
 
 [node name="flashlight_battery" type="ProgressBar" parent="."]
 layout_mode = 0
-offset_left = 115.0
-offset_top = 34.0
-offset_right = 874.0
-offset_bottom = 61.0
-show_percentage = false
+offset_left = 175.0
+offset_top = 30.0
+offset_right = 934.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/background = SubResource("StyleBoxFlat_0xn6b")

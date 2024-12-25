@@ -9,6 +9,8 @@ var red_light = false
 var green_light = false
 var blue_light = false
 
+signal color_update(new_color)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	update_color()
@@ -49,14 +51,16 @@ func update_color():
 		c += Color.GREEN
 	if blue_light:
 		c += Color.BLUE
+		
+	var new_color: Color = c.clamp()
 	
-	color_texture.modulate = c.clamp()	
+	Global.color = new_color
 	
 	# if all colors are off, change to the empty circle sprite
 	if c == Color.BLACK:
 		color_texture.disabled = true # Use the button's disabled texture
-		color_texture.modulate = Color.WHITE
+		new_color = Color.WHITE
 	else: # otherwise, set the filled circle to the correct color
 		color_texture.disabled = false
 		
-		
+	color_texture.modulate = new_color

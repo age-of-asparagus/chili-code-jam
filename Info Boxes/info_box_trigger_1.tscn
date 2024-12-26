@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkalqyp8ehboa"]
+
+[ext_resource type="PackedScene" uid="uid://b650qcamfhuhw" path="res://Info Boxes/info_box_trigger_base.tscn" id="1_0hoc7"]
+
+[node name="InfoBoxTrigger1" instance=ExtResource("1_0hoc7")]
+index = 1

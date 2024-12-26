@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var hud := $"../../CanvasLayer/HUD"
 @export var index := 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +13,7 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	pass
+	hud.display_info_box(index, true)
 
 func _on_body_exited(body):
-	pass
+	hud.display_info_box(index, false)

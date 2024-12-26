@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://brn0il6fnx4k4"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_baaed"]
+
+[node name="InfoBox1Energy" instance=ExtResource("1_baaed")]
+offset_top = -148.0
+
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "You can recharge your flashlight batteries using the energy orbs at the end of the hall.
+
+Make sure to use your flashlight wisely.  Energy orbs may be hard to find sometimes."

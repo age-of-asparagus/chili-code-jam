@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=13 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
 [ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
 [ext_resource type="PackedScene" uid="uid://d3t2lqhai054i" path="res://Info Boxes/info_box_0_flashlights.tscn" id="11_li8cv"]
+[ext_resource type="PackedScene" uid="uid://brn0il6fnx4k4" path="res://Info Boxes/info_box_1_energy.tscn" id="12_37yl8"]
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
@@ -123,6 +124,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InfoBox0Flashlights" parent="InfoBoxes" instance=ExtResource("11_li8cv")]
+visible = false
+layout_mode = 1
+
+[node name="InfoBox1Energy" parent="InfoBoxes" instance=ExtResource("12_37yl8")]
 visible = false
 layout_mode = 0
 anchors_preset = 0

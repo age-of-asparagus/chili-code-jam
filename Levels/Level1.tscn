@@ -98,7 +98,6 @@ position = Vector2(1789, 325)
 metadata/_edit_lock_ = true
 
 [node name="Enemy" parent="." instance=ExtResource("4_ssojy")]
-visible = false
 position = Vector2(-185, -15)
 metadata/_edit_group_ = true
 

@@ -16,6 +16,9 @@ signal color_update(new_color)
 
 func _ready():
 	update_color()
+	#print(get_tree().root.get_node("HUD").get_node("MarginContainer3"))
+	print(get_tree().root.get_child(1).name)
+
 
 func _process(delta):
 	

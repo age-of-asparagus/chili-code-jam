@@ -6,6 +6,6 @@
 offset_top = -148.0
 
 [node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
-text = "You can recharge your flashlight batteries using the energy orbs at the end of the hall.
+text = "You can recharge your flashtorch batteries using the energy orbs at the end of the hall.
 
 Make sure to use your flashlight wisely.  Energy orbs may be hard to find sometimes."

@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_qe5f3"]
 
 [node name="InfoBox0Flashlights" instance=ExtResource("1_qe5f3")]
-offset_top = -186.0
+offset_top = -199.0
 
-[node name="NinePatchRect" parent="." index="0"]
-self_modulate = Color(1, 1, 1, 0.501961)
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "It looks dark ahead!  Try using your flashtorch.
+
+Hit the R,G,B (or 1,2,3) keys to turn on the Red, Green, or Blue components of your flashtorch.
+
+Note that the more colors you turn on, the faster your battery will run out!"

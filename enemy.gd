@@ -49,9 +49,10 @@ func _ready():
 
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)
-	look_at(player.global_position)
-	navigation.target_position = player.global_position
-	velocity = global_position.direction_to(navigation.get_next_path_position())*speed
+	if not Global.game_over:
+		look_at(player.global_position)
+		navigation.target_position = player.global_position
+		velocity = global_position.direction_to(navigation.get_next_path_position())*speed
 	if attacking:
 		move_and_slide()
 	

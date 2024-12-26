@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://iybtum2u1v7h"]
+
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_rms2k"]
+
+[node name="YellowLight" instance=ExtResource("1_rms2k")]
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7

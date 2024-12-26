@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://t5sbwp1htlrb"]
+
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_8qwnv"]
+
+[node name="BlueLight" instance=ExtResource("1_8qwnv")]
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16

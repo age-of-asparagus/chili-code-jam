@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://e3u8t10chenn"]
+
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_jmyo7"]
+
+[node name="WhiteLight" instance=ExtResource("1_jmyo7")]

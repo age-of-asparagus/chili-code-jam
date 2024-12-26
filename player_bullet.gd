@@ -3,6 +3,7 @@ extends Area2D
 var velocity : Vector2
 var speed = 10
 var direction : Vector2
+var delete = false
 
 func _ready():
 	look_at(global_position+direction)
@@ -11,6 +12,9 @@ func _ready():
 func _process(delta):
 	velocity = direction*speed
 	global_position += velocity
+	
+	if delete and not $"AudioStreamPlayer-Gunshot".playing:
+		queue_free()
 
 
 func _on_body_entered(body):
@@ -18,6 +22,9 @@ func _on_body_entered(body):
 		body.health -= 1
 		body.hit()
 	if $"AudioStreamPlayer-Gunshot".playing:
-		pass
+		delete = true
+		$CollisionShape2D.disabled = true
+		hide()
 	else:
 		queue_free()
+		

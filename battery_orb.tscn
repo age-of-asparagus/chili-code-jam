@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://i0vf3ypb3xn4"]
+[gd_scene load_steps=9 format=3 uid="uid://uq75qgrdmoon"]
 
 [ext_resource type="Script" path="res://battery_orb.gd" id="1_h4nmo"]
 [ext_resource type="Texture2D" uid="uid://doohri7mneekp" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_round_gloss_large_square.png" id="1_lbysi"]

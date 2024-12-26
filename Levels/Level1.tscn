@@ -34,7 +34,6 @@ tile_map_data = PackedByteArray("AAAjAAgAAAARAAUAAAAjAAcAAAAOAAYAAAAjAAYAAAAJAAY
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
-visible = false
 light_mask = 63
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -185,18 +184,19 @@ position = Vector2(5411, 1012)
 [node name="Battery_Orb28" parent="OrbPile" instance=ExtResource("11_0cfoo")]
 position = Vector2(5411, 1012)
 
-[node name="Player" parent="." instance=ExtResource("3_blni0")]
-position = Vector2(4917, 37)
-
-[node name="Enemy" parent="." instance=ExtResource("4_ssojy")]
-position = Vector2(7002, 17)
-enemy_type = 1
-metadata/_edit_group_ = true
-
-[node name="Enemy2" parent="." instance=ExtResource("4_ssojy")]
+[node name="Enemies1" type="Node2D" parent="."]
 position = Vector2(6423, -303)
-enemy_type = 1
+
+[node name="Enemy" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(-3221, 1232)
 metadata/_edit_group_ = true
+
+[node name="Enemy2" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(-3956, 616)
+metadata/_edit_group_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_blni0")]
+position = Vector2(1789, 313)
 
 [node name="orb_position" parent="." instance=ExtResource("10_ldsyt")]
 

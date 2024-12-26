@@ -8,6 +8,7 @@ enum EnemyType {RED, GREEN, BLUE, RANDOM}
 @export var enemy_type : EnemyType
 
 @onready var navigation = $NavigationAgent2D
+@onready var root_node = get_tree().root.get_child(1)
 @onready var player = get_tree().root.get_child(1).get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
 
@@ -59,15 +60,15 @@ func hit():
 	blood.global_position = global_position
 	blood.color = color_picked[2]
 	blood.emitting = true
-	get_parent().add_child(blood)
+	root_node.add_child(blood)
 
 func die():
 	var battery_orb = battery_orb_scene.instantiate()
 	battery_orb.global_position = global_position
-	get_parent().add_child(battery_orb)
+	root_node.add_child(battery_orb)
 	var explosion: Node2D = Explosion.instantiate()
 	explosion.global_position = global_position
-	get_parent().add_child(explosion)
+	root_node.add_child(explosion)
 	
 	queue_free()
 

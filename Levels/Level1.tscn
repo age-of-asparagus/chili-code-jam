@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bfj46f3mou4s8"]
+[gd_scene load_steps=14 format=4 uid="uid://bfj46f3mou4s8"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_j84bo"]
 [ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://bbl1j2b3uexg0" path="res://Audio/Music/Dark-Knight-chosic.com_.mp3" id="6_eam0u"]
 [ext_resource type="PackedScene" uid="uid://dlnvoeuuf5fec" path="res://LightingSystem/cyan_light.tscn" id="6_mqs1b"]
 [ext_resource type="PackedScene" uid="uid://crmggsvksa0vl" path="res://LightingSystem/magenta_light.tscn" id="12_5qj7r"]
+[ext_resource type="PackedScene" uid="uid://b650qcamfhuhw" path="res://Info Boxes/info_box_trigger_base.tscn" id="12_07jk7"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 
@@ -28,6 +29,7 @@ tile_map_data = PackedByteArray("AAAjAAgAAAARAAUAAAAjAAcAAAAOAAYAAAAjAAYAAAAJAAY
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+visible = false
 light_mask = 63
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -107,3 +109,7 @@ metadata/_edit_lock_ = true
 stream = ExtResource("6_eam0u")
 volume_db = -15.0
 autoplay = true
+
+[node name="InfoBoxesTriggers" type="Node2D" parent="."]
+
+[node name="InfoBoxTrigger" parent="InfoBoxesTriggers" instance=ExtResource("12_07jk7")]

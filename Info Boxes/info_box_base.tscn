@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://biafjiv3u5ve3"]
+
+[ext_resource type="Texture2D" uid="uid://dwqju3isoiqwr" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notch_tr.png" id="1_dip8y"]
+[ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="2_8a75y"]
+
+[node name="InfoBox" type="MarginContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -207.0
+offset_right = 610.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_dip8y")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 15
+patch_margin_bottom = 18
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("2_8a75y")
+text = "It looks dark ahead!  Try using your flashlight.
+
+Hit the R,G,B (or 1,2,3) keys to turn on your Red, Green, or Blue Flashlight.
+
+Note that the more lights you turn on, the faster your battery will run out!"
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true

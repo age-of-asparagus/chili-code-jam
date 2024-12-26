@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=12 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
 [ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
+[ext_resource type="PackedScene" uid="uid://d3t2lqhai054i" path="res://Info Boxes/info_box_0_flashlights.tscn" id="11_li8cv"]
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
@@ -112,3 +113,16 @@ layout_mode = 2
 button_mask = 0
 texture_normal = ExtResource("5_ygdwd")
 texture_disabled = ExtResource("6_gukxe")
+
+[node name="InfoBoxes" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InfoBox0Flashlights" parent="InfoBoxes" instance=ExtResource("11_li8cv")]
+visible = false
+layout_mode = 0
+anchors_preset = 0

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb1d55qlrog6l"]
+
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_pr3yo"]
+
+[node name="GreenLight" instance=ExtResource("1_pr3yo")]
+color = Color(0, 1, 0, 1)
+range_item_cull_mask = 4

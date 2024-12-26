@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://crmggsvksa0vl"]
+
+[ext_resource type="PackedScene" uid="uid://bl7ioa7ir5xsw" path="res://LightingSystem/BasicLight.tscn" id="1_y23dq"]
+
+[node name="MagentaLight" instance=ExtResource("1_y23dq")]
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49

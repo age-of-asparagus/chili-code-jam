@@ -12,6 +12,8 @@ enum EnemyType {RED, GREEN, BLUE, RANDOM}
 @onready var player = get_tree().root.get_child(1).get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
 
+var attacking = false
+
 var battery_orb_scene = preload("res://battery_orb.tscn")
 
 var blood_splatter = preload("res://enemy_blood.tscn")
@@ -50,7 +52,8 @@ func _physics_process(delta):
 	look_at(player.global_position)
 	navigation.target_position = player.global_position
 	velocity = global_position.direction_to(navigation.get_next_path_position())*speed
-	move_and_slide()
+	if attacking:
+		move_and_slide()
 	
 	if health <= 0:
 		die()
@@ -82,3 +85,7 @@ func _on_attack_zone_body_entered(body):
 
 func _on_audio_stream_player_2d_finished():
 	Sound.play()
+
+
+func _on_visible_on_screen_notifier_2d_screen_entered():
+	attacking = true

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnn0qj7t1ylvd"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_nyvus"]
+
+[node name="InfoBox3EnemiesPart2" instance=ExtResource("1_nyvus")]
+offset_top = -212.0
+
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "We are receiving our first reports of strange physics from the chromadrones.  
+
+It seems that they can limit themselves to only be visible in specific wavelenths of light.
+
+The Red-visible chromodrones seem to be the most common.  we recommend you have your red flashtorch handy."

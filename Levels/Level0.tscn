@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bfj46f3mou4s8"]
+[gd_scene load_steps=21 format=4 uid="uid://bfj46f3mou4s8"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_j84bo"]
 [ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://e3u8t10chenn" path="res://LightingSystem/white_light.tscn" id="16_ujkrb"]
 [ext_resource type="PackedScene" uid="uid://jc4wuwwkdvcm" path="res://Info Boxes/info_box_trigger_2.tscn" id="17_mivq5"]
 [ext_resource type="PackedScene" uid="uid://b6btbjk6abg13" path="res://Info Boxes/info_box_trigger_3.tscn" id="18_kwo6k"]
+[ext_resource type="PackedScene" uid="uid://sh7cpa5ypeuy" path="res://Info Boxes/info_box_trigger_4.tscn" id="19_01lo1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(7130.57, -218.57, 7130.57, -37.4297, 5033.57, -37.4297, 4837.43, -218.57, 5018.57, -22.4297, 4837.43, 474.57, 5018.57, 278.43, 5078.43, 474.57, 5033.57, 293.43, 5274.57, 293.43, 5093.43, 489.57, 5274.57, 854.43, 5093.43, 854.43, 5289.57, 869.43, 5466.57, 869.43, 5466.57, 1050.57, 3109.43, 1050.57, 5078.43, 869.43, 2266.57, 425.57, 2266.57, 538.57, 1317.43, 538.57, 1317.43, 101.43, 2266.57, 101.43, 2266.57, 214.43, 2281.57, 410.57, 2281.57, 229.43, 3094.43, 410.57, 3290.57, 229.43, 3109.43, 425.57, 3290.57, 854.43, 3305.57, 869.43)
@@ -270,3 +271,6 @@ metadata/_edit_lock_ = true
 
 [node name="InfoBoxTrigger3" parent="InfoBoxesTriggers" instance=ExtResource("18_kwo6k")]
 position = Vector2(5256, 645)
+
+[node name="InfoBoxTrigger4" parent="InfoBoxesTriggers" instance=ExtResource("19_01lo1")]
+position = Vector2(5696, -114)

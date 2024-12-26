@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://uq75qgrdmoon"]
+
+[ext_resource type="Script" path="res://battery_orb.gd" id="1_h4nmo"]
+[ext_resource type="Texture2D" uid="uid://doohri7mneekp" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_round_gloss_large_square.png" id="1_lbysi"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lfjxj"]
+light_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvv0y"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_vqelc"]
+resource_name = "Orb_Collected"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Battery_sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.35, 0.35), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"done_collecting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vugo4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Battery_sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.35, 0.35)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2i8t8"]
+_data = {
+"Orb_Collected": SubResource("Animation_vqelc"),
+"RESET": SubResource("Animation_vugo4")
+}
+
+[node name="Battery_Orb" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_h4nmo")
+
+[node name="Battery_sprite" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_lfjxj")
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_lbysi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cvv0y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2i8t8")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

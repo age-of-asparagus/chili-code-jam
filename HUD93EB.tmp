@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3uclqwegwhlx"]
+
+[ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
+[ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
+[ext_resource type="Texture2D" uid="uid://dp2qh53vqmwad" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_g_outline.png" id="2_o602v"]
+[ext_resource type="Texture2D" uid="uid://ceqwpqvb7pjkh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notch_bl.png" id="2_tuw12"]
+[ext_resource type="Texture2D" uid="uid://cydu6uj2k78xh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_round_gloss_large.png" id="3_32r65"]
+[ext_resource type="Texture2D" uid="uid://couomc82iev55" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large.png" id="3_a8tby"]
+[ext_resource type="Texture2D" uid="uid://b8uvxs3svedpj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_b_outline.png" id="3_q8g5o"]
+[ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
+[ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
+[ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
+
+[node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xq6nd")
+r_texture = NodePath("MarginContainer/VBoxContainer/R")
+g_texture = NodePath("MarginContainer/VBoxContainer/G")
+b_texture = NodePath("MarginContainer/VBoxContainer/B")
+color_texture = NodePath("MarginContainer/VBoxContainer/Color")
+battery_progress = NodePath("MarginContainer3/HBoxContainer/flashlight_battery")
+battery_label = NodePath("MarginContainer3/HBoxContainer/power_label")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.5
+offset_right = 235.5
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+text = "BATTERY POWER: "
+
+[node name="power_label" type="Label" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+uppercase = true
+visible_characters = 4
+
+[node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_top = 10
+stretch_margin_right = 10
+stretch_margin_bottom = 10
+texture_under = ExtResource("3_a8tby")
+texture_progress = ExtResource("3_32r65")
+tint_under = Color(1, 1, 1, 0.196078)
+
+[node name="AudioStreamPlayer-flashlight" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_55521")
+volume_db = 10.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.196078)
+layout_mode = 2
+texture = ExtResource("2_tuw12")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="R" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_dmiul")
+
+[node name="G" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_o602v")
+
+[node name="B" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_q8g5o")
+
+[node name="Color" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("5_ygdwd")
+texture_disabled = ExtResource("6_gukxe")

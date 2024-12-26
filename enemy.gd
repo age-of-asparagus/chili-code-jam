@@ -8,6 +8,8 @@ extends CharacterBody2D
 @onready var player = get_parent().get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
 
+var battery_orb_scene = preload("res://battery_orb.tscn")
+
 var blood_splatter = preload("res://enemy_blood.tscn")
 
 var sprite_red = preload("res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png")
@@ -48,6 +50,9 @@ func hit():
 	get_parent().add_child(blood)
 
 func die():
+	var battery_orb = battery_orb_scene.instantiate()
+	battery_orb.global_position = global_position
+	get_parent().add_child(battery_orb)
 	var explosion: Node2D = Explosion.instantiate()
 	explosion.global_position = global_position
 	get_parent().add_child(explosion)
@@ -56,6 +61,7 @@ func die():
 
 func _on_attack_zone_body_entered(body):
 	body.health -= 1
+	Global.game_over = true
 	queue_free()
 	#Sound.stop()
 

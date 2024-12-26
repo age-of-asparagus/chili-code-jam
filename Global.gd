@@ -1,5 +1,5 @@
 extends Node
 
 var color : Color = Color.RED
-
-var flashlight_battery : int
+var game_over = false
+var flashlight_battery = 100

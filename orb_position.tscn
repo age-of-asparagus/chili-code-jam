@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://i8n4ine8bty7"]
+
+[ext_resource type="Script" path="res://orb_position.gd" id="1_r7epf"]
+
+[node name="orb_position" type="Marker2D"]
+script = ExtResource("1_r7epf")

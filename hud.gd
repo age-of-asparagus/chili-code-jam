@@ -1,7 +1,5 @@
 extends Control
 
-var flashlight_battery = 100
-
 @export var r_texture : Control
 @export var g_texture : Control
 @export var b_texture : Control
@@ -22,22 +20,21 @@ func _ready():
 func _process(delta):
 	
 	if Global.color == Color.RED or Global.color == Color.BLUE or Global.color == Color.GREEN:
-		flashlight_battery -= 0.01
+		Global.flashlight_battery -= 0.01
 	
 	if Global.color == Color.MAGENTA or Global.color == Color.YELLOW or Global.color == Color.CYAN:
-		flashlight_battery -= 0.02
+		Global.flashlight_battery -= 0.02
 		
 	if Global.color == Color.WHITE:
-		flashlight_battery -= 0.03
+		Global.flashlight_battery -= 0.03
 	
-	Global.flashlight_battery = flashlight_battery
-	battery_progress.value = flashlight_battery
-	battery_label.text = "%3d" % flashlight_battery + "%"
+	battery_progress.value = Global.flashlight_battery
+	battery_label.text = "%3d" % Global.flashlight_battery + "%"
 	
 	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
 		$"AudioStreamPlayer-flashlight".play()
 	
-	if flashlight_battery > 0:
+	if Global.flashlight_battery > 0:
 		if Input.is_action_just_pressed("key_red"):
 			if not red_light:
 				r_texture.modulate = Color.RED

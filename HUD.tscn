@@ -144,6 +144,7 @@ visible = false
 layout_mode = 1
 
 [node name="InfoBox4EnemiesPart3" parent="InfoBoxes" instance=ExtResource("15_o5jbc")]
+visible = false
 layout_mode = 1
 offset_top = -158.0
 

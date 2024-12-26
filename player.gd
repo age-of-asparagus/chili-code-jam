@@ -35,7 +35,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Left_Click") and can_shoot:
 		shoot_bullet()
 		
-	if moving_direction != Vector2.ZERO:
+	if velocity != Vector2.ZERO:
 		if not footsteps.playing:
 			footsteps.play()
 

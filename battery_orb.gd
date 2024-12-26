@@ -14,6 +14,7 @@ func _process(delta):
 func _on_body_entered(body):
 	collected = true
 	$AnimationPlayer.play("Orb_Collected")
+	$AudioStreamPlayer.play()
 
 func done_collecting():
 	Global.flashlight_battery += 5

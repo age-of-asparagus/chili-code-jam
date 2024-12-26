@@ -92,3 +92,5 @@ func update_color():
 func display_info_box(index, displayed):
 	var info_box: Control = $InfoBoxes.get_child(index)
 	info_box.visible = displayed
+	if displayed: 
+		$"AudioStreamPlayer-infobox".play()

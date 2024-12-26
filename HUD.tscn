@@ -129,5 +129,4 @@ layout_mode = 1
 
 [node name="InfoBox1Energy" parent="InfoBoxes" instance=ExtResource("12_37yl8")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
+layout_mode = 1

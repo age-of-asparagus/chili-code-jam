@@ -1,22 +1,24 @@
 [gd_scene load_steps=17 format=4 uid="uid://bfj46f3mou4s8"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_j84bo"]
-[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
+[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="3_blni0"]
-[ext_resource type="PackedScene" path="res://LightingSystem/yellow_light.tscn" id="4_53jvy"]
+[ext_resource type="PackedScene" uid="uid://iybtum2u1v7h" path="res://LightingSystem/yellow_light.tscn" id="4_53jvy"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="4_ssojy"]
-[ext_resource type="PackedScene" path="res://LightingSystem/green_light.tscn" id="5_45fhm"]
+[ext_resource type="PackedScene" uid="uid://cb1d55qlrog6l" path="res://LightingSystem/green_light.tscn" id="5_45fhm"]
 [ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="5_cfukg"]
-[ext_resource type="PackedScene" path="res://LightingSystem/blue_light.tscn" id="5_weldx"]
+[ext_resource type="PackedScene" uid="uid://t5sbwp1htlrb" path="res://LightingSystem/blue_light.tscn" id="5_weldx"]
 [ext_resource type="AudioStream" uid="uid://bbl1j2b3uexg0" path="res://Audio/Music/Dark-Knight-chosic.com_.mp3" id="6_eam0u"]
-[ext_resource type="PackedScene" path="res://LightingSystem/cyan_light.tscn" id="6_mqs1b"]
-[ext_resource type="PackedScene" uid="uid://i8n4ine8bty7" path="res://orb_position.tscn" id="10_ldsyt"]
+[ext_resource type="PackedScene" uid="uid://dlnvoeuuf5fec" path="res://LightingSystem/cyan_light.tscn" id="6_mqs1b"]
+[ext_resource type="PackedScene" path="res://orb_position.tscn" id="10_ldsyt"]
 [ext_resource type="PackedScene" uid="uid://uq75qgrdmoon" path="res://battery_orb.tscn" id="11_0cfoo"]
-[ext_resource type="PackedScene" path="res://LightingSystem/magenta_light.tscn" id="12_5qj7r"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_trigger_0.tscn" id="13_lqr2j"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_trigger_1.tscn" id="14_6xebj"]
+[ext_resource type="PackedScene" uid="uid://crmggsvksa0vl" path="res://LightingSystem/magenta_light.tscn" id="12_5qj7r"]
+[ext_resource type="PackedScene" uid="uid://j4faa6xmm6rn" path="res://Info Boxes/info_box_trigger_0.tscn" id="13_lqr2j"]
+[ext_resource type="PackedScene" uid="uid://dkalqyp8ehboa" path="res://Info Boxes/info_box_trigger_1.tscn" id="14_6xebj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
+vertices = PackedVector2Array(7130.57, -410.57, 7130.57, 154.57, 5669.43, 154.57, 5669.43, -22.4297, 5033.57, 293.43, 5274.57, 293.43, 5274.57, 854.43, 5093.43, 489.57, 5289.57, 869.43, 5466.57, 869.43, 5466.57, 1050.57, 3109.43, 1050.57, 5078.43, 869.43, 2266.57, 425.57, 2266.57, 538.57, 1317.43, 538.57, 1317.43, 101.43, 2266.57, 101.43, 2266.57, 214.43, 2281.57, 410.57, 2281.57, 229.43, 3094.43, 410.57, 3290.57, 229.43, 3109.43, 425.57, 3290.57, 854.43, 3305.57, 869.43, 5078.43, 474.57, 4837.43, 474.57, 4837.43, -218.57, 5018.57, 278.43, 5669.43, -233.57, 5669.43, -410.57, 5654.43, -37.4297, 5654.43, -218.57, 5033.57, -37.4297, 5018.57, -22.4297, 5093.43, 854.43)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(6, 8, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(16, 17, 18), PackedInt32Array(19, 13, 16, 18, 20), PackedInt32Array(21, 19, 20, 22), PackedInt32Array(23, 21, 22), PackedInt32Array(23, 22, 24, 11), PackedInt32Array(11, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(30, 31, 0), PackedInt32Array(30, 0, 3, 32, 33), PackedInt32Array(33, 32, 34, 28), PackedInt32Array(28, 34, 35), PackedInt32Array(28, 35, 29), PackedInt32Array(26, 29, 4, 7), PackedInt32Array(11, 25, 12), PackedInt32Array(6, 12, 36), PackedInt32Array(6, 36, 7)])
 
 [node name="World" type="Node2D"]
 visibility_layer = 3
@@ -186,7 +188,7 @@ position = Vector2(1789, 325)
 metadata/_edit_lock_ = true
 
 [node name="Enemy" parent="." instance=ExtResource("4_ssojy")]
-position = Vector2(-185, -15)
+position = Vector2(2264, 295)
 metadata/_edit_group_ = true
 
 [node name="orb_position" parent="." instance=ExtResource("10_ldsyt")]

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="5_p3hd7"]
 [ext_resource type="PackedScene" uid="uid://uq75qgrdmoon" path="res://battery_orb.tscn" id="7_7tkma"]
 [ext_resource type="AudioStream" uid="uid://bbl1j2b3uexg0" path="res://Audio/Music/Dark-Knight-chosic.com_.mp3" id="7_bae0w"]
-[ext_resource type="PackedScene" uid="uid://i8n4ine8bty7" path="res://orb_position.tscn" id="8_iw1qp"]
+[ext_resource type="PackedScene" path="res://orb_position.tscn" id="8_iw1qp"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(1125.43, 406.43, 1125.43, 233.57, 1178.57, 165.43, 1178.57, 662.43, 1065.57, 165.43, 1110.43, 218.57, 1050.57, 150.43, 937.57, 218.57, 489.57, 101.43, 1110.43, 421.43, 805.43, 534.43, 937.57, 421.43, 677.43, 681.57, 790.43, 549.43, 805.43, 361.57, 922.57, 406.43, 922.57, 233.57, 790.43, 346.57, 361.57, -26.5703, 474.57, -26.5703, 474.57, 86.4297, 1050.57, 101.43, 681.57, 346.57, 1193.57, 677.43, 2714.57, 677.43, 2714.57, 1370.57, 677.43, 1370.57, 681.57, 549.43, 662.43, 666.57, 613.43, 666.57, 613.43, 489.57, 666.57, 534.43, 666.57, 361.57, 598.43, 474.57, -101.43, 489.57, -101.43, 538.57, -154.57, 538.57, -154.57, 489.57, -169.57, 474.57, -218.57, 474.57, -218.57, 233.57, 346.57, -41.5703, -233.57, 218.57, -282.57, 218.57, -282.57, -90.5703, 346.57, -90.5703, -86.4297, 474.57)

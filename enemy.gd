@@ -4,6 +4,9 @@ extends CharacterBody2D
 @export var speed = 150
 @export var Explosion : PackedScene
 
+enum EnemyType {RED, GREEN, BLUE, RANDOM}
+@export var enemy_type : EnemyType
+
 @onready var navigation = $NavigationAgent2D
 @onready var player = get_parent().get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
@@ -26,11 +29,18 @@ var color_options = [
 
 
 func _ready():
-	color_picked = color_options.pick_random()
+	match enemy_type:
+		EnemyType.RANDOM:
+			color_picked = color_options.pick_random()
+		EnemyType.RED:
+			color_picked = color_options[0]
+		EnemyType.GREEN:
+			color_picked = color_options[1]
+		EnemyType.BLUE:
+			color_picked = color_options[2]
+	
 	$Sprite2D.light_mask = color_picked[0]
 	$Sprite2D.texture = color_picked[1]
-	
-	Sound.play()
 
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)

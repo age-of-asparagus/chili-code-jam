@@ -27,5 +27,6 @@ shape = SubResource("RectangleShape2D_hvwgs")
 
 [node name="AudioStreamPlayer-Gunshot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_yxoxj")
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

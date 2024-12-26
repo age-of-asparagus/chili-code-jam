@@ -5,8 +5,9 @@ var velocity = Vector2.ZERO
 var speed = 1
 
 func _process(delta):
+	
 	if collected:
-		var direction = (get_parent().get_node("orb_position").global_position - global_position).normalized()
+		var direction = (get_tree().root.get_child(1).get_node("orb_position").global_position - global_position).normalized()
 		velocity += direction * speed
 		global_position += velocity
 

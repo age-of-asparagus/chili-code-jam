@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var health = 10
+@export var health = 3
 @export var speed = 150
 @export var Explosion : PackedScene
 

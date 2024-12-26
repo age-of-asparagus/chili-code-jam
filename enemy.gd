@@ -41,6 +41,8 @@ func _ready():
 	
 	$Sprite2D.light_mask = color_picked[0]
 	$Sprite2D.texture = color_picked[1]
+	
+	Sound.play()
 
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)

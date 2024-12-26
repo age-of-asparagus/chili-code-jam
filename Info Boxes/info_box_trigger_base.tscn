@@ -3,10 +3,9 @@
 [ext_resource type="Script" path="res://Info Boxes/info_box_trigger.gd" id="1_lir1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4m1tc"]
-size = Vector2(1273, 377)
+size = Vector2(396, 377)
 
 [node name="InfoBoxTrigger" type="Area2D"]
-position = Vector2(4342.5, 965.5)
 script = ExtResource("1_lir1f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

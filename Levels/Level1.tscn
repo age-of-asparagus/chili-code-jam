@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bfj46f3mou4s8"]
+[gd_scene load_steps=19 format=4 uid="uid://bfj46f3mou4s8"]
 
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_j84bo"]
 [ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://crmggsvksa0vl" path="res://LightingSystem/magenta_light.tscn" id="12_5qj7r"]
 [ext_resource type="PackedScene" uid="uid://j4faa6xmm6rn" path="res://Info Boxes/info_box_trigger_0.tscn" id="13_lqr2j"]
 [ext_resource type="PackedScene" uid="uid://dkalqyp8ehboa" path="res://Info Boxes/info_box_trigger_1.tscn" id="14_6xebj"]
+[ext_resource type="PackedScene" uid="uid://e3u8t10chenn" path="res://LightingSystem/white_light.tscn" id="16_ujkrb"]
+[ext_resource type="PackedScene" uid="uid://jc4wuwwkdvcm" path="res://Info Boxes/info_box_trigger_2.tscn" id="17_mivq5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(7130.57, -346.57, 7130.57, 90.5703, 5669.43, 90.5703, 5669.43, -22.4297, 5033.57, 293.43, 5274.57, 293.43, 5274.57, 854.43, 5093.43, 489.57, 5289.57, 869.43, 5466.57, 869.43, 5466.57, 1050.57, 3109.43, 1050.57, 5078.43, 869.43, 2266.57, 425.57, 2266.57, 538.57, 1317.43, 538.57, 1317.43, 101.43, 2266.57, 101.43, 2266.57, 214.43, 2281.57, 410.57, 2281.57, 229.43, 3094.43, 410.57, 3290.57, 229.43, 3109.43, 425.57, 3290.57, 854.43, 3305.57, 869.43, 5078.43, 474.57, 4837.43, 474.57, 4837.43, -218.57, 5018.57, 278.43, 5669.43, -233.57, 5669.43, -346.57, 5654.43, -37.4297, 5654.43, -218.57, 5033.57, -37.4297, 5018.57, -22.4297, 5093.43, 854.43)
@@ -34,6 +36,7 @@ tile_map_data = PackedByteArray("AAAjAAgAAAARAAUAAAAjAAcAAAAOAAYAAAAjAAYAAAAJAAY
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+visible = false
 light_mask = 63
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -95,6 +98,30 @@ position = Vector2(6889, 110)
 
 [node name="RedLight9" parent="Lighting/Lights1" instance=ExtResource("3_a84hv")]
 position = Vector2(5917, -360)
+
+[node name="WhiteLight" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(838, 483)
+
+[node name="WhiteLight2" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(1015, 152)
+
+[node name="WhiteLight3" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(416, 491)
+
+[node name="WhiteLight4" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(590, 135)
+
+[node name="WhiteLight5" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(230, 143)
+
+[node name="WhiteLight6" parent="Lighting/Lights1" instance=ExtResource("16_ujkrb")]
+visible = false
+position = Vector2(69, 481)
 
 [node name="OrbPile" type="Node2D" parent="."]
 position = Vector2(3, -4)
@@ -192,11 +219,11 @@ position = Vector2(-3221, 1232)
 metadata/_edit_group_ = true
 
 [node name="Enemy2" parent="Enemies1" instance=ExtResource("4_ssojy")]
-position = Vector2(-3956, 616)
+position = Vector2(-3246, 617)
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_blni0")]
-position = Vector2(1789, 313)
+position = Vector2(1783, 319)
 
 [node name="orb_position" parent="." instance=ExtResource("10_ldsyt")]
 
@@ -214,7 +241,11 @@ autoplay = true
 
 [node name="InfoBoxTrigger0" parent="InfoBoxesTriggers" instance=ExtResource("13_lqr2j")]
 position = Vector2(3636, 954)
+metadata/_edit_lock_ = true
 
 [node name="InfoBoxTrigger1" parent="InfoBoxesTriggers" instance=ExtResource("14_6xebj")]
-position = Vector2(5162, 965)
+position = Vector2(4461, 967)
+
+[node name="InfoBoxTrigger2" parent="InfoBoxesTriggers" instance=ExtResource("17_mivq5")]
+position = Vector2(2486, 330)
 metadata/_edit_lock_ = true

@@ -94,3 +94,5 @@ func display_info_box(index, displayed):
 	info_box.visible = displayed
 	if displayed: 
 		$"AudioStreamPlayer-infobox".play()
+	else:
+		$"AudioStreamPlayer-infoclose".play()

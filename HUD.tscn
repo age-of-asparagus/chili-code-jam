@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=16 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -12,7 +12,9 @@
 [ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
 [ext_resource type="PackedScene" uid="uid://d3t2lqhai054i" path="res://Info Boxes/info_box_0_flashlights.tscn" id="11_li8cv"]
 [ext_resource type="AudioStream" uid="uid://4wseqmg80352" path="res://Audio/Sounds/342758__rhodesmas__searching-02.wav" id="11_y8b6u"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_1_energy.tscn" id="12_37yl8"]
+[ext_resource type="PackedScene" uid="uid://brn0il6fnx4k4" path="res://Info Boxes/info_box_1_energy.tscn" id="12_37yl8"]
+[ext_resource type="PackedScene" uid="uid://4noadq0ntvcd" path="res://Info Boxes/info_box_2_chromadrones.tscn" id="13_01mjd"]
+[ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
@@ -132,6 +134,14 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="InfoBox2Chromadrones" parent="InfoBoxes" instance=ExtResource("13_01mjd")]
+visible = false
+layout_mode = 1
+
 [node name="AudioStreamPlayer-infobox" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_y8b6u")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer-infoclose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_sc3tf")
 volume_db = -10.0

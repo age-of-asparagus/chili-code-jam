@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://4noadq0ntvcd"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_yg5gq"]
+
+[node name="InfoBox2Chromadrones" instance=ExtResource("1_yg5gq")]
+offset_top = -152.0
+
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "I can hear the hum of the invading alien Chromadrones ahead.  Have your pistol ready.
+
+As far as we know they obey the normal lays of physics and are vulnerable to our weapons."

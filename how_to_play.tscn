@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://3pnivionxnff"]
+
+[node name="How_to_play" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 478.0
+offset_top = 186.0
+offset_right = 955.0
+offset_bottom = 346.0
+text = "wasd"

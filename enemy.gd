@@ -8,7 +8,7 @@ enum EnemyType {RED, GREEN, BLUE, RANDOM}
 @export var enemy_type : EnemyType
 
 @onready var navigation = $NavigationAgent2D
-@onready var player = get_parent().get_node("Player")
+@onready var player = get_tree().root.get_child(1).get_node("Player")
 @onready var Sound = $AudioStreamPlayer2D
 
 var battery_orb_scene = preload("res://battery_orb.tscn")
@@ -44,7 +44,7 @@ func _ready():
 
 func _physics_process(delta):
 	$Sprite2D.rotate(0.05)
-	look_at(player.gldwaobal_position)
+	look_at(player.global_position)
 	navigation.target_position = player.global_position
 	velocity = global_position.direction_to(navigation.get_next_path_position())*speed
 	move_and_slide()

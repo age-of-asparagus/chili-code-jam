@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt2g1klr1b0wb"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_ge5ct"]
+
+[node name="InfoBox5EnemiesPart4" instance=ExtResource("1_ge5ct")]
+offset_top = -310.0
+
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "Thanks for your report.  Based on this and some other intel, here's what we know so about chromadrone stealth tech:
+
+* There are three distinct colors of Drones: Red, Green, and Blue
+* They spray oil of the same color as their tech.
+* They are only visible under light of the same color.
+* Combinations of RGB lights can reveal mulitple drone types (e.g. Yellow light, which is composed of Red and Green, can be used to reveal both Red and green drones."

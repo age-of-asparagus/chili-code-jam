@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_uarui"]
 
 [node name="InfoBox4EnemiesPart3" instance=ExtResource("1_uarui")]
-offset_top = -178.0
+offset_top = -191.0
 
 [node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
-text = "The path ahead looks well lit. Save your your torchlight battery.
+text = "The path ahead looks well lit. Save your your torchlight battery and take the opportunity to study the Chromadrone Stealh Tech.
 
-There is a swarm of red chromadromes ahead, study how they interact with different wavelengths of light."
+We are detecting a swarm of chromadromes ahead, study how they interact with different wavelengths of light and report back to us."

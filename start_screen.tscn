@@ -1,17 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://c7sgtubxw34vr"]
+[gd_scene load_steps=13 format=3 uid="uid://c7sgtubxw34vr"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_uif4i"]
 [ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_1xuf0"]
 [ext_resource type="Texture2D" uid="uid://8o8mj21fg8a3" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle_depth.png" id="2_ipqhk"]
 [ext_resource type="Texture2D" uid="uid://c7una05q12jbx" path="res://Assets/screenshot2.png" id="2_sm5hu"]
 [ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="3_83lc7"]
-[ext_resource type="Texture2D" uid="uid://df6xjshodbom5" path="res://Assets/Kenny/kenney_input-prompts/Steam Deck/Default/steamdeck_trackpad_l_all.png" id="3_yegee"]
 [ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="4_800lq"]
 [ext_resource type="AudioStream" uid="uid://c0slbauvhh14e" path="res://Audio/Sounds/421278__jaszunio15__click_127.wav" id="6_icolq"]
-[ext_resource type="Texture2D" uid="uid://gmdfi3h5dqtg" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_a_outline.png" id="8_05fcb"]
+[ext_resource type="Texture2D" uid="uid://dqu3pxyctgoo0" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_a_outline.png" id="8_05fcb"]
 [ext_resource type="Texture2D" uid="uid://b4x3utq6u5126" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_d_outline.png" id="9_q7xcg"]
-[ext_resource type="Texture2D" uid="uid://b7mm5skulwgsj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_s_outline.png" id="10_iqebi"]
-[ext_resource type="Texture2D" uid="uid://cxews6iln7yq4" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_w_outline.png" id="11_aybh0"]
+[ext_resource type="Texture2D" uid="uid://dd27pmh4isc87" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_s_outline.png" id="10_iqebi"]
+[ext_resource type="Texture2D" uid="uid://cgg32qyxt0e0f" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_w_outline.png" id="11_aybh0"]
 [ext_resource type="Texture2D" uid="uid://dt8wmsl3cuhac" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Double/mouse_left_outline.png" id="12_2l3h4"]
 
 [node name="Start_Screen" type="Control"]
@@ -66,7 +65,6 @@ offset_left = 1267.0
 offset_top = 301.0
 offset_right = 1701.0
 offset_bottom = 494.0
-texture_normal = ExtResource("3_yegee")
 stretch_mode = 1
 
 [node name="AudioStreamPlayerClick" type="AudioStreamPlayer" parent="."]

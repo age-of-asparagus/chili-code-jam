@@ -92,7 +92,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
-self_modulate = Color(1, 1, 1, 0.196078)
+self_modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 texture = ExtResource("2_tuw12")
 patch_margin_left = 16

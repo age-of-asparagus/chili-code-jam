@@ -1,30 +1,165 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwuwubw6mhgot"]
+[gd_scene load_steps=9 format=3 uid="uid://cwuwubw6mhgot"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_paqyv"]
-[ext_resource type="Texture2D" uid="uid://ctbyqh38gp3ro" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Red/Default/button_square_header_large_rectangle_screws.png" id="2_7kgg6"]
+[ext_resource type="PackedScene" path="res://UI/button.tscn" id="2_57npi"]
+[ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_wtdsi"]
+[ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="3_0wfb8"]
+[ext_resource type="AudioStream" uid="uid://c0slbauvhh14e" path="res://Audio/Sounds/421278__jaszunio15__click_127.wav" id="3_jmj2i"]
+[ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="4_j857d"]
+[ext_resource type="Texture2D" uid="uid://cte8di2du5qrj" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoGreen.png" id="5_36dq7"]
+[ext_resource type="Texture2D" uid="uid://0m7x73qr7lna" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoBlue.png" id="6_61jl3"]
 
-[node name="Credits" type="Node2D"]
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_paqyv")
+metadata/_edit_lock_ = true
 
-[node name="most_important" type="Label" parent="."]
-offset_left = 109.0
-offset_top = 207.0
-offset_right = 1033.0
-offset_bottom = 344.0
-theme_override_font_sizes/font_size = 100
-text = "KAMRAN COUTURE"
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 153.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
 
-[node name="didnt_really_do_much" type="Label" parent="."]
-offset_left = 20.0
-offset_top = 615.0
-offset_right = 212.0
-offset_bottom = 693.0
-text = "tylere"
+[node name="NinePatchRect2" type="NinePatchRect" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.498039)
+layout_mode = 2
+texture = ExtResource("2_wtdsi")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 15
+patch_margin_bottom = 18
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_right = 334.0
-offset_bottom = 189.0
-texture_normal = ExtResource("2_7kgg6")
-stretch_mode = 1
+[node name="TITLE" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0wfb8")
+theme_override_font_sizes/font_size = 66
+text = "CHROMADRONE HUNTER
+-= CREDITS =-"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
 
-[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -912.0
+offset_top = -393.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="MarginContainer3"]
+self_modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+texture = ExtResource("2_wtdsi")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 15
+patch_margin_bottom = 18
+
+[node name="TITLE" type="RichTextLabel" parent="MarginContainer3/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -139.5
+offset_right = 383.0
+offset_bottom = 146.5
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_0wfb8")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "This game was created for the [color=87CEFA][url=https://itch.io/jam/chili-code-jam-ranked-with-prize]Chili Code Jam[/url][/color] run on itch.io in December 2024.
+
+Build using the [color=87CEFA][url=\"https://godotengine.org/\"]Godot Game Engine (v4.3)[/url][/color].
+
+The game's code is available on [color=87CEFA][url=https://github.com/age-of-asparagus/chili-code-jam]github[/url][/color] .
+
+Designed by [color=87CEFA][url=https://github.com/kamrancouture?tab=overview&from=2023-12-01&to=2023-12-31]Kamran[/url][/color] and [color=87CEFA][url=https://github.com/tylerecouture]Tylere Couture[/url][/color].
+
+
+"
+
+[node name="TITLE2" type="RichTextLabel" parent="MarginContainer3/NinePatchRect2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -382.0
+offset_top = -138.5
+offset_right = -34.0
+offset_bottom = 149.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_0wfb8")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "All assets used are CC0 or CC-BY or CC-BY-SAs
+
+Tileset, sprites, and UI elements: [color=87CEFA][url=https://kenney.nl/assets]Kenney.nl[/url][/color].
+
+Sound effects: [color=87CEFA][url=https://freesound.org/]freesound.org[/url][/color].
+
+Music: [color=87CEFA][url=https://www.chosic.com/download-audio/59091/]Dark Knight by MaxKoMusic[/url][/color].
+
+Direct links to all assets used are available in the [color=87CEFA][url=https://github.com/age-of-asparagus/chili-code-jam/blob/main/Credits.txt]Credits.txt[/url][/color] file in our github repo.
+
+"
+
+[node name="UfoRed" type="Sprite2D" parent="MarginContainer3/NinePatchRect2"]
+position = Vector2(-165, 39)
+texture = ExtResource("4_j857d")
+
+[node name="UfoGreen" type="Sprite2D" parent="MarginContainer3/NinePatchRect2"]
+position = Vector2(-76, 136)
+texture = ExtResource("5_36dq7")
+
+[node name="UfoBlue" type="Sprite2D" parent="MarginContainer3/NinePatchRect2"]
+position = Vector2(-198, 197)
+texture = ExtResource("6_61jl3")
+
+[node name="Start_button" parent="." instance=ExtResource("2_57npi")]
+layout_mode = 2
+offset_left = 50.0
+offset_top = 534.0
+offset_right = 242.0
+offset_bottom = 598.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" parent="Start_button" index="0"]
+text = "BACK"
+
+[node name="AudioStreamPlayerClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jmj2i")
+
+[connection signal="meta_clicked" from="MarginContainer3/NinePatchRect2/TITLE" to="." method="_on_title_meta_clicked"]
+[connection signal="meta_clicked" from="MarginContainer3/NinePatchRect2/TITLE2" to="." method="_on_title_meta_clicked"]
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
+
+[editable path="Start_button"]

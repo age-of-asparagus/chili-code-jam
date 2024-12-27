@@ -35,6 +35,7 @@ theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 20
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 texture = ExtResource("2_1xuf0")
 region_rect = Rect2(0, 0, 64, 64)
@@ -45,16 +46,17 @@ patch_margin_bottom = 18
 
 [node name="TITLE" type="Label" parent="MarginContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.362829, 0.362829, 0.362829, 1)
 theme_override_fonts/font = ExtResource("4_800lq")
 theme_override_font_sizes/font_size = 66
-text = "CHROMADRONE HUNTER"
+text = "CHROMADRONE HUNTER
+-= VOLUME 1 =-"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="How_to_play_button" type="TextureButton" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 1267.0
 offset_top = 301.0
 offset_right = 1701.0
@@ -72,10 +74,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -293.0
-offset_top = -109.0
-offset_right = -101.0
-offset_bottom = 159.0
+offset_left = -353.0
+offset_top = -12.0
+offset_right = -161.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 50
@@ -124,14 +126,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="NinePatchRect3" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -432.0
-offset_top = -451.0
+offset_left = -554.0
+offset_top = -384.0
 offset_right = -53.0
 offset_bottom = -55.0
 grow_horizontal = 0
@@ -148,12 +151,11 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -164.5
+offset_left = -226.5
 offset_top = 28.0
-offset_right = 165.5
-offset_bottom = 289.0
+offset_right = 234.5
+offset_bottom = 264.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.362829, 0.362829, 0.362829, 1)
 theme_override_fonts/font = ExtResource("4_800lq")
 theme_override_font_sizes/font_size = 26
 text = "The world has been invaded by alien stealth technology.  You must study and destroy it.
@@ -165,23 +167,23 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="KeyboardAOutline" type="Sprite2D" parent="NinePatchRect3"]
-position = Vector2(71, 345)
+position = Vector2(125, 283)
 texture = ExtResource("8_05fcb")
 
 [node name="KeyboardDOutline" type="Sprite2D" parent="NinePatchRect3"]
-position = Vector2(185, 345)
+position = Vector2(239, 283)
 texture = ExtResource("9_q7xcg")
 
 [node name="KeyboardSOutline" type="Sprite2D" parent="NinePatchRect3"]
-position = Vector2(128, 345)
+position = Vector2(182, 283)
 texture = ExtResource("10_iqebi")
 
 [node name="KeyboardWOutline" type="Sprite2D" parent="NinePatchRect3"]
-position = Vector2(127, 288)
+position = Vector2(181, 226)
 texture = ExtResource("11_aybh0")
 
 [node name="MouseLeftOutline2" type="Sprite2D" parent="NinePatchRect3"]
-position = Vector2(281, 314)
+position = Vector2(335, 252)
 texture = ExtResource("12_2l3h4")
 
 [connection signal="button_down" from="How_to_play_button" to="." method="_on_how_to_play_button_button_down"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://uf5qen1cusy0"]
+
+[ext_resource type="Texture2D" uid="uid://8o8mj21fg8a3" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle_depth.png" id="1_qexkj"]
+[ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="2_ay8td"]
+[ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="3_8fd7b"]
+
+[node name="Start_button" type="TextureButton"]
+size_flags_vertical = 4
+texture_normal = ExtResource("1_qexkj")
+texture_pressed = ExtResource("2_ay8td")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.362829, 0.362829, 0.362829, 1)
+theme_override_fonts/font = ExtResource("3_8fd7b")
+theme_override_font_sizes/font_size = 26
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1

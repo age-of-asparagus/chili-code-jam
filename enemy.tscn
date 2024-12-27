@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bong5i513sa8s"]
+[gd_scene load_steps=12 format=3 uid="uid://bong5i513sa8s"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_auvvt"]
 [ext_resource type="Material" uid="uid://clcwuoiilg8t8" path="res://LightingSystem/Materials/Enemy.tres" id="2_43682"]
@@ -6,12 +6,25 @@
 [ext_resource type="AudioStream" uid="uid://d0tiv3ej5fgwg" path="res://Audio/Sounds/709054__funnyvoices__ufo-au-fx.wav" id="4_xd3lr"]
 [ext_resource type="PackedScene" uid="uid://i4pi2ym4qeq5" path="res://Effects/explosion.tscn" id="5_6o0yq"]
 [ext_resource type="AudioStream" uid="uid://cqx73r4iycmvi" path="res://Audio/Sounds/418194__deleted_user_3656686__hard-glass-impact.wav" id="6_226w0"]
+[ext_resource type="AudioStream" uid="uid://dpby5awx7e1cu" path="res://Audio/Sounds/257780__xtrgamr__man-oof.wav" id="7_msvwn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mk4i"]
 radius = 22.0227
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xypht"]
 radius = 23.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_30e36"]
+random_pitch = 1.1
+random_volume_offset_db = 5.0
+streams_count = 1
+stream_0/stream = ExtResource("6_226w0")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rwvw8"]
+random_pitch = 1.1
+random_volume_offset_db = 5.0
+streams_count = 1
+stream_0/stream = ExtResource("7_msvwn")
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 2
@@ -46,10 +59,13 @@ panning_strength = 10.0
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="AudioStreamPlayer2D-Hit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_226w0")
+stream = SubResource("AudioStreamRandomizer_30e36")
 pitch_scale = 2.0
 attenuation = 2.54912
 panning_strength = 10.0
+
+[node name="AudioStreamPlayer2D-Playerhit" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_rwvw8")
 
 [connection signal="body_entered" from="Attack_zone" to="." method="_on_attack_zone_body_entered"]
 [connection signal="body_exited" from="Attack_zone" to="." method="_on_attack_zone_body_exited"]

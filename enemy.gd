@@ -52,6 +52,8 @@ func _physics_process(delta):
 	
 	if damaging:
 		Global.player_health -= 0.03
+		if not $"AudioStreamPlayer2D-Playerhit".playing:
+			$"AudioStreamPlayer2D-Playerhit".play()
 	
 	$Sprite2D.rotate(0.05)
 	if not Global.game_over:

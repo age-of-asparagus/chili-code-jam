@@ -4,4 +4,4 @@ extends Marker2D
 
 func _process(delta):
 	if Global.game_over == false:
-		global_position = player.global_position - Vector2(-75,280)
+		global_position = player.global_position - Vector2(-245,245)

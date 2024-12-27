@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=26 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -14,12 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://d3t2lqhai054i" path="res://Info Boxes/info_box_0_flashlights.tscn" id="11_li8cv"]
 [ext_resource type="AudioStream" uid="uid://4wseqmg80352" path="res://Audio/Sounds/342758__rhodesmas__searching-02.wav" id="11_y8b6u"]
 [ext_resource type="PackedScene" uid="uid://brn0il6fnx4k4" path="res://Info Boxes/info_box_1_energy.tscn" id="12_37yl8"]
-[ext_resource type="PackedScene" uid="uid://4noadq0ntvcd" path="res://Info Boxes/info_box_2_chromadrones.tscn" id="13_01mjd"]
+[ext_resource type="PackedScene" path="res://Info Boxes/info_box_2_chromadrones.tscn" id="13_01mjd"]
 [ext_resource type="PackedScene" uid="uid://dnn0qj7t1ylvd" path="res://Info Boxes/info_box_3_enemies_part_2.tscn" id="14_j1ook"]
-[ext_resource type="PackedScene" uid="uid://bum8pipgj33te" path="res://Info Boxes/info_box_4_enemies_part_3.tscn" id="15_o5jbc"]
+[ext_resource type="PackedScene" path="res://Info Boxes/info_box_4_enemies_part_3.tscn" id="15_o5jbc"]
 [ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
-[ext_resource type="PackedScene" uid="uid://dt2g1klr1b0wb" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
-[ext_resource type="PackedScene" uid="uid://bgqwt5sfdj6xj" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
+[ext_resource type="PackedScene" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
+[ext_resource type="PackedScene" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
 
 [sub_resource type="Animation" id="Animation_f4ol1"]
 length = 0.001
@@ -34,6 +34,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Left_wall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Right_wall:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1152, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ynk4y"]
@@ -53,10 +77,68 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 0.403922, 0.741176, 1), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_opd77"]
+resource_name = "level_animation"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left_wall:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1000, 0), Vector2(-424, 0), Vector2(-424, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right_wall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1152, 0), Vector2(576, 0), Vector2(576, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ynafw"]
+resource_name = "level_animation_open"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Left_wall:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-424, 0), Vector2(-1000, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Right_wall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(576, 0), Vector2(1152, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sucjy"]
 _data = {
 "RESET": SubResource("Animation_f4ol1"),
-"battery_bar_flicker": SubResource("Animation_ynk4y")
+"battery_bar_flicker": SubResource("Animation_ynk4y"),
+"level_animation_close": SubResource("Animation_opd77"),
+"level_animation_open": SubResource("Animation_ynafw")
 }
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label", "health_progress", "health_label")]
@@ -225,6 +307,17 @@ volume_db = -10.0
 [node name="AudioStreamPlayer-infoclose" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_sc3tf")
 volume_db = -10.0
+
+[node name="Left_wall" type="ColorRect" parent="."]
+offset_left = -1000.0
+offset_bottom = 648.0
+color = Color(0, 0, 1, 1)
+
+[node name="Right_wall" type="ColorRect" parent="."]
+offset_left = 1152.0
+offset_right = 2152.0
+offset_bottom = 648.0
+color = Color(0, 0, 1, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

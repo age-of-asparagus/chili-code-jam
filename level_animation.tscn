@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://hyahj8amdyqy"]
+
+[node name="level_animation" type="Node2D"]
+
+[node name="Left_Wall" type="Sprite2D" parent="."]
+
+[node name="Right_Wall" type="Sprite2D" parent="."]

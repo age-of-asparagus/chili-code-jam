@@ -16,6 +16,7 @@ var green_light = false
 var blue_light = false
 
 var flashlight_battery = Global.flashlight_battery
+var level = Global.level
 
 signal color_update(new_color)
 
@@ -25,8 +26,8 @@ func _ready():
 
 func _process(delta):
 	
-	if flashlight_battery < Global.flashlight_battery:
-		$AnimationPlayer.play("battery_bar_flicker")
+	if level != Global.level:
+		$AnimationPlayer.play("level_animation_close")
 	
 	flashlight_battery = Global.flashlight_battery
 	

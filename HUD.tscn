@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=24 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -19,6 +19,45 @@
 [ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
 [ext_resource type="PackedScene" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
 [ext_resource type="PackedScene" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
+[ext_resource type="Texture2D" uid="uid://fjef1ykkkvg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Red/Default/bar_round_gloss_small.png" id="20_wy41c"]
+
+[sub_resource type="Animation" id="Animation_ynk4y"]
+resource_name = "battery_bar_flicker"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer3/HBoxContainer/flashlight_battery:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.403922, 0.741176, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f4ol1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer3/HBoxContainer/flashlight_battery:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sucjy"]
+_data = {
+"RESET": SubResource("Animation_f4ol1"),
+"battery_bar_flicker": SubResource("Animation_ynk4y")
+}
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
@@ -65,6 +104,7 @@ visible_characters = 4
 [node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+value = 50.0
 nine_patch_stretch = true
 stretch_margin_left = 10
 stretch_margin_top = 10
@@ -181,5 +221,10 @@ stretch_margin_top = 10
 stretch_margin_right = 10
 stretch_margin_bottom = 10
 texture_under = ExtResource("3_a8tby")
-texture_progress = ExtResource("3_32r65")
+texture_progress = ExtResource("20_wy41c")
 tint_under = Color(1, 1, 1, 0.196078)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sucjy")
+}

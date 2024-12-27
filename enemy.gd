@@ -51,7 +51,7 @@ func _ready():
 func _physics_process(delta):
 	
 	if damaging:
-		Global.player_health -= 0.01
+		Global.player_health -= 0.03
 	
 	$Sprite2D.rotate(0.05)
 	if not Global.game_over:

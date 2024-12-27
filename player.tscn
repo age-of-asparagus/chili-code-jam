@@ -34,7 +34,7 @@ platform_floor_layers = 4294967040
 script = ExtResource("1_w1kno")
 
 [node name="Flashlight" parent="." instance=ExtResource("4_uv0tw")]
-position = Vector2(299, 1.52734e-07)
+position = Vector2(28, -10)
 rotation = 0.0388671
 scale = Vector2(0.987278, 1.0125)
 

@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://0slhet8daytj"]
 
-[ext_resource type="Texture2D" uid="uid://48gqog2dlms3" path="res://LightingSystem/LightTextures/CustomSpotlight2.png" id="1_nb82s"]
+[ext_resource type="Texture2D" uid="uid://b3gy25fyq3fgq" path="res://LightingSystem/LightTextures/CustomSpotlight3.png" id="1_lyaxo"]
 [ext_resource type="Script" path="res://LightingSystem/Flashlights/flash_light_base.gd" id="2_vvd0h"]
 
 [node name="Flashlight" type="PointLight2D"]
-position = Vector2(272, 2)
-shadow_color = Color(0.442911, 0.442911, 0.442911, 0)
-texture = ExtResource("1_nb82s")
+position = Vector2(-4, 2)
+shadow_enabled = true
+shadow_color = Color(1, 1, 1, 0)
+shadow_item_cull_mask = 63
+texture = ExtResource("1_lyaxo")
 script = ExtResource("2_vvd0h")
 
 [node name="Background" type="ColorRect" parent="."]

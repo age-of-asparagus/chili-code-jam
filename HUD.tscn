@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=27 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
 [ext_resource type="PackedScene" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
 [ext_resource type="PackedScene" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
+[ext_resource type="AudioStream" uid="uid://b1en8ta77l8c3" path="res://Audio/Sounds/223653__trautwein__elevator-cropped.wav" id="21_ieqvc"]
 
 [sub_resource type="Animation" id="Animation_f4ol1"]
 length = 0.001
@@ -58,6 +59,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1152, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ynk4y"]
@@ -99,15 +112,27 @@ tracks/1/path = NodePath("Right_wall:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 3.1),
+"times": PackedFloat32Array(0, 2.43333, 3.1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1152, 0), Vector2(576, 0), Vector2(576, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ynafw"]
 resource_name = "level_animation_open"
-length = 2.5
+length = 3.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,6 +156,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(576, 0), Vector2(1152, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sucjy"]
@@ -309,15 +346,16 @@ stream = ExtResource("15_sc3tf")
 volume_db = -10.0
 
 [node name="Left_wall" type="ColorRect" parent="."]
-offset_left = -1000.0
+offset_left = -424.0
+offset_right = 576.0
 offset_bottom = 648.0
-color = Color(0, 0, 1, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Right_wall" type="ColorRect" parent="."]
-offset_left = 1152.0
-offset_right = 2152.0
+offset_left = 576.0
+offset_right = 1576.0
 offset_bottom = 648.0
-color = Color(0, 0, 1, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -345,3 +383,6 @@ offset_bottom = 43.0
 text = "100%"
 uppercase = true
 visible_characters = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_ieqvc")

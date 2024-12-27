@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddw87gln6mbfp"]
+[gd_scene load_steps=9 format=3 uid="uid://ddw87gln6mbfp"]
 
 [ext_resource type="Script" path="res://level_transporter.gd" id="1_qjbuv"]
 [ext_resource type="Texture2D" uid="uid://ckd2gn0pdt858" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_12-dark.png" id="2_or6hq"]
 [ext_resource type="Texture2D" uid="uid://b2cdxsqa44ktb" path="res://Assets/ElevatorWalls.png" id="3_0q4ew"]
 [ext_resource type="Texture2D" uid="uid://cyck5ks1ce15f" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_446.png" id="3_gfvd4"]
-[ext_resource type="AudioStream" uid="uid://b1en8ta77l8c3" path="res://Audio/Sounds/223653__trautwein__elevator-cropped.wav" id="4_hk7uq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdtba"]
 size = Vector2(80, 112)
@@ -36,18 +35,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(-56, 64), Vector2(-56, 32)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_wqdq3"]
 length = 0.001
@@ -74,18 +61,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-56, 64)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i25li"]
@@ -143,8 +118,5 @@ texture = ExtResource("3_gfvd4")
 libraries = {
 "": SubResource("AnimationLibrary_i25li")
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_hk7uq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -13,6 +13,9 @@ func _process(delta):
 	velocity = direction*speed
 	global_position += velocity
 	
+	#if delete:
+		#monitoring = false
+
 	if delete and not $"AudioStreamPlayer-Gunshot".playing:
 		queue_free()
 
@@ -23,8 +26,8 @@ func _on_body_entered(body):
 		body.hit()
 	if $"AudioStreamPlayer-Gunshot".playing:
 		delete = true
-		$CollisionShape2D.disabled = true
 		hide()
+		set_deferred("monitoring",false)
 	else:
 		queue_free()
 		

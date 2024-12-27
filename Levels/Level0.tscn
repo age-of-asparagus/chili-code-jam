@@ -42,7 +42,6 @@ tile_map_data = PackedByteArray("AAAjAAgAAAARAAUAAAAjAAcAAAAOAAYAAAAjAAYAAAAJAAY
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
-visible = false
 light_mask = 63
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -543,7 +542,7 @@ position = Vector2(1462, 88)
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_blni0")]
-position = Vector2(7622, 693)
+position = Vector2(1776, 325)
 
 [node name="orb_position" parent="." instance=ExtResource("10_ldsyt")]
 

@@ -17,7 +17,7 @@ func _on_body_entered(body):
 	$AudioStreamPlayer.play()
 
 func done_collecting():
-	Global.flashlight_battery += 5
+	Global.flashlight_battery += 1
 	if Global.flashlight_battery > 100:
 		Global.flashlight_battery = 100
 	queue_free()

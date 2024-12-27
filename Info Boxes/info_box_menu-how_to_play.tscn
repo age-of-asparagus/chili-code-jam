@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cusjq8aereqa2"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_gm7t7"]
+
+[node name="InfoBox-How_to_play" instance=ExtResource("1_gm7t7")]

@@ -2,48 +2,31 @@
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
+[ext_resource type="Texture2D" uid="uid://b47nflajb46gd" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_square_gloss_large.png" id="2_330le"]
 [ext_resource type="Texture2D" uid="uid://dp2qh53vqmwad" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_g_outline.png" id="2_o602v"]
 [ext_resource type="Texture2D" uid="uid://ceqwpqvb7pjkh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notch_bl.png" id="2_tuw12"]
-[ext_resource type="Texture2D" uid="uid://cydu6uj2k78xh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_round_gloss_large.png" id="3_32r65"]
-[ext_resource type="Texture2D" uid="uid://couomc82iev55" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Grey/Default/bar_round_gloss_large.png" id="3_a8tby"]
+[ext_resource type="Texture2D" uid="uid://stkyclox3yx7" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Red/Default/bar_square_gloss_large.png" id="3_ahvhl"]
 [ext_resource type="Texture2D" uid="uid://b8uvxs3svedpj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_b_outline.png" id="3_q8g5o"]
+[ext_resource type="Texture2D" uid="uid://n7xg8671omdv" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Blue/Default/bar_square_gloss_large.png" id="4_jsbf1"]
 [ext_resource type="Texture2D" uid="uid://dhmey5khy68xl" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle.png" id="5_ygdwd"]
 [ext_resource type="Texture2D" uid="uid://bh3bylsy870k3" path="res://Assets/Kenny/kenney_input-prompts/Generic/Default/generic_button_circle_outline.png" id="6_gukxe"]
 [ext_resource type="AudioStream" uid="uid://6mi2k6u1kb0s" path="res://Audio/Sounds/770346__quetum__flashlightclick.ogg" id="7_55521"]
 [ext_resource type="PackedScene" uid="uid://d3t2lqhai054i" path="res://Info Boxes/info_box_0_flashlights.tscn" id="11_li8cv"]
 [ext_resource type="AudioStream" uid="uid://4wseqmg80352" path="res://Audio/Sounds/342758__rhodesmas__searching-02.wav" id="11_y8b6u"]
 [ext_resource type="PackedScene" uid="uid://brn0il6fnx4k4" path="res://Info Boxes/info_box_1_energy.tscn" id="12_37yl8"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_2_chromadrones.tscn" id="13_01mjd"]
+[ext_resource type="PackedScene" uid="uid://4noadq0ntvcd" path="res://Info Boxes/info_box_2_chromadrones.tscn" id="13_01mjd"]
 [ext_resource type="PackedScene" uid="uid://dnn0qj7t1ylvd" path="res://Info Boxes/info_box_3_enemies_part_2.tscn" id="14_j1ook"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_4_enemies_part_3.tscn" id="15_o5jbc"]
+[ext_resource type="PackedScene" uid="uid://bum8pipgj33te" path="res://Info Boxes/info_box_4_enemies_part_3.tscn" id="15_o5jbc"]
 [ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
-[ext_resource type="PackedScene" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
-[ext_resource type="Texture2D" uid="uid://fjef1ykkkvg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Red/Default/bar_round_gloss_small.png" id="20_wy41c"]
-
-[sub_resource type="Animation" id="Animation_ynk4y"]
-resource_name = "battery_bar_flicker"
-length = 0.1
-step = 0.01
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer3/HBoxContainer/flashlight_battery:tint_progress")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.403922, 0.741176, 1), Color(1, 1, 1, 1)]
-}
+[ext_resource type="PackedScene" uid="uid://dt2g1klr1b0wb" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
+[ext_resource type="PackedScene" uid="uid://bgqwt5sfdj6xj" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
 
 [sub_resource type="Animation" id="Animation_f4ol1"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer3/HBoxContainer/flashlight_battery:tint_progress")
+tracks/0/path = NodePath("MarginContainer3/HBoxContainer/HBoxContainer/flashlight_battery:tint_progress")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -53,13 +36,30 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ynk4y"]
+resource_name = "battery_bar_flicker"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer3/HBoxContainer/HBoxContainer/flashlight_battery:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.403922, 0.741176, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sucjy"]
 _data = {
 "RESET": SubResource("Animation_f4ol1"),
 "battery_bar_flicker": SubResource("Animation_ynk4y")
 }
 
-[node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
+[node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label", "health_progress", "health_label")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,37 +71,57 @@ r_texture = NodePath("MarginContainer/VBoxContainer/R")
 g_texture = NodePath("MarginContainer/VBoxContainer/G")
 b_texture = NodePath("MarginContainer/VBoxContainer/B")
 color_texture = NodePath("MarginContainer/VBoxContainer/Color")
-battery_progress = NodePath("MarginContainer3/HBoxContainer/flashlight_battery")
-battery_label = NodePath("MarginContainer3/HBoxContainer/power_label")
+battery_progress = NodePath("MarginContainer3/HBoxContainer/HBoxContainer/flashlight_battery")
+battery_label = NodePath("power_label")
+health_progress = NodePath("MarginContainer3/HBoxContainer/HBoxContainer2/Health_Bar")
+health_label = NodePath("health_label")
 
 [node name="MarginContainer3" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -264.5
-offset_right = 235.5
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 43.0
 grow_horizontal = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 90
 theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3"]
 layout_mode = 2
+theme_override_constants/separation = 50
 
-[node name="Label" type="Label" parent="MarginContainer3/HBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer3/HBoxContainer"]
 layout_mode = 2
-text = "BATTERY POWER: "
+size_flags_horizontal = 3
 
-[node name="power_label" type="Label" parent="MarginContainer3/HBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer3/HBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "100%"
-uppercase = true
-visible_characters = 4
+text = "HEALTH: "
 
-[node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer"]
+[node name="Health_Bar" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10.0
+step = 0.0
+nine_patch_stretch = true
+stretch_margin_left = 10
+stretch_margin_top = 10
+stretch_margin_right = 10
+stretch_margin_bottom = 10
+texture_under = ExtResource("2_330le")
+texture_progress = ExtResource("3_ahvhl")
+tint_under = Color(1, 1, 1, 0.196078)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer3/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "BATTERY: "
+
+[node name="flashlight_battery" type="TextureProgressBar" parent="MarginContainer3/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 value = 50.0
@@ -110,8 +130,8 @@ stretch_margin_left = 10
 stretch_margin_top = 10
 stretch_margin_right = 10
 stretch_margin_bottom = 10
-texture_under = ExtResource("3_a8tby")
-texture_progress = ExtResource("3_32r65")
+texture_under = ExtResource("2_330le")
+texture_progress = ExtResource("4_jsbf1")
 tint_under = Color(1, 1, 1, 0.196078)
 
 [node name="AudioStreamPlayer-flashlight" type="AudioStreamPlayer" parent="."]
@@ -206,25 +226,29 @@ volume_db = -10.0
 stream = ExtResource("15_sc3tf")
 volume_db = -10.0
 
-[node name="Health_Bar" type="TextureProgressBar" parent="."]
-layout_mode = 2
-offset_left = 521.0
-offset_top = 350.0
-offset_right = 650.0
-offset_bottom = 370.0
-size_flags_horizontal = 3
-max_value = 10.0
-step = 0.0
-nine_patch_stretch = true
-stretch_margin_left = 10
-stretch_margin_top = 10
-stretch_margin_right = 10
-stretch_margin_bottom = 10
-texture_under = ExtResource("3_a8tby")
-texture_progress = ExtResource("20_wy41c")
-tint_under = Color(1, 1, 1, 0.196078)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_sucjy")
 }
+
+[node name="health_label" type="Label" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 94.0
+offset_top = 20.0
+offset_right = 136.0
+offset_bottom = 43.0
+text = "100%"
+uppercase = true
+visible_characters = 4
+
+[node name="power_label" type="Label" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 647.0
+offset_top = 20.0
+offset_right = 689.0
+offset_bottom = 43.0
+text = "100%"
+uppercase = true
+visible_characters = 4

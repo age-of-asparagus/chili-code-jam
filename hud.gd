@@ -8,6 +8,9 @@ extends Control
 @export var battery_progress : Control
 @export var battery_label : Label
 
+@export var health_progress : Control
+@export var health_label : Label
+
 var red_light = false
 var green_light = false
 var blue_light = false
@@ -39,7 +42,7 @@ func _process(delta):
 	battery_progress.value = Global.flashlight_battery
 	battery_label.text = "%3d" % Global.flashlight_battery + "%"
 	
-	$Health_Bar.value = Global.player_health
+	health_progress.value = Global.player_health
 	
 	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
 		$"AudioStreamPlayer-flashlight".play()

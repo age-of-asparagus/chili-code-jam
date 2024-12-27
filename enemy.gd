@@ -56,7 +56,7 @@ func _physics_process(delta):
 			$"AudioStreamPlayer2D-Playerhit".play()
 	
 	$Sprite2D.rotate(0.05)
-	if not Global.game_over:
+	if not Global.level_completed:
 		look_at(player.global_position)
 		navigation.target_position = player.global_position
 		velocity = global_position.direction_to(navigation.get_next_path_position())*speed

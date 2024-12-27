@@ -21,6 +21,7 @@ var level = Global.level
 signal color_update(new_color)
 
 func _ready():
+	Global.level_completed = false
 	$AnimationPlayer.play("level_animation_open")
 	update_color()
 

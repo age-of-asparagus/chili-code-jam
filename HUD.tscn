@@ -346,14 +346,15 @@ stream = ExtResource("15_sc3tf")
 volume_db = -10.0
 
 [node name="Left_wall" type="ColorRect" parent="."]
-offset_left = -424.0
-offset_right = 576.0
+layout_mode = 0
+offset_left = -1000.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="Right_wall" type="ColorRect" parent="."]
-offset_left = 576.0
-offset_right = 1576.0
+layout_mode = 0
+offset_left = 1152.0
+offset_right = 2152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 

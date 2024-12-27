@@ -16,27 +16,28 @@ func _physics_process(delta):
 	moving_direction = Vector2.ZERO
 	velocity = Vector2.ZERO
 	
-	if Input.is_action_pressed("ui_right"):
-		moving_direction.x += 1
-	if Input.is_action_pressed("ui_left"):
-		moving_direction.x -= 1
-	if Input.is_action_pressed("ui_up"):
-		moving_direction.y -= 1
-	if Input.is_action_pressed("ui_down"):
-		moving_direction.y += 1
-	
-	velocity += moving_direction.normalized()*speed
-	
-	look_at(get_global_mouse_position())
-	
-	move_and_slide()
-	
-	if Input.is_action_pressed("Left_Click") and can_shoot:
-		shoot_bullet()
+	if not Global.level_completed:
+		if Input.is_action_pressed("ui_right"):
+			moving_direction.x += 1
+		if Input.is_action_pressed("ui_left"):
+			moving_direction.x -= 1
+		if Input.is_action_pressed("ui_up"):
+			moving_direction.y -= 1
+		if Input.is_action_pressed("ui_down"):
+			moving_direction.y += 1
 		
-	if velocity != Vector2.ZERO:
-		if not footsteps.playing:
-			footsteps.play()
+		velocity += moving_direction.normalized()*speed
+		
+		look_at(get_global_mouse_position())
+		
+		move_and_slide()
+		
+		if Input.is_action_pressed("Left_Click") and can_shoot:
+			shoot_bullet()
+			
+		if velocity != Vector2.ZERO:
+			if not footsteps.playing:
+				footsteps.play()
 
 
 

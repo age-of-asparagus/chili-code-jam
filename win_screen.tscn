@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://opd3kboomj2l"]
+
+[node name="win_screen" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 590.0
+offset_top = 242.0
+offset_right = 661.0
+offset_bottom = 265.0
+text = "YOU WIN
+"

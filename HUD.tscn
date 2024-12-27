@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=20 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://o8h8ribnmaxj" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bum8pipgj33te" path="res://Info Boxes/info_box_4_enemies_part_3.tscn" id="15_o5jbc"]
 [ext_resource type="AudioStream" uid="uid://huq37qyx3ry8" path="res://Audio/Sounds/342758__rhodesmas__searching-cropped.wav" id="15_sc3tf"]
 [ext_resource type="PackedScene" uid="uid://dt2g1klr1b0wb" path="res://Info Boxes/info_box_5_enemies_part_4.tscn" id="16_ote6l"]
+[ext_resource type="PackedScene" uid="uid://bgqwt5sfdj6xj" path="res://Info Boxes/info_box_6_flashtorch_combos.tscn" id="17_gtdve"]
 
 [node name="HUD" type="Control" node_paths=PackedStringArray("r_texture", "g_texture", "b_texture", "color_texture", "battery_progress", "battery_label")]
 layout_mode = 3
@@ -150,6 +151,10 @@ layout_mode = 1
 offset_top = -193.0
 
 [node name="InfoBox5EnemiesPart4" parent="InfoBoxes" instance=ExtResource("16_ote6l")]
+visible = false
+layout_mode = 1
+
+[node name="InfoBox6FlashtorchCombos" parent="InfoBoxes" instance=ExtResource("17_gtdve")]
 visible = false
 layout_mode = 1
 

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgqwt5sfdj6xj"]
+
+[ext_resource type="PackedScene" uid="uid://biafjiv3u5ve3" path="res://Info Boxes/info_box_base.tscn" id="1_4yl7c"]
+
+[node name="InfoBox6FlashtorchCombos" instance=ExtResource("1_4yl7c")]
+offset_top = -193.0
+
+[node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
+text = "There is an elevator at the end of the corridor, but no lighting.  You'll need to use your FlashTorch the rest of the way.  
+
+We're only detecting red and  green chromadrones ahead, so your yellow light should be enough to detect both of them."

@@ -42,6 +42,7 @@ tile_map_data = PackedByteArray("AAAjAAgAAAARAAUAAAAjAAcAAAAOAAYAAAAjAAYAAAAJAAY
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+visible = false
 light_mask = 63
 color = Color(0, 0, 0, 1)
 metadata/_edit_lock_ = true
@@ -71,6 +72,12 @@ position = Vector2(7397, -30)
 
 [node name="YellowLight4" parent="Lighting/Lights2" instance=ExtResource("4_53jvy")]
 position = Vector2(8231, 30)
+
+[node name="YellowLight5" parent="Lighting/Lights2" instance=ExtResource("4_53jvy")]
+position = Vector2(7906, 621)
+
+[node name="YellowLight6" parent="Lighting/Lights2" instance=ExtResource("4_53jvy")]
+position = Vector2(7647, 800)
 
 [node name="GreenLight" parent="Lighting/Lights2" instance=ExtResource("5_45fhm")]
 position = Vector2(7902, -33)
@@ -407,7 +414,7 @@ enemy_type = 1
 metadata/_edit_group_ = true
 
 [node name="Enemy18" parent="Enemies1" instance=ExtResource("4_ssojy")]
-position = Vector2(1865, 594)
+position = Vector2(1869, 584)
 metadata/_edit_group_ = true
 
 [node name="Enemy19" parent="Enemies1" instance=ExtResource("4_ssojy")]
@@ -420,6 +427,104 @@ position = Vector2(1821, 594)
 enemy_type = 1
 metadata/_edit_group_ = true
 
+[node name="Enemy25" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(294, 1293)
+metadata/_edit_group_ = true
+
+[node name="Enemy26" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(240, 1272)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy27" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(290, 1240)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy28" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(468, 1818)
+metadata/_edit_group_ = true
+
+[node name="Enemy29" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(505, 1772)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy30" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(431, 1772)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy34" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(895, 1768)
+metadata/_edit_group_ = true
+
+[node name="Enemy35" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(945, 1768)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy36" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(849, 1772)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy40" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1460, 1770)
+metadata/_edit_group_ = true
+
+[node name="Enemy41" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1509, 1768)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy42" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1413, 1772)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy49" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1862, 1755)
+metadata/_edit_group_ = true
+
+[node name="Enemy50" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1911, 1754)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy51" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1815, 1758)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy43" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1716, 1905)
+metadata/_edit_group_ = true
+
+[node name="Enemy44" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1765, 1904)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy45" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1669, 1908)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy37" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1210, 1900)
+metadata/_edit_group_ = true
+
+[node name="Enemy38" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1259, 1897)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy39" parent="Enemies1" instance=ExtResource("4_ssojy")]
+position = Vector2(1163, 1901)
+enemy_type = 1
+metadata/_edit_group_ = true
+
 [node name="Enemy20" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1973, 837)
 metadata/_edit_group_ = true
@@ -429,7 +534,7 @@ position = Vector2(1877, 841)
 metadata/_edit_group_ = true
 
 [node name="Enemy21" parent="Enemies1" instance=ExtResource("4_ssojy")]
-position = Vector2(1929, 840)
+position = Vector2(1922, 834)
 enemy_type = 1
 metadata/_edit_group_ = true
 
@@ -438,7 +543,7 @@ position = Vector2(1462, 88)
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_blni0")]
-position = Vector2(7951, 711)
+position = Vector2(7622, 693)
 
 [node name="orb_position" parent="." instance=ExtResource("10_ldsyt")]
 
@@ -446,9 +551,6 @@ position = Vector2(7951, 711)
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("5_cfukg")]
 metadata/_edit_lock_ = true
-
-[node name="InfoBoxTrigger5" parent="CanvasLayer" instance=ExtResource("14_dykxl")]
-position = Vector2(8355, 697)
 
 [node name="AudioStreamPlayer-GameMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_eam0u")
@@ -477,5 +579,14 @@ metadata/_edit_lock_ = true
 position = Vector2(5696, -114)
 metadata/_edit_lock_ = true
 
+[node name="InfoBoxTrigger5" parent="InfoBoxesTriggers" instance=ExtResource("14_dykxl")]
+position = Vector2(8323, 699)
+metadata/_edit_lock_ = true
+
+[node name="InfoBoxTrigger6" parent="InfoBoxesTriggers" instance=ExtResource("14_dykxl")]
+position = Vector2(7391, 707)
+index = 6
+metadata/_edit_lock_ = true
+
 [node name="level_transporter" parent="." instance=ExtResource("20_13kkv")]
-position = Vector2(6555, 1802)
+position = Vector2(8447, 1530)

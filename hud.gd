@@ -16,23 +16,23 @@ signal color_update(new_color)
 
 func _ready():
 	update_color()
-	#print(get_tree().root.get_node("HUD").get_node("MarginContainer3"))
-	print(get_tree().root.get_child(1).name)
 
 
 func _process(delta):
 	
 	if Global.color == Color.RED or Global.color == Color.BLUE or Global.color == Color.GREEN:
-		Global.flashlight_battery -= 0.01
+		Global.flashlight_battery -= 0.02
 	
 	if Global.color == Color.MAGENTA or Global.color == Color.YELLOW or Global.color == Color.CYAN:
-		Global.flashlight_battery -= 0.02
+		Global.flashlight_battery -= 0.04
 		
 	if Global.color == Color.WHITE:
-		Global.flashlight_battery -= 0.03
+		Global.flashlight_battery -= 0.06
 	
 	battery_progress.value = Global.flashlight_battery
 	battery_label.text = "%3d" % Global.flashlight_battery + "%"
+	
+	$Health_Bar.value = Global.player_health
 	
 	if Input.is_action_just_pressed("key_red") or Input.is_action_just_pressed("key_green") or Input.is_action_just_pressed("key_blue"):
 		$"AudioStreamPlayer-flashlight".play()
@@ -43,7 +43,6 @@ func _process(delta):
 				r_texture.modulate = Color.RED
 			else:
 				r_texture.modulate = Color.WHITE
-			# toggle variable
 			red_light = not red_light
 			
 		if Input.is_action_just_pressed("key_green"):
@@ -64,6 +63,9 @@ func _process(delta):
 		red_light = false
 		blue_light = false
 		green_light = false
+		r_texture.modulate = Color.WHITE
+		b_texture.modulate = Color.WHITE
+		g_texture.modulate = Color.WHITE
 	
 	update_color()
 		

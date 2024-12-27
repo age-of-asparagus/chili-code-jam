@@ -13,6 +13,7 @@ enum EnemyType {RED, GREEN, BLUE, RANDOM}
 @onready var Sound = $AudioStreamPlayer2D
 
 var attacking = false
+var damaging = false
 
 var battery_orb_scene = preload("res://battery_orb.tscn")
 
@@ -48,6 +49,10 @@ func _ready():
 	Sound.play()
 
 func _physics_process(delta):
+	
+	if damaging:
+		Global.player_health -= 0.01
+	
 	$Sprite2D.rotate(0.05)
 	if not Global.game_over:
 		look_at(player.global_position)
@@ -77,17 +82,17 @@ func die():
 	
 	queue_free()
 
-func _on_attack_zone_body_entered(body):
-	body.health -= 1
-	Global.game_over = true
-	queue_free()
-	#Sound.stop()
-
-
-
 func _on_audio_stream_player_2d_finished():
 	Sound.play()
 
 
 func _on_visible_on_screen_notifier_2d_screen_entered():
 	attacking = true
+
+
+func _on_attack_zone_body_exited(body):
+	damaging = false
+
+
+func _on_attack_zone_body_entered(body):
+	damaging = true

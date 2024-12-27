@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @onready var footsteps = $AudioStreamPlayer_Footsteps
 
-
-var health = 1
 var speed = 300
 var moving_direction = Vector2.ZERO
 var Bullet_Scene = preload("res://player_bullet.tscn")
@@ -11,7 +9,8 @@ var can_shoot = true
 
 func _physics_process(delta):
 	
-	if health <= 0:
+	if Global.player_health <= 0:
+		Global.player_health = 10
 		get_tree().change_scene_to_file("res://game_over_screen.tscn")
 	
 	moving_direction = Vector2.ZERO

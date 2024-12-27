@@ -28,7 +28,9 @@ stream_1/stream = ExtResource("9_4c107")
 stream_2/stream = ExtResource("10_1t2nj")
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 4
+collision_mask = 6
+platform_on_leave = 2
+platform_floor_layers = 4294967040
 script = ExtResource("1_w1kno")
 
 [node name="Flashlight" parent="." instance=ExtResource("4_uv0tw")]

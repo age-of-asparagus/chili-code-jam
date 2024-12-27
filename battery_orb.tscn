@@ -8,7 +8,7 @@
 light_mode = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvv0y"]
-radius = 5.0
+radius = 45.0444
 
 [sub_resource type="Animation" id="Animation_vqelc"]
 resource_name = "Orb_Collected"

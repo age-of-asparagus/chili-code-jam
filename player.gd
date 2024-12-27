@@ -12,7 +12,7 @@ var can_shoot = true
 func _physics_process(delta):
 	
 	if health <= 0:
-		get_tree().change_scene_to_file("res://game_over.tscn")
+		get_tree().change_scene_to_file("res://game_over_screen.tscn")
 	
 	moving_direction = Vector2.ZERO
 	velocity = Vector2.ZERO

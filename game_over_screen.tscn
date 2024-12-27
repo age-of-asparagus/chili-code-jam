@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc8brq1hpxsgj"]
+[gd_scene load_steps=8 format=3 uid="uid://2s07xlvdumj4"]
 
 [ext_resource type="Script" path="res://game_over.gd" id="1_1mfq3"]
 [ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_x6s2c"]

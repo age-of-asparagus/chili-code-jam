@@ -17,6 +17,7 @@ var blue_light = false
 
 var flashlight_battery = Global.flashlight_battery
 var level = Global.level
+var player_health = Global.player_health
 
 signal color_update(new_color)
 
@@ -29,7 +30,15 @@ func _ready():
 func _process(delta):
 	
 	if level != Global.level:
+		level = Global.level
 		$AnimationPlayer.play("level_animation_close")
+	
+	if player_health != Global.player_health:
+		player_health = Global.player_health
+		$AnimationPlayer.play("health_bar_flicker")
+	
+	if flashlight_battery < Global.flashlight_battery:
+		$AnimationPlayer.play("battery_bar_flicker")
 	
 	flashlight_battery = Global.flashlight_battery
 	

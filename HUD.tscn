@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d3uclqwegwhlx"]
+[gd_scene load_steps=28 format=3 uid="uid://d3uclqwegwhlx"]
 
 [ext_resource type="Texture2D" uid="uid://dd4x1iugey3mq" path="res://Assets/Kenny/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_r_outline.png" id="1_dmiul"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xq6nd"]
@@ -71,6 +71,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer3/HBoxContainer/HBoxContainer2/Health_Bar:tint_progress")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.231373, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ynk4y"]
@@ -170,10 +182,28 @@ tracks/2/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_c4u6w"]
+resource_name = "health_bar_flicker"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer3/HBoxContainer/HBoxContainer2/Health_Bar:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.231373, 0, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sucjy"]
 _data = {
 "RESET": SubResource("Animation_f4ol1"),
 "battery_bar_flicker": SubResource("Animation_ynk4y"),
+"health_bar_flicker": SubResource("Animation_c4u6w"),
 "level_animation_close": SubResource("Animation_opd77"),
 "level_animation_open": SubResource("Animation_ynafw")
 }
@@ -223,6 +253,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 10.0
 step = 0.0
+value = 5.0
 nine_patch_stretch = true
 stretch_margin_left = 10
 stretch_margin_top = 10
@@ -231,6 +262,7 @@ stretch_margin_bottom = 10
 texture_under = ExtResource("2_330le")
 texture_progress = ExtResource("3_ahvhl")
 tint_under = Color(1, 1, 1, 0.196078)
+tint_progress = Color(1, 0.231373, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3/HBoxContainer"]
 layout_mode = 2

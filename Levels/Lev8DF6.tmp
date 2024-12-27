@@ -1,0 +1,180 @@
+[gd_scene load_steps=16 format=4 uid="uid://d3bfd1w1cppt0"]
+
+[ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_0i4nu"]
+[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="2_niqro"]
+[ext_resource type="PackedScene" path="res://LightingSystem/yellow_light.tscn" id="3_8ioyd"]
+[ext_resource type="PackedScene" path="res://LightingSystem/green_light.tscn" id="4_14uui"]
+[ext_resource type="PackedScene" path="res://LightingSystem/cyan_light.tscn" id="5_qkeex"]
+[ext_resource type="PackedScene" path="res://LightingSystem/blue_light.tscn" id="6_6pueq"]
+[ext_resource type="PackedScene" path="res://LightingSystem/magenta_light.tscn" id="7_ek14m"]
+[ext_resource type="PackedScene" uid="uid://uq75qgrdmoon" path="res://battery_orb.tscn" id="9_ahv3p"]
+[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="10_0qmkg"]
+[ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="11_be5yk"]
+[ext_resource type="PackedScene" uid="uid://i8n4ine8bty7" path="res://orb_position.tscn" id="12_chwcq"]
+[ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="13_bela8"]
+[ext_resource type="AudioStream" uid="uid://bbl1j2b3uexg0" path="res://Audio/Music/Dark-Knight-chosic.com_.mp3" id="14_o4ub2"]
+[ext_resource type="PackedScene" uid="uid://ddw87gln6mbfp" path="res://level_transporter.tscn" id="21_hggir"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
+vertices = PackedVector2Array(-1115.43, 507.43, -1115.43, 748.43, -1296.57, 748.43, -1296.57, 575.57, -1567.57, 507.43, -1552.57, 492.43, -1499.43, 492.43, -1484.43, 507.43, -1435.43, 575.57, -1435.43, 624.57, -1484.43, 624.57, -1616.57, 575.57, -1100.43, 763.43, -987.43, 763.43, -987.43, 816.57, -1356.43, 816.57, -1311.57, 763.43, -1484.43, 763.43, -1371.43, 831.57, -1484.43, 880.57, -1567.57, 880.57, -1371.43, 880.57, -1759.57, 1072.57, -1808.57, 1072.57, -1808.57, 959.57, -1755.43, 1004.43, -1740.43, 1019.43, -1823.57, 944.57, -1872.57, 944.57, -1872.57, 571.43, -1819.43, 571.43, -1819.43, 876.43, -1804.43, 891.43, -1755.43, 891.43, -1744.57, 1087.57, -1691.43, 1019.43, -1691.43, 1196.43, -1744.57, 1264.57, -1616.57, 880.57, -1616.57, 767.57, -1499.43, 748.43, -1631.57, 752.57, -1680.57, 752.57, -1680.57, 699.43, -1631.57, 699.43, -1631.57, 560.57, -1680.57, 560.57, -1680.57, 507.43, -1552.57, 379.43, -1499.43, 379.43, -1311.57, 560.57, -1420.43, 560.57, -1676.43, 1211.43, -1243.43, 1264.57, -1311.57, 1211.43, -1296.57, 1196.43, -1243.43, 1019.43, -1296.57, 1087.57, -1311.57, 1072.57, -1484.43, 1019.43, -1552.57, 1072.57, -1499.43, 1004.43, -1552.57, 895.57, -1499.43, 895.57, -1499.43, 639.57, -1616.57, 684.43)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(2, 1, 12, 15, 16), PackedInt32Array(17, 16, 15, 18, 19, 20), PackedInt32Array(18, 21, 19), PackedInt32Array(22, 23, 24, 25, 26), PackedInt32Array(27, 28, 29, 30, 31), PackedInt32Array(27, 31, 32, 25, 24), PackedInt32Array(32, 33, 25), PackedInt32Array(34, 26, 35, 36, 37), PackedInt32Array(20, 38, 39, 40, 17), PackedInt32Array(41, 42, 43, 44, 40), PackedInt32Array(45, 46, 47, 4), PackedInt32Array(11, 45, 4), PackedInt32Array(5, 48, 49, 6), PackedInt32Array(0, 3, 50), PackedInt32Array(7, 0, 50, 51), PackedInt32Array(7, 51, 8), PackedInt32Array(34, 22, 26), PackedInt32Array(37, 36, 52), PackedInt32Array(53, 37, 52, 54), PackedInt32Array(53, 54, 55), PackedInt32Array(56, 53, 55, 57), PackedInt32Array(56, 57, 58), PackedInt32Array(59, 56, 58, 60), PackedInt32Array(61, 59, 60), PackedInt32Array(61, 60, 62, 63), PackedInt32Array(11, 10, 64, 65), PackedInt32Array(65, 64, 40, 44), PackedInt32Array(39, 41, 40), PackedInt32Array(20, 19, 63, 62)])
+
+[node name="World" type="Node2D"]
+visibility_layer = 3
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer-GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_o4ub2")
+volume_db = -25.0
+autoplay = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_ybu1w")
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" parent="NavigationRegion2D" instance=ExtResource("1_0i4nu")]
+light_mask = 63
+position = Vector2(10, 22)
+tile_map_data = PackedByteArray("AADn/wwAAAAPAAYAAADq/wwAAAAJAAYAAADr/wwAAAAOAAcAAADt/wwAAAAOAAcAAADu/wwAAAAOAAcAAADu/wsAAAAJAAcAAADu/woAAAAOAAYAAADu/wkAAAAOAAYAAADu/wgAAAAOAAYAAADu/wcAAAARAAQAAADt/wcAAAANAAcAAADs/wcAAAANAAcAAADr/wcAAAANAAcAAADq/wcAAAANAAcAAADp/wcAAAANAAcAAADo/wcAAAAJAAcAAADn/wcAAAAKAAcAAADn/wgAAAAPAAYAAADn/wkAAAAPAAYAAADn/woAAAAPAAYAAADn/wsAAAAPAAYAAADo/wsAAAAJAAcAAADp/wsAAAANAAcAAADq/wsAAAANAAcAAADr/wsAAAAKAAcAAADs/wsAAAAPAAYAAADt/wsAAAAPAAYAAADt/woAAAAPAAYAAADt/wkAAAAPAAYAAADt/wgAAAAPAAYAAADs/wgAAAAPAAYAAADs/wkAAAAPAAYAAADr/wkAAAANAAYAAADr/woAAAANAAYAAADs/woAAAAPAAYAAADq/wgAAAAOAAcAAADr/wgAAAAKAAYAAADp/wgAAAAJAAYAAADo/wkAAAAJAAYAAADo/woAAAAOAAYAAADo/wgAAAAPAAYAAADv/wwAAAAOAAcAAADn/wYAAAANAAYAAADo/wYAAAAOAAYAAADo/wwAAAAPAAYAAADp/wwAAAAPAAYAAADp/w0AAAAOAAcAAADo/w0AAAAJAAYAAADn/w0AAAAKAAYAAADm/w0AAAAQAAUAAADm/wwAAAANAAYAAADm/wsAAAAKAAYAAADm/woAAAAKAAcAAADm/wkAAAANAAYAAADq/w0AAAARAAUAAADo/wUAAAARAAQAAADn/wUAAAAQAAQAAADv/wsAAAANAAcAAADw/wsAAAARAAQAAADw/wwAAAARAAUAAADp/wkAAAARAAUAAADm/wgAAAAKAAYAAADl/wgAAAAQAAUAAADm/wcAAAANAAcAAADl/wcAAAAQAAQAAADl/wsAAAAQAAUAAADl/woAAAAQAAQAAADo/w8AAAAJAAcAAADo/w4AAAAOAAYAAADn/w8AAAANAAYAAADn/w4AAAANAAYAAADs/w8AAAARAAQAAADr/w8AAAANAAcAAADq/w8AAAANAAcAAADp/w8AAAANAAcAAADs/xEAAAAOAAYAAADs/xAAAAAOAAYAAADr/xEAAAANAAYAAADl/xAAAAAOAAYAAADk/w8AAAAJAAcAAADk/w4AAAAOAAYAAADk/w0AAAARAAQAAADj/w0AAAAJAAcAAADj/wwAAAAOAAYAAADj/wsAAAAOAAYAAADj/woAAAAOAAYAAADj/wkAAAAOAAYAAADj/wgAAAARAAQAAADs/wwAAAAOAAcAAADo/xAAAAAOAAcAAADp/xAAAAAOAAcAAADq/xAAAAAOAAcAAADr/xAAAAAKAAYAAADn/xAAAAAQAAUAAADs/xIAAAAOAAYAAADr/xIAAAAKAAcAAADs/xMAAAARAAUAAADr/xMAAAAOAAcAAADq/xMAAAAOAAcAAADp/xMAAAAOAAcAAADo/xIAAAANAAcAAADn/xIAAAANAAcAAADp/xIAAAANAAcAAADq/xIAAAANAAcAAADo/xMAAAAOAAcAAADn/xMAAAAOAAcAAADm/xMAAAAOAAcAAADl/xMAAAAOAAcAAADl/xIAAAAJAAcAAADm/xIAAAANAAcAAADk/xMAAAAQAAUAAADk/xIAAAANAAYAAADk/xEAAAANAAYAAADk/xAAAAAKAAYAAADj/xAAAAAQAAUAAADj/w8AAAANAAYAAADj/w4AAAAKAAYAAADi/w4AAAAQAAUAAADi/w0AAAANAAYAAADi/wwAAAANAAYAAADi/wsAAAANAAYAAADi/woAAAANAAYAAADi/wkAAAANAAYAAADi/wgAAAAQAAQAAADl/xEAAAAOAAYAAADl/w8AAAARAAQAAAA=")
+metadata/_edit_lock_ = true
+
+[node name="level_transporter" parent="NavigationRegion2D" instance=ExtResource("21_hggir")]
+position = Vector2(-1013, 790)
+
+[node name="Lighting" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Lighting"]
+light_mask = 63
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="OrbPile" type="Node2D" parent="."]
+position = Vector2(-6874, -401)
+metadata/_edit_group_ = true
+
+[node name="Battery_Orb" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5365, 949)
+
+[node name="Battery_Orb2" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5373, 956)
+
+[node name="Battery_Orb3" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5375, 944)
+
+[node name="Battery_Orb4" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5359, 938)
+
+[node name="Battery_Orb5" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5352, 948)
+
+[node name="Battery_Orb6" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5356, 960)
+
+[node name="Battery_Orb7" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5367, 968)
+
+[node name="Battery_Orb8" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5382, 968)
+
+[node name="Battery_Orb9" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5382, 957)
+
+[node name="Battery_Orb10" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5389, 946)
+
+[node name="Battery_Orb11" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5384, 936)
+
+[node name="Battery_Orb12" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5370, 932)
+
+[node name="Battery_Orb13" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5356, 973)
+
+[node name="Battery_Orb14" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5375, 977)
+
+[node name="Battery_Orb15" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5393, 957)
+
+[node name="Battery_Orb16" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5395, 969)
+
+[node name="Battery_Orb17" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5338, 959)
+
+[node name="Battery_Orb18" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5338, 936)
+
+[node name="Battery_Orb19" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5354, 907)
+
+[node name="Battery_Orb20" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5402, 914)
+
+[node name="Battery_Orb21" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5412, 947)
+
+[node name="Battery_Orb22" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5400, 931)
+
+[node name="Battery_Orb23" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5431, 931)
+
+[node name="Battery_Orb24" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5388, 980)
+
+[node name="Battery_Orb25" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5366, 981)
+
+[node name="Battery_Orb26" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5379, 993)
+
+[node name="Battery_Orb27" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5411, 1012)
+
+[node name="Battery_Orb28" parent="OrbPile" instance=ExtResource("9_ahv3p")]
+position = Vector2(5411, 1012)
+
+[node name="Player" parent="." instance=ExtResource("11_be5yk")]
+position = Vector2(-1524, 748)
+
+[node name="orb_position" parent="." instance=ExtResource("12_chwcq")]
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("13_bela8")]
+metadata/_edit_lock_ = true
+
+[node name="IntroScreenshot" type="Node2D" parent="."]
+
+[node name="RedLight2" parent="IntroScreenshot" instance=ExtResource("2_niqro")]
+position = Vector2(-1588, 832)
+
+[node name="YellowLight" parent="IntroScreenshot" instance=ExtResource("3_8ioyd")]
+position = Vector2(-941, 787)
+
+[node name="GreenLight" parent="IntroScreenshot" instance=ExtResource("4_14uui")]
+position = Vector2(-1261, 755)
+
+[node name="BlueLight" parent="IntroScreenshot" instance=ExtResource("6_6pueq")]
+position = Vector2(-1298, 458)
+metadata/_edit_lock_ = true
+
+[node name="MagentaLight" parent="IntroScreenshot" instance=ExtResource("7_ek14m")]
+position = Vector2(-1526, 365)
+
+[node name="CyanLight" parent="IntroScreenshot" instance=ExtResource("5_qkeex")]
+position = Vector2(-1073, 460)
+metadata/_edit_lock_ = true
+
+[node name="Enemy2" parent="IntroScreenshot" instance=ExtResource("10_0qmkg")]
+position = Vector2(-1485, 512)
+enemy_type = 2
+
+[node name="Enemy3" parent="IntroScreenshot" instance=ExtResource("10_0qmkg")]
+position = Vector2(-1131, 747)
+enemy_type = 1
+metadata/_edit_lock_ = true

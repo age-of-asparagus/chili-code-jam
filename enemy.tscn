@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bong5i513sa8s"]
+[gd_scene load_steps=9 format=3 uid="uid://bong5i513sa8s"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_auvvt"]
 [ext_resource type="Material" uid="uid://clcwuoiilg8t8" path="res://LightingSystem/Materials/Enemy.tres" id="2_43682"]
 [ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="3_6ahqx"]
 [ext_resource type="AudioStream" uid="uid://d0tiv3ej5fgwg" path="res://Audio/Sounds/709054__funnyvoices__ufo-au-fx.wav" id="4_xd3lr"]
 [ext_resource type="PackedScene" uid="uid://i4pi2ym4qeq5" path="res://Effects/explosion.tscn" id="5_6o0yq"]
+[ext_resource type="AudioStream" uid="uid://cqx73r4iycmvi" path="res://Audio/Sounds/418194__deleted_user_3656686__hard-glass-impact.wav" id="6_226w0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0mk4i"]
 radius = 22.0227
@@ -42,6 +43,12 @@ attenuation = 2.63902
 panning_strength = 10.0
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="AudioStreamPlayer2D-Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_226w0")
+pitch_scale = 2.0
+attenuation = 2.54912
+panning_strength = 10.0
 
 [connection signal="body_entered" from="Attack_zone" to="." method="_on_attack_zone_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

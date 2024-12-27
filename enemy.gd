@@ -65,6 +65,7 @@ func hit():
 	blood.color = color_picked[2]
 	blood.emitting = true
 	root_node.add_child(blood)
+	$"AudioStreamPlayer2D-Hit".play()
 
 func die():
 	var battery_orb = battery_orb_scene.instantiate()

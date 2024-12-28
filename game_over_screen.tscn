@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://2s07xlvdumj4"]
+[gd_scene load_steps=9 format=3 uid="uid://2s07xlvdumj4"]
 
 [ext_resource type="Script" path="res://game_over.gd" id="1_1mfq3"]
 [ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_x6s2c"]
 [ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="3_gr4ds"]
 [ext_resource type="AudioStream" uid="uid://c0slbauvhh14e" path="res://Audio/Sounds/421278__jaszunio15__click_127.wav" id="5_6omvn"]
 [ext_resource type="Texture2D" uid="uid://8o8mj21fg8a3" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle_depth.png" id="7_b7vvy"]
-[ext_resource type="PackedScene" path="res://Audio/animated_ufo_sound_for_menus.tscn" id="7_mmyoh"]
+[ext_resource type="PackedScene" uid="uid://caj18p8nsn8bv" path="res://Audio/animated_ufo_sound_for_menus.tscn" id="7_mmyoh"]
+[ext_resource type="AudioStream" uid="uid://2nyrbsbaom73" path="res://Audio/Sounds/364929__jofae__game-die.mp3" id="8_a3kj2"]
 [ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="8_oh6ua"]
 
 [node name="game_over_screen" type="Control"]
@@ -114,6 +115,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnimatedUFOSoundForMenus" parent="." instance=ExtResource("7_mmyoh")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_a3kj2")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

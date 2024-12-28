@@ -101,7 +101,7 @@ The game's code is available on [color=87CEFA][url=https://github.com/age-of-asp
 
 Designed by [color=87CEFA][url=https://github.com/kamrancouture?tab=overview&from=2023-12-01&to=2023-12-31]Kamran[/url][/color] and [color=87CEFA][url=https://github.com/tylerecouture]Tylere Couture[/url][/color].
 
-
+Playtested by Logan, Jaeden, Greg, Mason, and Grady.
 "
 
 [node name="TITLE2" type="RichTextLabel" parent="MarginContainer3/NinePatchRect2"]

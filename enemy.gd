@@ -57,11 +57,10 @@ func _physics_process(delta):
 			player.hit()
 	
 	$Sprite2D.rotate(0.05)
-	if not Global.level_completed:
+	if not Global.level_completed and attacking:
 		look_at(player.global_position)
 		navigation.target_position = player.global_position
 		velocity = global_position.direction_to(navigation.get_next_path_position())*speed
-	if attacking:
 		move_and_slide()
 	
 	if health <= 0:

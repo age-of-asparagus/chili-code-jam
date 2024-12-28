@@ -735,7 +735,7 @@ metadata/_edit_group_ = true
 position = Vector2(4944, -928)
 
 [node name="Player" parent="." index="15"]
-position = Vector2(2136, -1208)
+position = Vector2(4096, -1216)
 
 [node name="CanvasLayer" parent="." index="17"]
 visible = true

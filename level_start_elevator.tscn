@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj2hhq5k178mg"]
+[gd_scene load_steps=8 format=3 uid="uid://47v5sb0yig1"]
 
 [ext_resource type="Texture2D" uid="uid://ckd2gn0pdt858" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_12-dark.png" id="2_hejul"]
 [ext_resource type="Texture2D" uid="uid://b2cdxsqa44ktb" path="res://Assets/ElevatorWalls.png" id="3_qtiiv"]
 [ext_resource type="Texture2D" uid="uid://cyck5ks1ce15f" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_446.png" id="4_ac3jd"]
-[ext_resource type="PackedScene" uid="uid://cb1d55qlrog6l" path="res://LightingSystem/green_light.tscn" id="5_wboqt"]
+[ext_resource type="PackedScene" path="res://LightingSystem/green_light.tscn" id="5_wboqt"]
 
 [sub_resource type="Animation" id="Animation_psq08"]
 resource_name = "DoorClose"
@@ -122,3 +122,4 @@ metadata/_edit_lock_ = true
 libraries = {
 "": SubResource("AnimationLibrary_i25li")
 }
+autoplay = "DoorClose"

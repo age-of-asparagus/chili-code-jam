@@ -22,8 +22,10 @@ var player_health = Global.player_health
 signal color_update(new_color)
 
 func _ready():
-	Global.level_completed = false
+	Global.level_completed = true
 	$AnimationPlayer.play("level_animation_open")
+	await $AnimationPlayer.animation_finished
+	Global.level_completed = false
 	update_color()
 
 

@@ -1,11 +1,116 @@
-[gd_scene format=3 uid="uid://bu3b6sgha507m"]
+[gd_scene load_steps=7 format=3 uid="uid://do86es7ns2thm"]
 
-[node name="win_screen" type="Node2D"]
+[ext_resource type="Script" path="res://game_over.gd" id="1_cd2ec"]
+[ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_7v18r"]
+[ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="3_p5ndx"]
+[ext_resource type="AudioStream" uid="uid://c0slbauvhh14e" path="res://Audio/Sounds/421278__jaszunio15__click_127.wav" id="4_l2kfn"]
+[ext_resource type="Texture2D" uid="uid://8o8mj21fg8a3" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle_depth.png" id="5_nvkar"]
+[ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="6_wqng1"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 590.0
-offset_top = 242.0
-offset_right = 661.0
-offset_bottom = 265.0
-text = "YOU WIN
+[node name="Start_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cd2ec")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 84.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+texture = ExtResource("2_7v18r")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 17
+patch_margin_top = 19
+patch_margin_right = 15
+patch_margin_bottom = 18
+
+[node name="TITLE" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p5ndx")
+theme_override_font_sizes/font_size = 66
+text = "CHROMADRONE HUNTER
+-= To be continued? =-"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayerClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_l2kfn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 9.0
+offset_right = 98.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+metadata/_edit_group_ = true
+
+[node name="MenuButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_nvkar")
+texture_pressed = ExtResource("6_wqng1")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/MenuButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.362829, 0.362829, 0.362829, 1)
+theme_override_fonts/font = ExtResource("3_p5ndx")
+theme_override_font_sizes/font_size = 26
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_nvkar")
+texture_pressed = ExtResource("6_wqng1")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer/RetryButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.362829, 0.362829, 0.362829, 1)
+theme_override_fonts/font = ExtResource("3_p5ndx")
+theme_override_font_sizes/font_size = 26
+text = "RETRY
 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

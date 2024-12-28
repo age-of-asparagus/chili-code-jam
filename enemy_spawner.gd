@@ -18,7 +18,7 @@ func _on_spawn_time_timeout():
 			current_enemy = Enemy.instantiate()
 			current_enemy.enemy_type = enemy_spawn_type
 			current_enemy.global_position = global_position
-			get_parent().find_child("Enemies").add_child(current_enemy)
+			get_tree().root.get_child(1).find_child("Enemies").add_child(current_enemy)
 
 
 func _on_visible_on_screen_notifier_2d_screen_entered():

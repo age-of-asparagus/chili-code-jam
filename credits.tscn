@@ -145,11 +145,15 @@ position = Vector2(-198, 197)
 texture = ExtResource("6_61jl3")
 
 [node name="Start_button" parent="." instance=ExtResource("2_57npi")]
-layout_mode = 2
-offset_left = 50.0
-offset_top = 534.0
-offset_right = 242.0
-offset_bottom = 598.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -119.0
+offset_right = 251.0
+offset_bottom = -55.0
+grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 

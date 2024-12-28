@@ -10,10 +10,10 @@ func _on_menu_button_pressed():
 	Global.game_over = false
 	get_tree().change_scene_to_file("res://start_screen.tscn")
 	
-func _on_retry_button_pressed():
-	Global.player_health = 10
-	Global.flashlight_battery = 100
+
+func _on_menu_button_2_pressed() -> void:
 	click_sound.play()
 	await click_sound.finished
 	Global.game_over = false
-	get_tree().change_scene_to_file(levels[Global.level])
+	get_tree().change_scene_to_file("res://credits.tscn")
+	

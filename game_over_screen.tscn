@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2s07xlvdumj4"]
+[gd_scene load_steps=12 format=3 uid="uid://2s07xlvdumj4"]
 
 [ext_resource type="Script" path="res://game_over.gd" id="1_1mfq3"]
 [ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_x6s2c"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://caj18p8nsn8bv" path="res://Audio/animated_ufo_sound_for_menus.tscn" id="7_mmyoh"]
 [ext_resource type="AudioStream" uid="uid://2nyrbsbaom73" path="res://Audio/Sounds/364929__jofae__game-die.mp3" id="8_a3kj2"]
 [ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="8_oh6ua"]
+[ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="9_yn48h"]
+[ext_resource type="Texture2D" uid="uid://cte8di2du5qrj" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoGreen.png" id="10_ccr7a"]
+[ext_resource type="Texture2D" uid="uid://0m7x73qr7lna" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoBlue.png" id="11_jy6jw"]
 
 [node name="game_over_screen" type="Control"]
 layout_mode = 3
@@ -119,6 +122,18 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_a3kj2")
 autoplay = true
+
+[node name="UfoRed" type="Sprite2D" parent="."]
+position = Vector2(963.5, 395.5)
+texture = ExtResource("9_yn48h")
+
+[node name="UfoGreen" type="Sprite2D" parent="."]
+position = Vector2(1052.5, 492.5)
+texture = ExtResource("10_ccr7a")
+
+[node name="UfoBlue" type="Sprite2D" parent="."]
+position = Vector2(930.5, 553.5)
+texture = ExtResource("11_jy6jw")
 
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

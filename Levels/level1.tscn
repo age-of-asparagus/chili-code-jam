@@ -641,4 +641,7 @@ position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
+[node name="CanvasLayer" parent="." index="26"]
+visible = true
+
 [editable path="CanvasLayer/HUD"]

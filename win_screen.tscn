@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://do86es7ns2thm"]
 
-[ext_resource type="Script" path="res://game_over.gd" id="1_cd2ec"]
+[ext_resource type="Script" path="res://win.gd" id="1_f7s14"]
 [ext_resource type="Texture2D" uid="uid://s1xe3gsskpsh" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass_notches.png" id="2_7v18r"]
 [ext_resource type="FontFile" uid="uid://ddufs37isldg4" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="3_p5ndx"]
 [ext_resource type="AudioStream" uid="uid://c0slbauvhh14e" path="res://Audio/Sounds/421278__jaszunio15__click_127.wav" id="4_l2kfn"]
@@ -12,14 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://cte8di2du5qrj" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoGreen.png" id="10_0ru70"]
 [ext_resource type="Texture2D" uid="uid://0m7x73qr7lna" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoBlue.png" id="11_jthyo"]
 
-[node name="Start_Screen" type="Control"]
+[node name="Win_Screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cd2ec")
+script = ExtResource("1_f7s14")
 metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

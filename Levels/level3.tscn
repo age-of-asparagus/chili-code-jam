@@ -17,6 +17,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 
 [node name="Level" instance=ExtResource("1_nnk38")]
 
+[node name="Lighting" parent="." index="0"]
+visible = true
+
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="1"]
 navigation_polygon = SubResource("NavigationPolygon_ybu1w")
 metadata/_edit_lock_ = true

@@ -19,6 +19,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 
 [node name="Level2" instance=ExtResource("1_vk6kg")]
 
+[node name="Lighting" parent="." index="0"]
+visible = true
+
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="1"]
 navigation_polygon = SubResource("NavigationPolygon_ybu1w")
 metadata/_edit_lock_ = true
@@ -73,169 +76,206 @@ rotation = -0.524762
 position = Vector2(5723, 3748)
 rotation = -0.524762
 
-[node name="Battery_Orb53" parent="OrbPile" index="9" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb81" parent="OrbPile" index="9" instance=ExtResource("3_ajxy3")]
+position = Vector2(5715, 3788)
+rotation = -0.524762
+
+[node name="Battery_Orb82" parent="OrbPile" index="10" instance=ExtResource("3_ajxy3")]
+position = Vector2(5717, 3758)
+rotation = -0.524762
+
+[node name="Battery_Orb83" parent="OrbPile" index="11" instance=ExtResource("3_ajxy3")]
+position = Vector2(5689, 3764)
+rotation = -0.524762
+
+[node name="Battery_Orb84" parent="OrbPile" index="12" instance=ExtResource("3_ajxy3")]
+position = Vector2(5746, 3764)
+rotation = -0.524762
+
+[node name="Battery_Orb85" parent="OrbPile" index="13" instance=ExtResource("3_ajxy3")]
+position = Vector2(5731, 3732)
+rotation = -0.524762
+
+[node name="Battery_Orb86" parent="OrbPile" index="14" instance=ExtResource("3_ajxy3")]
+position = Vector2(5703, 3751)
+rotation = -0.524762
+
+[node name="Battery_Orb87" parent="OrbPile" index="15" instance=ExtResource("3_ajxy3")]
+position = Vector2(5743, 3776)
+rotation = -0.524762
+
+[node name="Battery_Orb53" parent="OrbPile" index="16" instance=ExtResource("3_ajxy3")]
 position = Vector2(4126, 1826)
 rotation = -0.524762
 
-[node name="Battery_Orb57" parent="OrbPile" index="10" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb57" parent="OrbPile" index="17" instance=ExtResource("3_ajxy3")]
 position = Vector2(4146, 1904)
 rotation = -0.524762
 
-[node name="Battery_Orb58" parent="OrbPile" index="11" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb58" parent="OrbPile" index="18" instance=ExtResource("3_ajxy3")]
 position = Vector2(4220, 1907)
 rotation = -0.524762
 
-[node name="Battery_Orb59" parent="OrbPile" index="12" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb59" parent="OrbPile" index="19" instance=ExtResource("3_ajxy3")]
 position = Vector2(4168, 1845)
 rotation = -0.524762
 
-[node name="Battery_Orb60" parent="OrbPile" index="13" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb60" parent="OrbPile" index="20" instance=ExtResource("3_ajxy3")]
 position = Vector2(4168, 1845)
 rotation = -0.524762
 
-[node name="Battery_Orb55" parent="OrbPile" index="14" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb55" parent="OrbPile" index="21" instance=ExtResource("3_ajxy3")]
 position = Vector2(4198, 1845)
 rotation = -0.524762
 
-[node name="Battery_Orb56" parent="OrbPile" index="15" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb56" parent="OrbPile" index="22" instance=ExtResource("3_ajxy3")]
 position = Vector2(4204, 1875)
 rotation = -0.524762
 
-[node name="Battery_Orb61" parent="OrbPile" index="16" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb61" parent="OrbPile" index="23" instance=ExtResource("3_ajxy3")]
 position = Vector2(4153, 1886)
 rotation = -0.524762
 
-[node name="Battery_Orb62" parent="OrbPile" index="17" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb62" parent="OrbPile" index="24" instance=ExtResource("3_ajxy3")]
 position = Vector2(4133, 1856)
 rotation = -0.524762
 
-[node name="Battery_Orb63" parent="OrbPile" index="18" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb63" parent="OrbPile" index="25" instance=ExtResource("3_ajxy3")]
 position = Vector2(4199, 1860)
 rotation = -0.524762
 
-[node name="Battery_Orb64" parent="OrbPile" index="19" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb64" parent="OrbPile" index="26" instance=ExtResource("3_ajxy3")]
 position = Vector2(4162, 1877)
 rotation = -0.524762
 
-[node name="Battery_Orb65" parent="OrbPile" index="20" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb65" parent="OrbPile" index="27" instance=ExtResource("3_ajxy3")]
 position = Vector2(4169, 1843)
 rotation = -0.524762
 
-[node name="Battery_Orb66" parent="OrbPile" index="21" instance=ExtResource("3_ajxy3")]
-position = Vector2(4161, 1812)
+[node name="Battery_Orb88" parent="OrbPile" index="28" instance=ExtResource("3_ajxy3")]
+position = Vector2(4169, 1843)
 rotation = -0.524762
 
-[node name="Battery_Orb67" parent="OrbPile" index="22" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb66" parent="OrbPile" index="29" instance=ExtResource("3_ajxy3")]
+position = Vector2(4144, 1848)
+rotation = -0.524762
+
+[node name="Battery_Orb89" parent="OrbPile" index="30" instance=ExtResource("3_ajxy3")]
+position = Vector2(4169, 1888)
+rotation = -0.524762
+
+[node name="Battery_Orb90" parent="OrbPile" index="31" instance=ExtResource("3_ajxy3")]
+position = Vector2(4190, 1884)
+rotation = -0.524762
+
+[node name="Battery_Orb67" parent="OrbPile" index="32" instance=ExtResource("3_ajxy3")]
 position = Vector2(5658, 1049)
 rotation = -0.524762
 
-[node name="Battery_Orb68" parent="OrbPile" index="23" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb68" parent="OrbPile" index="33" instance=ExtResource("3_ajxy3")]
 position = Vector2(5778, 1060)
 rotation = -0.524762
 
-[node name="Battery_Orb69" parent="OrbPile" index="24" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb69" parent="OrbPile" index="34" instance=ExtResource("3_ajxy3")]
 position = Vector2(5878, 1056)
 rotation = -0.524762
 
-[node name="Battery_Orb70" parent="OrbPile" index="25" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb70" parent="OrbPile" index="35" instance=ExtResource("3_ajxy3")]
 position = Vector2(6022, 1056)
 rotation = -0.524762
 
-[node name="Battery_Orb71" parent="OrbPile" index="26" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb71" parent="OrbPile" index="36" instance=ExtResource("3_ajxy3")]
 position = Vector2(6256, 595)
 rotation = -0.524762
 
-[node name="Battery_Orb73" parent="OrbPile" index="27" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb73" parent="OrbPile" index="37" instance=ExtResource("3_ajxy3")]
 position = Vector2(6233, 655)
 rotation = -0.524762
 
-[node name="Battery_Orb74" parent="OrbPile" index="28" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb74" parent="OrbPile" index="38" instance=ExtResource("3_ajxy3")]
 position = Vector2(6280, 658)
 rotation = -0.524762
 
-[node name="Battery_Orb75" parent="OrbPile" index="29" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb75" parent="OrbPile" index="39" instance=ExtResource("3_ajxy3")]
 position = Vector2(6254, 659)
 rotation = -0.524762
 
-[node name="Battery_Orb76" parent="OrbPile" index="30" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb76" parent="OrbPile" index="40" instance=ExtResource("3_ajxy3")]
 position = Vector2(6277, 638)
 rotation = -0.524762
 
-[node name="Battery_Orb77" parent="OrbPile" index="31" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb77" parent="OrbPile" index="41" instance=ExtResource("3_ajxy3")]
 position = Vector2(6290, 678)
 rotation = -0.524762
 
-[node name="Battery_Orb78" parent="OrbPile" index="32" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb78" parent="OrbPile" index="42" instance=ExtResource("3_ajxy3")]
 position = Vector2(6206, 682)
 rotation = -0.524762
 
-[node name="Battery_Orb79" parent="OrbPile" index="33" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb79" parent="OrbPile" index="43" instance=ExtResource("3_ajxy3")]
 position = Vector2(6226, 632)
 rotation = -0.524762
 
-[node name="Battery_Orb80" parent="OrbPile" index="34" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb80" parent="OrbPile" index="44" instance=ExtResource("3_ajxy3")]
 position = Vector2(6300, 627)
 rotation = 1.63709
 
-[node name="Battery_Orb72" parent="OrbPile" index="35" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb72" parent="OrbPile" index="45" instance=ExtResource("3_ajxy3")]
 position = Vector2(6262, 726)
 rotation = -0.524762
 
-[node name="Battery_Orb33" parent="OrbPile" index="36" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb33" parent="OrbPile" index="46" instance=ExtResource("3_ajxy3")]
 position = Vector2(5459, 848)
 rotation = -0.524762
 
-[node name="Battery_Orb34" parent="OrbPile" index="37" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb34" parent="OrbPile" index="47" instance=ExtResource("3_ajxy3")]
 position = Vector2(5153, 1076)
 rotation = -0.524762
 
-[node name="Battery_Orb35" parent="OrbPile" index="38" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb35" parent="OrbPile" index="48" instance=ExtResource("3_ajxy3")]
 position = Vector2(5217, 1021)
 rotation = -0.524762
 
-[node name="Battery_Orb36" parent="OrbPile" index="39" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb36" parent="OrbPile" index="49" instance=ExtResource("3_ajxy3")]
 position = Vector2(5344, 1112)
 rotation = -0.524762
 
-[node name="Battery_Orb37" parent="OrbPile" index="40" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb37" parent="OrbPile" index="50" instance=ExtResource("3_ajxy3")]
 position = Vector2(5344, 1112)
 rotation = -0.524762
 
-[node name="Battery_Orb29" parent="OrbPile" index="41" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb29" parent="OrbPile" index="51" instance=ExtResource("3_ajxy3")]
 position = Vector2(5510, 1169)
 
-[node name="Battery_Orb38" parent="OrbPile" index="42" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb38" parent="OrbPile" index="52" instance=ExtResource("3_ajxy3")]
 position = Vector2(5485, 1310)
 
-[node name="Battery_Orb39" parent="OrbPile" index="43" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb39" parent="OrbPile" index="53" instance=ExtResource("3_ajxy3")]
 position = Vector2(5423, 1331)
 
-[node name="Battery_Orb40" parent="OrbPile" index="44" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb40" parent="OrbPile" index="54" instance=ExtResource("3_ajxy3")]
 position = Vector2(5425, 1130)
 
-[node name="Battery_Orb41" parent="OrbPile" index="45" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb41" parent="OrbPile" index="55" instance=ExtResource("3_ajxy3")]
 position = Vector2(5425, 1130)
 
-[node name="Battery_Orb42" parent="OrbPile" index="46" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb42" parent="OrbPile" index="56" instance=ExtResource("3_ajxy3")]
 position = Vector2(5375, 1037)
 
-[node name="Battery_Orb45" parent="OrbPile" index="47" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb45" parent="OrbPile" index="57" instance=ExtResource("3_ajxy3")]
 position = Vector2(1012, -9)
 
-[node name="Battery_Orb43" parent="OrbPile" index="48" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb43" parent="OrbPile" index="58" instance=ExtResource("3_ajxy3")]
 position = Vector2(5432, 780)
 
-[node name="Battery_Orb44" parent="OrbPile" index="49" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb44" parent="OrbPile" index="59" instance=ExtResource("3_ajxy3")]
 position = Vector2(5432, 924)
 
-[node name="Battery_Orb30" parent="OrbPile" index="50" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb30" parent="OrbPile" index="60" instance=ExtResource("3_ajxy3")]
 position = Vector2(5254, 1069)
 
-[node name="Battery_Orb31" parent="OrbPile" index="51" instance=ExtResource("3_ajxy3")]
+[node name="Battery_Orb31" parent="OrbPile" index="61" instance=ExtResource("3_ajxy3")]
 position = Vector2(5445, 1224)
-
-[node name="Lights" parent="." index="5"]
-metadata/_edit_group_ = true
 
 [node name="BlueLight5" parent="Lights" index="0" instance=ExtResource("4_w01rd")]
 position = Vector2(15622, 3304)
@@ -279,19 +319,34 @@ position = Vector2(13465, 2414)
 [node name="WhiteLight10" parent="Lights" index="13" instance=ExtResource("8_23o4i")]
 position = Vector2(12235, 1836)
 
-[node name="WhiteLight11" parent="Lights" index="14" instance=ExtResource("8_23o4i")]
+[node name="WhiteLight12" parent="Lights" index="14" instance=ExtResource("8_23o4i")]
+position = Vector2(13348, 2319)
+
+[node name="WhiteLight13" parent="Lights" index="15" instance=ExtResource("8_23o4i")]
+position = Vector2(14475, 2028)
+
+[node name="WhiteLight14" parent="Lights" index="16" instance=ExtResource("8_23o4i")]
+position = Vector2(15124, 2885)
+
+[node name="WhiteLight15" parent="Lights" index="17" instance=ExtResource("8_23o4i")]
+position = Vector2(14075, 3227)
+
+[node name="WhiteLight16" parent="Lights" index="18" instance=ExtResource("8_23o4i")]
+position = Vector2(13370, 3753)
+
+[node name="WhiteLight11" parent="Lights" index="19" instance=ExtResource("8_23o4i")]
 position = Vector2(15164, 705)
 
-[node name="MagentaLight" parent="Lights" index="15" instance=ExtResource("9_ga1fu")]
+[node name="MagentaLight" parent="Lights" index="20" instance=ExtResource("9_ga1fu")]
 position = Vector2(14091, 2609)
 
-[node name="MagentaLight2" parent="Lights" index="16" instance=ExtResource("9_ga1fu")]
+[node name="MagentaLight2" parent="Lights" index="21" instance=ExtResource("9_ga1fu")]
 position = Vector2(15188, 990)
 
-[node name="YellowLight" parent="Lights" index="17" instance=ExtResource("10_cp7a2")]
+[node name="YellowLight" parent="Lights" index="22" instance=ExtResource("10_cp7a2")]
 position = Vector2(12690, 3098)
 
-[node name="YellowLight2" parent="Lights" index="18" instance=ExtResource("10_cp7a2")]
+[node name="YellowLight2" parent="Lights" index="23" instance=ExtResource("10_cp7a2")]
 position = Vector2(15212, 1204)
 
 [node name="Enemy128" parent="Enemies" index="0" instance=ExtResource("11_hlpir")]

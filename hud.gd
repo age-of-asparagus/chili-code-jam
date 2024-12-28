@@ -45,13 +45,13 @@ func _process(delta):
 	flashlight_battery = Global.flashlight_battery
 	
 	if Global.color == Color.RED or Global.color == Color.BLUE or Global.color == Color.GREEN:
-		Global.flashlight_battery -= 0.02
+		Global.flashlight_battery -= 0.01
 	
 	if Global.color == Color.MAGENTA or Global.color == Color.YELLOW or Global.color == Color.CYAN:
-		Global.flashlight_battery -= 0.04
+		Global.flashlight_battery -= 0.02
 		
 	if Global.color == Color.WHITE:
-		Global.flashlight_battery -= 0.06
+		Global.flashlight_battery -= 0.03
 	
 	battery_progress.value = Global.flashlight_battery
 	battery_label.text = "%3d" % Global.flashlight_battery + "%"

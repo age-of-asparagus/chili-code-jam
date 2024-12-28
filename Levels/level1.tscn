@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://do2fe6slw8iux"]
+[gd_scene load_steps=8 format=4 uid="uid://do2fe6slw8iux"]
 
 [ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_fvjxe"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="2_bysrn"]
 [ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
+[ext_resource type="PackedScene" uid="uid://uq75qgrdmoon" path="res://battery_orb.tscn" id="3_nmvpj"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="3_yyjbs"]
+[ext_resource type="PackedScene" uid="uid://ccf2ig23ak528" path="res://enemy_spawner.tscn" id="5_q1xo3"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(8218.57, 425.57, 8218.57, 858.57, 8037.43, 726.43, 8037.43, 425.57, 8730.57, -218.57, 8730.57, 214.43, 8549.43, 214.43, 8549.43, -86.4297, 8745.57, 229.43, 9306.57, 229.43, 9306.57, 278.43, 9321.57, 293.43, 9434.57, 293.43, 9434.57, 346.57, 9321.57, 346.57, 9306.57, 361.57, 9306.57, 410.57, 8233.57, 410.57, 8534.43, 229.43, 6998.43, 410.57, 1957.43, 410.57, 1957.43, 361.57, 1942.43, 346.57, 1829.43, 346.57, 1829.43, 293.43, 1942.43, 293.43, 1957.43, 278.43, 1957.43, 229.43, 7510.43, 229.43, 7209.57, 410.57, 8534.43, -101.43, 7525.43, -218.57, 7721.57, -101.43, 7706.57, -86.4297, 7525.43, 214.43, 7706.57, 214.43, 8022.43, 741.43, 7013.43, 858.57, 7209.57, 741.43, 7194.57, 726.43, 7013.43, 425.57, 7194.57, 425.57, 7721.57, 229.43, 8022.43, 410.57)
@@ -27,13 +29,76 @@ metadata/_edit_lock_ = true
 position = Vector2(9408, 320)
 
 [node name="OrbPile" parent="." index="4"]
-visible = false
-position = Vector2(-3032, -1640)
+position = Vector2(8132, -208)
 
-[node name="Lights" parent="." index="5"]
+[node name="Battery_Orb" parent="OrbPile" index="0" instance=ExtResource("3_nmvpj")]
+position = Vector2(33, 8)
+
+[node name="Battery_Orb2" parent="OrbPile" index="1" instance=ExtResource("3_nmvpj")]
+position = Vector2(0, -16)
+
+[node name="Battery_Orb3" parent="OrbPile" index="2" instance=ExtResource("3_nmvpj")]
+position = Vector2(-13, 12)
+
+[node name="Battery_Orb4" parent="OrbPile" index="3" instance=ExtResource("3_nmvpj")]
+position = Vector2(17, 0)
+
+[node name="Battery_Orb5" parent="OrbPile" index="4" instance=ExtResource("3_nmvpj")]
+position = Vector2(1, 24)
+
+[node name="Battery_Orb6" parent="OrbPile" index="5" instance=ExtResource("3_nmvpj")]
+position = Vector2(-13, -12)
+
+[node name="Battery_Orb7" parent="OrbPile" index="6" instance=ExtResource("3_nmvpj")]
+position = Vector2(-31, -4)
+
+[node name="Battery_Orb8" parent="OrbPile" index="7" instance=ExtResource("3_nmvpj")]
+position = Vector2(29, -12)
+
+[node name="Battery_Orb9" parent="OrbPile" index="8" instance=ExtResource("3_nmvpj")]
+position = Vector2(13, -12)
+
+[node name="Battery_Orb10" parent="OrbPile" index="9" instance=ExtResource("3_nmvpj")]
+position = Vector2(13, 8)
+
+[node name="OrbPile2" type="Node2D" parent="." index="5"]
+position = Vector2(7589, 836)
+metadata/_edit_group_ = true
+
+[node name="Battery_Orb" parent="OrbPile2" index="0" instance=ExtResource("3_nmvpj")]
+position = Vector2(33, 8)
+
+[node name="Battery_Orb2" parent="OrbPile2" index="1" instance=ExtResource("3_nmvpj")]
+position = Vector2(0, -16)
+
+[node name="Battery_Orb3" parent="OrbPile2" index="2" instance=ExtResource("3_nmvpj")]
+position = Vector2(-13, 12)
+
+[node name="Battery_Orb4" parent="OrbPile2" index="3" instance=ExtResource("3_nmvpj")]
+position = Vector2(17, 0)
+
+[node name="Battery_Orb5" parent="OrbPile2" index="4" instance=ExtResource("3_nmvpj")]
+position = Vector2(1, 24)
+
+[node name="Battery_Orb6" parent="OrbPile2" index="5" instance=ExtResource("3_nmvpj")]
+position = Vector2(-13, -12)
+
+[node name="Battery_Orb7" parent="OrbPile2" index="6" instance=ExtResource("3_nmvpj")]
+position = Vector2(-31, -4)
+
+[node name="Battery_Orb8" parent="OrbPile2" index="7" instance=ExtResource("3_nmvpj")]
+position = Vector2(29, -12)
+
+[node name="Battery_Orb9" parent="OrbPile2" index="8" instance=ExtResource("3_nmvpj")]
+position = Vector2(13, -12)
+
+[node name="Battery_Orb10" parent="OrbPile2" index="9" instance=ExtResource("3_nmvpj")]
+position = Vector2(13, 8)
+
+[node name="Lights" parent="." index="6"]
 visible = false
 
-[node name="RedLights" type="Node2D" parent="." index="6"]
+[node name="RedLights" type="Node2D" parent="." index="7"]
 
 [node name="RedLight2" parent="RedLights" index="0" instance=ExtResource("2_jy2p3")]
 position = Vector2(2176, 208)
@@ -53,70 +118,106 @@ position = Vector2(3200, 208)
 [node name="RedLight7" parent="RedLights" index="5" instance=ExtResource("2_jy2p3")]
 position = Vector2(3456, 432)
 
-[node name="RedLights2" type="Node2D" parent="." index="7"]
+[node name="Yellow" type="Node2D" parent="." index="8"]
 position = Vector2(1512, 0)
 
-[node name="RedLight2" parent="RedLights2" index="0" instance=ExtResource("2_jy2p3")]
+[node name="RedLight2" parent="Yellow" index="0" instance=ExtResource("2_jy2p3")]
 position = Vector2(2176, 208)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLight3" parent="RedLights2" index="1" instance=ExtResource("2_jy2p3")]
+[node name="RedLight3" parent="Yellow" index="1" instance=ExtResource("2_jy2p3")]
 position = Vector2(2432, 432)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLight4" parent="RedLights2" index="2" instance=ExtResource("2_jy2p3")]
+[node name="RedLight4" parent="Yellow" index="2" instance=ExtResource("2_jy2p3")]
 position = Vector2(2688, 208)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLight5" parent="RedLights2" index="3" instance=ExtResource("2_jy2p3")]
+[node name="RedLight5" parent="Yellow" index="3" instance=ExtResource("2_jy2p3")]
 position = Vector2(2944, 432)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLight6" parent="RedLights2" index="4" instance=ExtResource("2_jy2p3")]
+[node name="RedLight6" parent="Yellow" index="4" instance=ExtResource("2_jy2p3")]
 position = Vector2(3200, 208)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLight7" parent="RedLights2" index="5" instance=ExtResource("2_jy2p3")]
+[node name="RedLight7" parent="Yellow" index="5" instance=ExtResource("2_jy2p3")]
 position = Vector2(3456, 432)
+color = Color(1, 1, 0, 1)
+range_item_cull_mask = 7
 
-[node name="RedLights3" type="Node2D" parent="." index="8"]
+[node name="Magenta" type="Node2D" parent="." index="9"]
 position = Vector2(3040, 8)
 
-[node name="RedLight2" parent="RedLights3" index="0" instance=ExtResource("2_jy2p3")]
+[node name="RedLight2" parent="Magenta" index="0" instance=ExtResource("2_jy2p3")]
 position = Vector2(2176, 208)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLight3" parent="RedLights3" index="1" instance=ExtResource("2_jy2p3")]
+[node name="RedLight3" parent="Magenta" index="1" instance=ExtResource("2_jy2p3")]
 position = Vector2(2432, 432)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLight4" parent="RedLights3" index="2" instance=ExtResource("2_jy2p3")]
+[node name="RedLight4" parent="Magenta" index="2" instance=ExtResource("2_jy2p3")]
 position = Vector2(2688, 208)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLight5" parent="RedLights3" index="3" instance=ExtResource("2_jy2p3")]
+[node name="RedLight5" parent="Magenta" index="3" instance=ExtResource("2_jy2p3")]
 position = Vector2(2944, 432)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLight6" parent="RedLights3" index="4" instance=ExtResource("2_jy2p3")]
+[node name="RedLight6" parent="Magenta" index="4" instance=ExtResource("2_jy2p3")]
 position = Vector2(3200, 208)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLight7" parent="RedLights3" index="5" instance=ExtResource("2_jy2p3")]
+[node name="RedLight7" parent="Magenta" index="5" instance=ExtResource("2_jy2p3")]
 position = Vector2(3456, 432)
+color = Color(1, 0, 1, 1)
+range_item_cull_mask = 49
 
-[node name="RedLights4" type="Node2D" parent="." index="9"]
+[node name="BlueLights" type="Node2D" parent="." index="10"]
 position = Vector2(4568, 8)
 
-[node name="RedLight2" parent="RedLights4" index="0" instance=ExtResource("2_jy2p3")]
+[node name="RedLight2" parent="BlueLights" index="0" instance=ExtResource("2_jy2p3")]
 position = Vector2(2176, 208)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="RedLight3" parent="RedLights4" index="1" instance=ExtResource("2_jy2p3")]
+[node name="RedLight3" parent="BlueLights" index="1" instance=ExtResource("2_jy2p3")]
 position = Vector2(2432, 432)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="RedLight4" parent="RedLights4" index="2" instance=ExtResource("2_jy2p3")]
+[node name="RedLight4" parent="BlueLights" index="2" instance=ExtResource("2_jy2p3")]
 position = Vector2(2688, 208)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="RedLight5" parent="RedLights4" index="3" instance=ExtResource("2_jy2p3")]
+[node name="RedLight5" parent="BlueLights" index="3" instance=ExtResource("2_jy2p3")]
 position = Vector2(2944, 432)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="RedLight6" parent="RedLights4" index="4" instance=ExtResource("2_jy2p3")]
+[node name="RedLight6" parent="BlueLights" index="4" instance=ExtResource("2_jy2p3")]
 position = Vector2(3200, 208)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="RedLight7" parent="RedLights4" index="5" instance=ExtResource("2_jy2p3")]
+[node name="RedLight7" parent="BlueLights" index="5" instance=ExtResource("2_jy2p3")]
 position = Vector2(3456, 432)
+color = Color(0, 0, 1, 1)
+range_item_cull_mask = 16
 
-[node name="EnemyGroup" type="Node2D" parent="." index="11"]
+[node name="EnemyGroup" type="Node2D" parent="." index="12"]
 position = Vector2(-3136, -1064)
 
 [node name="Enemy2" parent="EnemyGroup" index="0" instance=ExtResource("3_yyjbs")]
@@ -127,35 +228,23 @@ metadata/_edit_group_ = true
 position = Vector2(5904, 1352)
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroup" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroup" index="3" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroup" index="4" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroup" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6104, 1344)
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroup" index="5" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroup" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroup" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(6112, 1434)
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroup" index="7" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroup" index="4" instance=ExtResource("3_yyjbs")]
 position = Vector2(5904, 1434)
 metadata/_edit_group_ = true
 
-[node name="Enemy9" parent="EnemyGroup" index="8" instance=ExtResource("3_yyjbs")]
+[node name="Enemy9" parent="EnemyGroup" index="5" instance=ExtResource("3_yyjbs")]
 position = Vector2(6200, 1384)
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupGreen" type="Node2D" parent="." index="12"]
+[node name="EnemyGroupGreen" type="Node2D" parent="." index="13"]
 position = Vector2(-2176, -1064)
 
 [node name="Enemy2" parent="EnemyGroupGreen" index="0" instance=ExtResource("3_yyjbs")]
@@ -168,42 +257,27 @@ position = Vector2(5904, 1352)
 enemy_type = 1
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupGreen" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 1
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupGreen" index="3" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 1
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupGreen" index="4" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupGreen" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6104, 1344)
 enemy_type = 1
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupGreen" index="5" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 1
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupGreen" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupGreen" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(6112, 1434)
 enemy_type = 1
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupGreen" index="7" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupGreen" index="4" instance=ExtResource("3_yyjbs")]
 position = Vector2(5904, 1434)
 enemy_type = 1
 metadata/_edit_group_ = true
 
-[node name="Enemy9" parent="EnemyGroupGreen" index="8" instance=ExtResource("3_yyjbs")]
+[node name="Enemy9" parent="EnemyGroupGreen" index="5" instance=ExtResource("3_yyjbs")]
 position = Vector2(6200, 1384)
 enemy_type = 1
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupBlue" type="Node2D" parent="." index="13"]
+[node name="EnemyGroupBlue" type="Node2D" parent="." index="14"]
 position = Vector2(-920, -1064)
 
 [node name="Enemy2" parent="EnemyGroupBlue" index="0" instance=ExtResource("3_yyjbs")]
@@ -216,42 +290,27 @@ position = Vector2(5904, 1352)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupBlue" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupBlue" index="3" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupBlue" index="4" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupBlue" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6104, 1344)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupBlue" index="5" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupBlue" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupBlue" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(6112, 1434)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupBlue" index="7" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupBlue" index="4" instance=ExtResource("3_yyjbs")]
 position = Vector2(5904, 1434)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy9" parent="EnemyGroupBlue" index="8" instance=ExtResource("3_yyjbs")]
+[node name="Enemy9" parent="EnemyGroupBlue" index="5" instance=ExtResource("3_yyjbs")]
 position = Vector2(6200, 1384)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupBlue2" type="Node2D" parent="." index="14"]
+[node name="EnemyGroupBlue2" type="Node2D" parent="." index="15"]
 position = Vector2(-440, -1072)
 
 [node name="Enemy2" parent="EnemyGroupBlue2" index="0" instance=ExtResource("3_yyjbs")]
@@ -264,42 +323,27 @@ position = Vector2(5904, 1352)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupBlue2" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupBlue2" index="3" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupBlue2" index="4" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupBlue2" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6104, 1344)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupBlue2" index="5" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 2
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupBlue2" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupBlue2" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(6112, 1434)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupBlue2" index="7" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupBlue2" index="4" instance=ExtResource("3_yyjbs")]
 position = Vector2(5904, 1434)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="Enemy9" parent="EnemyGroupBlue2" index="8" instance=ExtResource("3_yyjbs")]
+[node name="Enemy9" parent="EnemyGroupBlue2" index="5" instance=ExtResource("3_yyjbs")]
 position = Vector2(6200, 1384)
 enemy_type = 2
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom" type="Node2D" parent="." index="15"]
+[node name="EnemyGroupRandom" type="Node2D" parent="." index="16"]
 position = Vector2(720, -1072)
 
 [node name="Enemy3" parent="EnemyGroupRandom" index="0" instance=ExtResource("3_yyjbs")]
@@ -307,37 +351,22 @@ position = Vector2(5936, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom2" type="Node2D" parent="." index="16"]
+[node name="EnemyGroupRandom2" type="Node2D" parent="." index="17"]
 position = Vector2(1104, -808)
 
 [node name="Enemy3" parent="EnemyGroupRandom2" index="0" instance=ExtResource("3_yyjbs")]
@@ -345,37 +374,22 @@ position = Vector2(5926, 1401)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom2" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1424)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom2" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1494)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom2" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom2" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6071, 1401)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom2" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1364)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom2" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom2" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6071, 1482)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom2" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom2" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5926, 1482)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom3" type="Node2D" parent="." index="17"]
+[node name="EnemyGroupRandom3" type="Node2D" parent="." index="18"]
 position = Vector2(1600, -1296)
 
 [node name="Enemy3" parent="EnemyGroupRandom3" index="0" instance=ExtResource("3_yyjbs")]
@@ -383,37 +397,22 @@ position = Vector2(5936, 1229)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom3" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1252)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom3" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1322)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom3" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom3" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1229)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom3" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1192)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom3" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom3" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1310)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom3" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom3" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1310)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom4" type="Node2D" parent="." index="18"]
+[node name="EnemyGroupRandom4" type="Node2D" parent="." index="19"]
 position = Vector2(2120, -832)
 
 [node name="Enemy3" parent="EnemyGroupRandom4" index="0" instance=ExtResource("3_yyjbs")]
@@ -421,37 +420,22 @@ position = Vector2(5856, 1581)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom4" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(5928, 1604)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom4" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(5928, 1674)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom4" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom4" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6001, 1581)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom4" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(5928, 1544)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom4" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom4" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6001, 1662)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom4" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom4" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5856, 1662)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom5" type="Node2D" parent="." index="19"]
+[node name="EnemyGroupRandom5" type="Node2D" parent="." index="20"]
 position = Vector2(2624, -1296)
 
 [node name="Enemy3" parent="EnemyGroupRandom5" index="0" instance=ExtResource("3_yyjbs")]
@@ -459,37 +443,22 @@ position = Vector2(5926, 1125)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom5" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1148)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom5" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1218)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom5" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom5" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6071, 1125)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom5" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(5998, 1088)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom5" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom5" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6071, 1206)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom5" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom5" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5926, 1206)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom6" type="Node2D" parent="." index="20"]
+[node name="EnemyGroupRandom6" type="Node2D" parent="." index="21"]
 position = Vector2(1800, -1064)
 
 [node name="Enemy3" parent="EnemyGroupRandom6" index="0" instance=ExtResource("3_yyjbs")]
@@ -497,37 +466,22 @@ position = Vector2(5936, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom6" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom6" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom6" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom6" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom6" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom6" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom6" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom6" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom6" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom7" type="Node2D" parent="." index="21"]
+[node name="EnemyGroupRandom7" type="Node2D" parent="." index="22"]
 position = Vector2(2368, -1064)
 
 [node name="Enemy3" parent="EnemyGroupRandom7" index="0" instance=ExtResource("3_yyjbs")]
@@ -535,37 +489,22 @@ position = Vector2(5936, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom7" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom7" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom7" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom7" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom7" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom7" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom7" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom7" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom7" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom8" type="Node2D" parent="." index="22"]
+[node name="EnemyGroupRandom8" type="Node2D" parent="." index="23"]
 position = Vector2(1344, -1064)
 
 [node name="Enemy3" parent="EnemyGroupRandom8" index="0" instance=ExtResource("3_yyjbs")]
@@ -573,37 +512,22 @@ position = Vector2(5936, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom8" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom8" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom8" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom8" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom8" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom8" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom8" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom8" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom8" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="EnemyGroupRandom9" type="Node2D" parent="." index="23"]
+[node name="EnemyGroupRandom9" type="Node2D" parent="." index="24"]
 position = Vector2(2904, -1064)
 
 [node name="Enemy3" parent="EnemyGroupRandom9" index="0" instance=ExtResource("3_yyjbs")]
@@ -611,37 +535,86 @@ position = Vector2(5936, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy4" parent="EnemyGroupRandom9" index="1" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1374)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy10" parent="EnemyGroupRandom9" index="2" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1444)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy5" parent="EnemyGroupRandom9" index="3" instance=ExtResource("3_yyjbs")]
+[node name="Enemy5" parent="EnemyGroupRandom9" index="1" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1351)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy6" parent="EnemyGroupRandom9" index="4" instance=ExtResource("3_yyjbs")]
-position = Vector2(6008, 1314)
-enemy_type = 3
-metadata/_edit_group_ = true
-
-[node name="Enemy7" parent="EnemyGroupRandom9" index="5" instance=ExtResource("3_yyjbs")]
+[node name="Enemy7" parent="EnemyGroupRandom9" index="2" instance=ExtResource("3_yyjbs")]
 position = Vector2(6081, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy8" parent="EnemyGroupRandom9" index="6" instance=ExtResource("3_yyjbs")]
+[node name="Enemy8" parent="EnemyGroupRandom9" index="3" instance=ExtResource("3_yyjbs")]
 position = Vector2(5936, 1432)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer" parent="." index="26"]
+[node name="CanvasLayer" parent="." index="27"]
 visible = true
+
+[node name="Enemy_Spawner" parent="Enemy_spawners" index="0" instance=ExtResource("5_q1xo3")]
+position = Vector2(2880, 320)
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner2" parent="Enemy_spawners" index="1" instance=ExtResource("5_q1xo3")]
+position = Vector2(3840, 319)
+enemy_spawn_type = 1
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner3" parent="Enemy_spawners" index="2" instance=ExtResource("5_q1xo3")]
+position = Vector2(5088, 322)
+enemy_spawn_type = 2
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner4" parent="Enemy_spawners" index="3" instance=ExtResource("5_q1xo3")]
+position = Vector2(5568, 320)
+enemy_spawn_type = 2
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner5" parent="Enemy_spawners" index="4" instance=ExtResource("5_q1xo3")]
+position = Vector2(6744, 320)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner6" parent="Enemy_spawners" index="5" instance=ExtResource("5_q1xo3")]
+position = Vector2(7360, 332)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner7" parent="Enemy_spawners" index="6" instance=ExtResource("5_q1xo3")]
+position = Vector2(7824, 339)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner8" parent="Enemy_spawners" index="7" instance=ExtResource("5_q1xo3")]
+position = Vector2(7608, -9)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner9" parent="Enemy_spawners" index="8" instance=ExtResource("5_q1xo3")]
+position = Vector2(7112, 640)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner10" parent="Enemy_spawners" index="9" instance=ExtResource("5_q1xo3")]
+position = Vector2(8064, 807)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner11" parent="Enemy_spawners" index="10" instance=ExtResource("5_q1xo3")]
+position = Vector2(8384, 332)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner12" parent="Enemy_spawners" index="11" instance=ExtResource("5_q1xo3")]
+position = Vector2(8624, -128)
+enemy_spawn_type = 3
+spawn_rate = 7.0
+
+[node name="Enemy_Spawner13" parent="Enemy_spawners" index="12" instance=ExtResource("5_q1xo3")]
+position = Vector2(8936, 347)
+enemy_spawn_type = 3
+spawn_rate = 7.0
 
 [editable path="CanvasLayer/HUD"]

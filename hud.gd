@@ -19,10 +19,13 @@ var flashlight_battery = Global.flashlight_battery
 var level = Global.level
 var player_health = Global.player_health
 
+@onready var label_level: Label = $MarginContainerLevel/NinePatchRect/LabelLevel
+
 signal color_update(new_color)
 
 func _ready():
 	Global.level_completed = true
+	label_level.text = "FLOOR " + str(Global.level)
 	$AnimationPlayer.play("level_animation_open")
 	await $AnimationPlayer.animation_finished
 	Global.level_completed = false

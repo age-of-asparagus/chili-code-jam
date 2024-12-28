@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://dj2hhq5k178mg"]
+
+[ext_resource type="Script" path="res://level_transporter.gd" id="1_oyn3i"]
+[ext_resource type="Texture2D" uid="uid://ckd2gn0pdt858" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_12-dark.png" id="2_hejul"]
+[ext_resource type="Texture2D" uid="uid://b2cdxsqa44ktb" path="res://Assets/ElevatorWalls.png" id="3_qtiiv"]
+[ext_resource type="Texture2D" uid="uid://cyck5ks1ce15f" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_446.png" id="4_ac3jd"]
+[ext_resource type="PackedScene" uid="uid://cb1d55qlrog6l" path="res://LightingSystem/green_light.tscn" id="5_wboqt"]
+
+[sub_resource type="Animation" id="Animation_psq08"]
+resource_name = "DoorClose"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-56, -32), Vector2(-56, -64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-56, 32), Vector2(-56, 64)]
+}
+
+[sub_resource type="Animation" id="Animation_wqdq3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-56, -64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-56, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i25li"]
+_data = {
+"DoorClose": SubResource("Animation_psq08"),
+"RESET": SubResource("Animation_wqdq3")
+}
+
+[node name="level_transporter" type="Node2D"]
+light_mask = 63
+script = ExtResource("1_oyn3i")
+
+[node name="Floor" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Tile11" type="Sprite2D" parent="Floor"]
+light_mask = 63
+position = Vector2(-32, -32)
+texture = ExtResource("2_hejul")
+
+[node name="Tile12" type="Sprite2D" parent="Floor"]
+light_mask = 63
+position = Vector2(32, -32)
+texture = ExtResource("2_hejul")
+
+[node name="Tile13" type="Sprite2D" parent="Floor"]
+light_mask = 63
+position = Vector2(32, 32)
+texture = ExtResource("2_hejul")
+
+[node name="Tile14" type="Sprite2D" parent="Floor"]
+light_mask = 63
+position = Vector2(-32, 32)
+texture = ExtResource("2_hejul")
+
+[node name="ElevatorWalls" type="Sprite2D" parent="."]
+light_mask = 63
+texture = ExtResource("3_qtiiv")
+metadata/_edit_lock_ = true
+
+[node name="Door1" type="Sprite2D" parent="."]
+light_mask = 63
+position = Vector2(-56, -64)
+texture = ExtResource("4_ac3jd")
+metadata/_edit_lock_ = true
+
+[node name="Door2" type="Sprite2D" parent="."]
+light_mask = 63
+position = Vector2(-56, 64)
+texture = ExtResource("4_ac3jd")
+metadata/_edit_lock_ = true
+
+[node name="GreenLight" parent="." instance=ExtResource("5_wboqt")]
+position = Vector2(48, 0)
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i25li")
+}

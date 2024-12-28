@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8o8mj21fg8a3" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle_depth.png" id="7_b7vvy"]
 [ext_resource type="Texture2D" uid="uid://u5n6omb0n81i" path="res://Assets/Kenny/kenney_ui-pack-space-expansion/PNG/Extra/Default/button_rectangle.png" id="8_oh6ua"]
 
-[node name="Start_Screen" type="Control"]
+[node name="game_over_screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

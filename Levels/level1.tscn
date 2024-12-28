@@ -1,15 +1,15 @@
-[gd_scene load_steps=6 format=4 uid="uid://b1ubpy8wcorjl"]
+[gd_scene load_steps=6 format=4 uid="uid://do2fe6slw8iux"]
 
 [ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_fvjxe"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="2_bysrn"]
-[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
+[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="3_yyjbs"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(8549.43, 214.43, 8549.43, -26.5703, 8730.57, -26.5703, 8730.57, 214.43, 8745.57, 229.43, 9306.57, 229.43, 9306.57, 278.43, 9321.57, 293.43, 9434.57, 293.43, 9434.57, 346.57, 9321.57, 346.57, 9306.57, 361.57, 9306.57, 410.57, 8233.57, 410.57, 8534.43, 229.43, 8218.57, 425.57, 8218.57, 666.57, 8037.43, 666.57, 8037.43, 425.57, 7194.57, 425.57, 7194.57, 666.57, 7013.43, 666.57, 7013.43, 425.57, 6998.43, 410.57, 1957.43, 410.57, 1957.43, 361.57, 1942.43, 346.57, 1829.43, 346.57, 1829.43, 293.43, 1942.43, 293.43, 1957.43, 278.43, 1957.43, 229.43, 7510.43, 229.43, 7209.57, 410.57, 7525.43, 214.43, 7525.43, -26.5703, 7706.57, -26.5703, 7706.57, 214.43, 7721.57, 229.43, 8022.43, 410.57, 1370.57, 346.57, 997.43, 346.57, 997.43, 229.43, 1370.57, 229.43)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(4, 11, 12, 13, 14), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(19, 20, 21, 22), PackedInt32Array(23, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(30, 31, 32, 33), PackedInt32Array(34, 35, 36, 37), PackedInt32Array(34, 37, 38, 32), PackedInt32Array(14, 0, 3, 4), PackedInt32Array(4, 6, 7, 10, 11), PackedInt32Array(38, 14, 13), PackedInt32Array(38, 13, 15, 39), PackedInt32Array(15, 18, 39), PackedInt32Array(38, 39, 33, 32), PackedInt32Array(25, 26, 29, 30, 33, 23), PackedInt32Array(23, 33, 19, 22), PackedInt32Array(40, 41, 42, 43)])
 
-[node name="Level" instance=ExtResource("1_fvjxe")]
+[node name="Level2" instance=ExtResource("1_fvjxe")]
 
 [node name="NavigationRegion2D" parent="." index="0"]
 visible = false

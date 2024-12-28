@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ckd2gn0pdt858" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_12-dark.png" id="2_or6hq"]
 [ext_resource type="Texture2D" uid="uid://b2cdxsqa44ktb" path="res://Assets/ElevatorWalls.png" id="3_0q4ew"]
 [ext_resource type="Texture2D" uid="uid://cyck5ks1ce15f" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/Tiles/tile_446.png" id="3_gfvd4"]
-[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="5_u488e"]
+[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="5_u488e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdtba"]
-size = Vector2(80, 112)
+size = Vector2(56, 112)
 
 [sub_resource type="Animation" id="Animation_psq08"]
 resource_name = "DoorClose"
@@ -76,7 +76,7 @@ collision_layer = 0
 script = ExtResource("1_qjbuv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(16, 0)
+position = Vector2(28, 0)
 shape = SubResource("RectangleShape2D_gdtba")
 
 [node name="Floor" type="Node2D" parent="."]

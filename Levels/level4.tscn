@@ -387,7 +387,7 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy175" parent="Enemies" index="42" instance=ExtResource("11_hlpir")]
-position = Vector2(13258, 289)
+position = Vector2(12086, 426)
 rotation = 1.19805
 enemy_type = 3
 metadata/_edit_group_ = true
@@ -570,7 +570,7 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy62" parent="Enemies" index="74" instance=ExtResource("11_hlpir")]
-position = Vector2(10753, -370)
+position = Vector2(12107, -285)
 enemy_type = 3
 metadata/_edit_group_ = true
 
@@ -589,7 +589,7 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy66" parent="Enemies" index="78" instance=ExtResource("11_hlpir")]
-position = Vector2(11194, -376)
+position = Vector2(11203, -184)
 enemy_type = 3
 metadata/_edit_group_ = true
 
@@ -599,7 +599,7 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy68" parent="Enemies" index="80" instance=ExtResource("11_hlpir")]
-position = Vector2(11196, -190)
+position = Vector2(12093, -215)
 enemy_type = 3
 metadata/_edit_group_ = true
 
@@ -609,17 +609,17 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy70" parent="Enemies" index="82" instance=ExtResource("11_hlpir")]
-position = Vector2(11206, 432)
+position = Vector2(11206, 391)
 enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy71" parent="Enemies" index="83" instance=ExtResource("11_hlpir")]
-position = Vector2(11205, 516)
+position = Vector2(11651, -179)
 enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy72" parent="Enemies" index="84" instance=ExtResource("11_hlpir")]
-position = Vector2(10749, 312)
+position = Vector2(12101, 335)
 enemy_type = 3
 metadata/_edit_group_ = true
 
@@ -654,17 +654,17 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy80" parent="Enemies" index="91" instance=ExtResource("11_hlpir")]
-position = Vector2(12101, -194)
+position = Vector2(11655, -259)
 enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy78" parent="Enemies" index="92" instance=ExtResource("11_hlpir")]
-position = Vector2(11647, 435)
+position = Vector2(11639, 312)
 enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy79" parent="Enemies" index="93" instance=ExtResource("11_hlpir")]
-position = Vector2(11647, 518)
+position = Vector2(11654, 406)
 enemy_type = 3
 metadata/_edit_group_ = true
 
@@ -680,11 +680,69 @@ position = Vector2(11329, 3395)
 [node name="CanvasLayer" parent="." index="9"]
 visible = true
 
-[node name="Enemy_Spawner" parent="." index="11" instance=ExtResource("12_mucot")]
-position = Vector2(12670, 3589)
+[node name="Enemy_Spawner" parent="Enemy_spawners" index="0" instance=ExtResource("12_mucot")]
+position = Vector2(15120, 3765)
+enemy_spawn_type = 3
+spawn_rate = 7.5
 
-[node name="spawn_time" parent="Enemy_Spawner" index="0"]
-wait_time = 10.0
+[node name="Enemy_Spawner2" parent="Enemy_spawners" index="1" instance=ExtResource("12_mucot")]
+position = Vector2(14394, 2101)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner3" parent="Enemy_spawners" index="2" instance=ExtResource("12_mucot")]
+position = Vector2(12952, 1871)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner4" parent="Enemy_spawners" index="3" instance=ExtResource("12_mucot")]
+position = Vector2(13227, 2667)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner5" parent="Enemy_spawners" index="4" instance=ExtResource("12_mucot")]
+position = Vector2(14009, 1135)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner6" parent="Enemy_spawners" index="5" instance=ExtResource("12_mucot")]
+position = Vector2(12782, 406)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner7" parent="Enemy_spawners" index="6" instance=ExtResource("12_mucot")]
+position = Vector2(12729, -224)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner8" parent="Enemy_spawners" index="7" instance=ExtResource("12_mucot")]
+position = Vector2(12099, -360)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner9" parent="Enemy_spawners" index="8" instance=ExtResource("12_mucot")]
+position = Vector2(12094, 513)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner10" parent="Enemy_spawners" index="9" instance=ExtResource("12_mucot")]
+position = Vector2(11645, 491)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner11" parent="Enemy_spawners" index="10" instance=ExtResource("12_mucot")]
+position = Vector2(11651, -360)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner12" parent="Enemy_spawners" index="11" instance=ExtResource("12_mucot")]
+position = Vector2(11211, -371)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner13" parent="Enemy_spawners" index="12" instance=ExtResource("12_mucot")]
+position = Vector2(11203, 521)
+enemy_spawn_type = 3
+spawn_rate = 7.5
 
 [editable path="CanvasLayer/HUD"]
-[editable path="Enemy_Spawner"]

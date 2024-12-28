@@ -56,4 +56,6 @@ stream = ExtResource("16_7qj2o")
 volume_db = -15.0
 autoplay = true
 
+[node name="Enemy_spawners" type="Node2D" parent="."]
+
 [editable path="CanvasLayer/HUD"]

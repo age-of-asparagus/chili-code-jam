@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwuwubw6mhgot"]
+[gd_scene load_steps=10 format=3 uid="uid://cwuwubw6mhgot"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_paqyv"]
 [ext_resource type="PackedScene" path="res://UI/button.tscn" id="2_57npi"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="4_j857d"]
 [ext_resource type="Texture2D" uid="uid://cte8di2du5qrj" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoGreen.png" id="5_36dq7"]
 [ext_resource type="Texture2D" uid="uid://0m7x73qr7lna" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoBlue.png" id="6_61jl3"]
+[ext_resource type="PackedScene" uid="uid://caj18p8nsn8bv" path="res://Audio/animated_ufo_sound_for_menus.tscn" id="9_xshae"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -157,6 +158,8 @@ text = "BACK"
 
 [node name="AudioStreamPlayerClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_jmj2i")
+
+[node name="AnimatedUFOSoundForMenus" parent="." instance=ExtResource("9_xshae")]
 
 [connection signal="meta_clicked" from="MarginContainer3/NinePatchRect2/TITLE" to="." method="_on_title_meta_clicked"]
 [connection signal="meta_clicked" from="MarginContainer3/NinePatchRect2/TITLE2" to="." method="_on_title_meta_clicked"]

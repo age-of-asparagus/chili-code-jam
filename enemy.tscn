@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://enemy.gd" id="1_auvvt"]
 [ext_resource type="Material" uid="uid://clcwuoiilg8t8" path="res://LightingSystem/Materials/Enemy.tres" id="2_43682"]
 [ext_resource type="Texture2D" uid="uid://dvh6rwnvybrr2" path="res://Assets/Kenny/kenney_space-shooter-redux/PNG/ufoRed.png" id="3_6ahqx"]
-[ext_resource type="AudioStream" uid="uid://d0tiv3ej5fgwg" path="res://Audio/Sounds/709054__funnyvoices__ufo-au-fx.wav" id="4_xd3lr"]
 [ext_resource type="PackedScene" uid="uid://i4pi2ym4qeq5" path="res://Effects/explosion.tscn" id="5_6o0yq"]
+[ext_resource type="PackedScene" uid="uid://c0guo28dgashh" path="res://Audio/UFO_audio_stream_player_2d.tscn" id="5_ft6ph"]
 [ext_resource type="AudioStream" uid="uid://cqx73r4iycmvi" path="res://Audio/Sounds/418194__deleted_user_3656686__hard-glass-impact.wav" id="6_226w0"]
 [ext_resource type="AudioStream" uid="uid://dpby5awx7e1cu" path="res://Audio/Sounds/257780__xtrgamr__man-oof.wav" id="7_msvwn"]
 
@@ -50,11 +50,8 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Attack_zone"]
 shape = SubResource("CircleShape2D_xypht")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_xd3lr")
-max_distance = 1000.0
-attenuation = 2.63902
-panning_strength = 10.0
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("5_ft6ph")]
+autoplay = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
@@ -69,5 +66,4 @@ stream = SubResource("AudioStreamRandomizer_rwvw8")
 
 [connection signal="body_entered" from="Attack_zone" to="." method="_on_attack_zone_body_entered"]
 [connection signal="body_exited" from="Attack_zone" to="." method="_on_attack_zone_body_exited"]
-[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

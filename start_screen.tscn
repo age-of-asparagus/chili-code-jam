@@ -110,7 +110,7 @@ script = ExtResource("1_uif4i")
 metadata/_edit_lock_ = true
 
 [node name="Screenshot2" type="Sprite2D" parent="."]
-position = Vector2(298, 410)
+position = Vector2(390, 461)
 texture = ExtResource("2_sm5hu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

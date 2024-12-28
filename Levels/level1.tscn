@@ -1,16 +1,635 @@
-[gd_scene load_steps=2 format=3 uid="uid://do2fe6slw8iux"]
+[gd_scene load_steps=4 format=4 uid="uid://b1ubpy8wcorjl"]
 
-[ext_resource type="PackedScene" path="res://Levels/BaseLevel.tscn" id="1_fvjxe"]
+[ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_fvjxe"]
+[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
+[ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="3_yyjbs"]
 
 [node name="Level" instance=ExtResource("1_fvjxe")]
 
-[node name="Lighting" parent="." index="1"]
-visible = true
+[node name="TileMapLayer" parent="NavigationRegion2D" index="0"]
+tile_map_data = PackedByteArray("AAASAAUAAAAOAAcAAAASAAQAAAAPAAYAAAASAAMAAAANAAcAAAARAAUAAAAOAAcAAAARAAQAAAAPAAYAAAARAAMAAAANAAcAAAAQAAMAAAANAAcAAAAPAAMAAAAQAAQAAAAjAAYAAAAOAAcAAAAjAAUAAAAPAAYAAAAjAAQAAAAPAAYAAAAjAAMAAAANAAcAAAAiAAYAAAAOAAcAAAAiAAMAAAANAAcAAAAhAAYAAAAOAAcAAAAhAAUAAAAPAAYAAAAhAAQAAAAPAAYAAAAhAAMAAAANAAcAAAAgAAYAAAAOAAcAAAAgAAUAAAAPAAYAAAAgAAQAAAAPAAYAAAAgAAMAAAANAAcAAAAfAAYAAAAOAAcAAAAfAAUAAAAPAAYAAAAfAAQAAAAPAAYAAAAfAAMAAAANAAcAAAAeAAYAAAAQAAUAAAAeAAUAAAAKAAYAAAAeAAQAAAAKAAcAAAAeAAMAAAAQAAQAAAAdAAUAAAAOAAcAAAAdAAQAAAANAAcAAAAcAAUAAAAQAAUAAAAcAAQAAAAQAAQAAAAmAAUAAAAPAAYAAAAmAAQAAAAPAAYAAAAlAAUAAAAPAAYAAAAlAAQAAAAPAAYAAAAkAAUAAAAPAAYAAAAkAAQAAAAPAAYAAAAiAAUAAAAPAAYAAAAiAAQAAAAPAAYAAAAkAAMAAAANAAcAAAAkAAYAAAAOAAcAAAAVAAUAAAARAAUAAAAVAAQAAAAOAAYAAAAVAAMAAAARAAQAAAAUAAUAAAAOAAcAAAAUAAQAAAAPAAYAAAAUAAMAAAANAAcAAAATAAUAAAAOAAcAAAATAAQAAAAPAAYAAAATAAMAAAANAAcAAAAQAAUAAAAOAAcAAAAQAAQAAAAPAAYAAAAPAAUAAAAQAAUAAAAPAAQAAAANAAYAAAAlAAMAAAANAAcAAAAmAAMAAAANAAcAAAAoAAQAAAAPAAYAAAAnAAMAAAANAAcAAAAqAAQAAAAPAAYAAAApAAQAAAAPAAYAAAArAAQAAAAPAAYAAAAtAAQAAAAPAAYAAAAsAAQAAAAPAAYAAAAuAAQAAAAPAAYAAAAvAAQAAAAPAAYAAAAvAAUAAAAPAAYAAAAwAAUAAAAPAAYAAAAxAAUAAAAPAAYAAAAyAAUAAAAPAAYAAAAzAAUAAAAPAAYAAAA3AAYAAAAOAAcAAAA3AAUAAAAPAAYAAAA3AAQAAAAPAAYAAAA3AAMAAAANAAcAAAA2AAYAAAAOAAcAAAA2AAUAAAAPAAYAAAA2AAQAAAAPAAYAAAA2AAMAAAANAAcAAAA1AAYAAAAOAAcAAAA1AAUAAAAPAAYAAAA1AAQAAAAPAAYAAAA1AAMAAAANAAcAAAA0AAYAAAAOAAcAAAA0AAUAAAAPAAYAAAA0AAQAAAAPAAYAAAA0AAMAAAANAAcAAAAzAAYAAAAOAAcAAAAzAAQAAAAPAAYAAAAzAAMAAAANAAcAAAAyAAYAAAAOAAcAAAAyAAQAAAAPAAYAAAAyAAMAAAANAAcAAAAxAAYAAAAOAAcAAAAxAAQAAAAPAAYAAAAxAAMAAAANAAcAAAAwAAYAAAAOAAcAAAAwAAQAAAAPAAYAAAAwAAMAAAANAAcAAAAvAAYAAAAOAAcAAAAvAAMAAAANAAcAAAAuAAYAAAAOAAcAAAAuAAUAAAAPAAYAAAAuAAMAAAANAAcAAAAtAAYAAAAOAAcAAAAtAAUAAAAPAAYAAAAtAAMAAAANAAcAAAAsAAYAAAAOAAcAAAAsAAUAAAAPAAYAAAAsAAMAAAANAAcAAAArAAYAAAAOAAcAAAArAAUAAAAPAAYAAAArAAMAAAANAAcAAAAqAAYAAAAOAAcAAAAqAAUAAAAPAAYAAAAqAAMAAAANAAcAAAApAAYAAAAOAAcAAAApAAUAAAAPAAYAAAApAAMAAAANAAcAAAAoAAYAAAAOAAcAAAAoAAUAAAAPAAYAAAAoAAMAAAANAAcAAAAnAAYAAAAOAAcAAAAnAAUAAAAPAAYAAAAnAAQAAAAPAAYAAAAmAAYAAAAOAAcAAAAlAAYAAAAOAAcAAABQAAYAAAAOAAcAAABQAAUAAAAPAAYAAABQAAQAAAAPAAYAAABQAAMAAAANAAcAAABPAAYAAAAOAAcAAABPAAUAAAAPAAYAAABPAAQAAAAPAAYAAABPAAMAAAANAAcAAABOAAYAAAAOAAcAAABOAAUAAAAPAAYAAABOAAQAAAAPAAYAAABOAAMAAAANAAcAAABNAAYAAAAOAAcAAABNAAUAAAAPAAYAAABNAAQAAAAPAAYAAABNAAMAAAANAAcAAABMAAYAAAAOAAcAAABMAAUAAAAPAAYAAABMAAQAAAAPAAYAAABMAAMAAAANAAcAAABLAAYAAAAOAAcAAABLAAUAAAAPAAYAAABLAAQAAAAPAAYAAABLAAMAAAANAAcAAABKAAYAAAAOAAcAAABKAAUAAAAPAAYAAABKAAQAAAAPAAYAAABKAAMAAAANAAcAAABJAAYAAAAOAAcAAABJAAUAAAAPAAYAAABJAAQAAAAPAAYAAABJAAMAAAANAAcAAABIAAYAAAAOAAcAAABIAAUAAAAPAAYAAABIAAQAAAAPAAYAAABIAAMAAAANAAcAAABHAAYAAAAOAAcAAABHAAUAAAAPAAYAAABHAAQAAAAPAAYAAABHAAMAAAANAAcAAABGAAYAAAAOAAcAAABGAAUAAAAPAAYAAABGAAQAAAAPAAYAAABGAAMAAAANAAcAAABFAAYAAAAOAAcAAABFAAUAAAAPAAYAAABFAAQAAAAPAAYAAABFAAMAAAANAAcAAABEAAYAAAAOAAcAAABEAAUAAAAPAAYAAABEAAQAAAAPAAYAAABEAAMAAAANAAcAAABDAAYAAAAOAAcAAABDAAUAAAAPAAYAAABDAAQAAAAPAAYAAABDAAMAAAANAAcAAABCAAYAAAAOAAcAAABCAAUAAAAPAAYAAABCAAQAAAAPAAYAAABCAAMAAAANAAcAAABBAAYAAAAOAAcAAABBAAUAAAAPAAYAAABBAAQAAAAPAAYAAABBAAMAAAANAAcAAABAAAYAAAAOAAcAAABAAAUAAAAPAAYAAABAAAQAAAAPAAYAAABAAAMAAAANAAcAAAA/AAYAAAAOAAcAAAA/AAUAAAAPAAYAAAA/AAQAAAAPAAYAAAA/AAMAAAANAAcAAAA+AAYAAAAOAAcAAAA+AAUAAAAPAAYAAAA+AAQAAAAPAAYAAAA+AAMAAAANAAcAAAA9AAYAAAAOAAcAAAA9AAUAAAAPAAYAAAA9AAQAAAAPAAYAAAA9AAMAAAANAAcAAAA8AAYAAAAOAAcAAAA8AAUAAAAPAAYAAAA8AAQAAAAPAAYAAAA8AAMAAAANAAcAAAA7AAYAAAAOAAcAAAA7AAUAAAAPAAYAAAA7AAQAAAAPAAYAAAA7AAMAAAANAAcAAAA6AAYAAAAOAAcAAAA6AAUAAAAPAAYAAAA6AAQAAAAPAAYAAAA6AAMAAAANAAcAAAA5AAYAAAAOAAcAAAA5AAUAAAAPAAYAAAA5AAQAAAAPAAYAAAA5AAMAAAANAAcAAAA4AAYAAAAOAAcAAAA4AAUAAAAPAAYAAAA4AAQAAAAPAAYAAAA4AAMAAAANAAcAAABsAAYAAAAOAAcAAABsAAUAAAAPAAYAAABsAAQAAAAPAAYAAABsAAMAAAANAAcAAABrAAYAAAAOAAcAAABrAAUAAAAPAAYAAABrAAQAAAAPAAYAAABrAAMAAAANAAcAAABqAAYAAAAOAAcAAABqAAUAAAAPAAYAAABqAAQAAAAPAAYAAABqAAMAAAANAAcAAABpAAYAAAAOAAcAAABpAAUAAAAPAAYAAABpAAQAAAAPAAYAAABpAAMAAAANAAcAAABoAAYAAAAOAAcAAABoAAUAAAAPAAYAAABoAAQAAAAPAAYAAABoAAMAAAANAAcAAABnAAYAAAAOAAcAAABnAAUAAAAPAAYAAABnAAQAAAAPAAYAAABnAAMAAAANAAcAAABmAAYAAAAOAAcAAABmAAUAAAAPAAYAAABmAAQAAAAPAAYAAABmAAMAAAANAAcAAABlAAYAAAAOAAcAAABlAAUAAAAPAAYAAABlAAQAAAAPAAYAAABlAAMAAAANAAcAAABkAAYAAAAOAAcAAABkAAUAAAAPAAYAAABkAAQAAAAPAAYAAABkAAMAAAANAAcAAABjAAYAAAAOAAcAAABjAAUAAAAPAAYAAABjAAQAAAAPAAYAAABjAAMAAAANAAcAAABiAAYAAAAOAAcAAABiAAUAAAAPAAYAAABiAAQAAAAPAAYAAABiAAMAAAANAAcAAABhAAYAAAAOAAcAAABhAAUAAAAPAAYAAABhAAQAAAAPAAYAAABhAAMAAAANAAcAAABgAAYAAAAOAAcAAABgAAUAAAAPAAYAAABgAAQAAAAPAAYAAABgAAMAAAANAAcAAABfAAYAAAAOAAcAAABfAAUAAAAPAAYAAABfAAQAAAAPAAYAAABfAAMAAAANAAcAAABeAAYAAAAOAAcAAABeAAUAAAAPAAYAAABeAAQAAAAPAAYAAABeAAMAAAANAAcAAABdAAYAAAAOAAcAAABdAAUAAAAPAAYAAABdAAQAAAAPAAYAAABdAAMAAAANAAcAAABcAAYAAAAOAAcAAABcAAUAAAAPAAYAAABcAAQAAAAPAAYAAABcAAMAAAANAAcAAABbAAYAAAAOAAcAAABbAAUAAAAPAAYAAABbAAQAAAAPAAYAAABbAAMAAAANAAcAAABaAAYAAAAOAAcAAABaAAUAAAAPAAYAAABaAAQAAAAPAAYAAABaAAMAAAANAAcAAABZAAYAAAAOAAcAAABZAAUAAAAPAAYAAABZAAQAAAAPAAYAAABZAAMAAAANAAcAAABYAAYAAAAOAAcAAABYAAUAAAAPAAYAAABYAAQAAAAPAAYAAABYAAMAAAANAAcAAABXAAYAAAAOAAcAAABXAAUAAAAPAAYAAABXAAQAAAAPAAYAAABXAAMAAAANAAcAAABWAAYAAAAOAAcAAABWAAUAAAAPAAYAAABWAAQAAAAPAAYAAABWAAMAAAANAAcAAABVAAYAAAAOAAcAAABVAAUAAAAPAAYAAABVAAQAAAAPAAYAAABVAAMAAAANAAcAAABUAAYAAAAOAAcAAABUAAUAAAAPAAYAAABUAAQAAAAPAAYAAABUAAMAAAANAAcAAABTAAYAAAAOAAcAAABTAAUAAAAPAAYAAABTAAQAAAAPAAYAAABTAAMAAAANAAcAAABSAAYAAAAOAAcAAABSAAUAAAAPAAYAAABSAAQAAAAPAAYAAABSAAMAAAANAAcAAABRAAYAAAAOAAcAAABRAAUAAAAPAAYAAABRAAQAAAAPAAYAAABRAAMAAAANAAcAAACFAAYAAAAOAAcAAACFAAUAAAAPAAYAAACFAAQAAAAPAAYAAACFAAMAAAAKAAcAAACEAAYAAAAOAAcAAACEAAUAAAAPAAYAAACEAAQAAAAPAAYAAACEAAMAAAANAAcAAACDAAYAAAAOAAcAAACDAAUAAAAPAAYAAACDAAQAAAAPAAYAAACDAAMAAAANAAcAAACCAAYAAAAOAAcAAACCAAUAAAAPAAYAAACCAAQAAAAPAAYAAACCAAMAAAANAAcAAACBAAYAAAAOAAcAAACBAAUAAAAPAAYAAACBAAQAAAAPAAYAAACBAAMAAAANAAcAAACAAAYAAAAJAAYAAACAAAUAAAAPAAYAAACAAAQAAAAPAAYAAACAAAMAAAANAAcAAAB/AAYAAAAPAAYAAAB/AAUAAAAPAAYAAAB/AAQAAAAPAAYAAAB/AAMAAAANAAcAAAB+AAYAAAAPAAYAAAB+AAUAAAAPAAYAAAB+AAQAAAAPAAYAAAB+AAMAAAANAAcAAAB9AAYAAAAKAAYAAAB9AAUAAAAPAAYAAAB9AAQAAAAPAAYAAAB9AAMAAAANAAcAAAB8AAYAAAAOAAcAAAB8AAUAAAAPAAYAAAB8AAQAAAAPAAYAAAB8AAMAAAANAAcAAAB7AAYAAAAOAAcAAAB7AAUAAAAPAAYAAAB7AAQAAAAPAAYAAAB7AAMAAAANAAcAAAB6AAYAAAAOAAcAAAB6AAUAAAAPAAYAAAB6AAQAAAAPAAYAAAB6AAMAAAANAAcAAAB5AAYAAAAOAAcAAAB5AAUAAAAPAAYAAAB5AAQAAAAPAAYAAAB5AAMAAAANAAcAAAB4AAYAAAAOAAcAAAB4AAUAAAAPAAYAAAB4AAQAAAAPAAYAAAB4AAMAAAAJAAcAAAB3AAYAAAAOAAcAAAB3AAUAAAAPAAYAAAB3AAQAAAAPAAYAAAB3AAMAAAAPAAYAAAB2AAYAAAAOAAcAAAB2AAUAAAAPAAYAAAB2AAQAAAAPAAYAAAB2AAMAAAAPAAYAAAB1AAYAAAAOAAcAAAB1AAUAAAAPAAYAAAB1AAQAAAAPAAYAAAB1AAMAAAAKAAcAAAB0AAYAAAAOAAcAAAB0AAUAAAAPAAYAAAB0AAQAAAAPAAYAAAB0AAMAAAANAAcAAABzAAYAAAAOAAcAAABzAAUAAAAPAAYAAABzAAQAAAAPAAYAAABzAAMAAAANAAcAAAByAAYAAAAOAAcAAAByAAUAAAAPAAYAAAByAAQAAAAPAAYAAAByAAMAAAANAAcAAABxAAYAAAAOAAcAAABxAAUAAAAPAAYAAABxAAQAAAAPAAYAAABxAAMAAAANAAcAAABwAAYAAAAJAAYAAABwAAUAAAAPAAYAAABwAAQAAAAPAAYAAABwAAMAAAANAAcAAABvAAYAAAAPAAYAAABvAAUAAAAPAAYAAABvAAQAAAAPAAYAAABvAAMAAAANAAcAAABuAAYAAAAPAAYAAABuAAUAAAAPAAYAAABuAAQAAAAPAAYAAABuAAMAAAANAAcAAABtAAYAAAAKAAYAAABtAAUAAAAPAAYAAABtAAQAAAAPAAYAAABtAAMAAAANAAcAAAB3AAIAAAAPAAYAAAB3AAEAAAAPAAYAAAB3AAAAAAAPAAYAAAB3AP//AAANAAcAAAB2AAIAAAAPAAYAAAB2AAEAAAAPAAYAAAB2AAAAAAAPAAYAAAB2AP//AAANAAcAAAB1AAIAAAANAAYAAAB1AAEAAAANAAYAAAB1AAAAAAANAAYAAAB1AP//AAAQAAQAAAB4AAIAAAAOAAYAAAB4AAEAAAAOAAYAAAB4AAAAAAAOAAYAAAB4AP//AAARAAQAAACAAAoAAAARAAUAAACAAAkAAAAOAAYAAACAAAgAAAAOAAYAAACAAAcAAAAOAAYAAAB/AAoAAAAOAAcAAAB/AAkAAAAPAAYAAAB/AAgAAAAPAAYAAAB/AAcAAAAPAAYAAAB+AAoAAAAOAAcAAAB+AAkAAAAPAAYAAAB+AAgAAAAPAAYAAAB+AAcAAAAPAAYAAAB9AAoAAAAQAAUAAAB9AAkAAAANAAYAAAB9AAgAAAANAAYAAAB9AAcAAAANAAYAAACRAAYAAAARAAUAAACRAAUAAAAJAAYAAACRAAQAAAAJAAcAAACRAAMAAAARAAQAAACQAAYAAAAOAAcAAACQAAUAAAAPAAYAAACQAAQAAAAPAAYAAACQAAMAAAANAAcAAACPAAYAAAAOAAcAAACPAAUAAAAPAAYAAACPAAQAAAAPAAYAAACPAAMAAAANAAcAAACOAAYAAAAOAAcAAACOAAUAAAAPAAYAAACOAAQAAAAPAAYAAACOAAMAAAANAAcAAACNAAYAAAAOAAcAAACNAAUAAAAPAAYAAACNAAQAAAAPAAYAAACNAAMAAAANAAcAAACMAAYAAAAOAAcAAACMAAUAAAAPAAYAAACMAAQAAAAPAAYAAACMAAMAAAANAAcAAACLAAYAAAAOAAcAAACLAAUAAAAPAAYAAACLAAQAAAAPAAYAAACLAAMAAAANAAcAAACKAAYAAAAOAAcAAACKAAUAAAAPAAYAAACKAAQAAAAPAAYAAACKAAMAAAANAAcAAACJAAYAAAAOAAcAAACJAAUAAAAPAAYAAACJAAQAAAAPAAYAAACJAAMAAAANAAcAAACIAAYAAAAOAAcAAACIAAUAAAAPAAYAAACIAAQAAAAPAAYAAACIAAMAAAAJAAcAAACHAAYAAAAOAAcAAACHAAUAAAAPAAYAAACHAAQAAAAPAAYAAACHAAMAAAAPAAYAAACGAAYAAAAOAAcAAACGAAUAAAAPAAYAAACGAAQAAAAPAAYAAACGAAMAAAAPAAYAAACIAAIAAAAOAAYAAACIAAEAAAAOAAYAAACIAAAAAAAOAAYAAACIAP//AAARAAQAAACHAAIAAAAPAAYAAACHAAEAAAAPAAYAAACHAAAAAAAPAAYAAACHAP//AAANAAcAAACGAAIAAAAPAAYAAACGAAEAAAAPAAYAAACGAAAAAAAPAAYAAACGAP//AAANAAcAAACFAAIAAAANAAYAAACFAAEAAAANAAYAAACFAAAAAAANAAYAAACFAP//AAAQAAQAAABwAAoAAAARAAUAAABwAAkAAAAOAAYAAABwAAgAAAAOAAYAAABwAAcAAAAOAAYAAABvAAoAAAAOAAcAAABvAAkAAAAPAAYAAABvAAgAAAAPAAYAAABvAAcAAAAPAAYAAABuAAoAAAAOAAcAAABuAAkAAAAPAAYAAABuAAgAAAAPAAYAAABuAAcAAAAPAAYAAABtAAoAAAAQAAUAAABtAAkAAAANAAYAAABtAAgAAAANAAYAAABtAAcAAAANAAYAAACSAAQAAAANAAcAAACTAAQAAAARAAQAAACTAAUAAAARAAUAAACSAAUAAAAOAAcAAAA=")
+metadata/_edit_lock_ = true
 
-[node name="Left_wall" parent="CanvasLayer/HUD" index="6"]
-visible = true
+[node name="level_transporter" parent="." index="3"]
+position = Vector2(9408, 320)
 
-[node name="Right_wall" parent="CanvasLayer/HUD" index="7"]
-visible = true
+[node name="OrbPile" parent="." index="4"]
+visible = false
+position = Vector2(-3032, -1640)
+
+[node name="RedLights" type="Node2D" parent="." index="5"]
+
+[node name="RedLight2" parent="RedLights" index="0" instance=ExtResource("2_jy2p3")]
+position = Vector2(2176, 208)
+
+[node name="RedLight3" parent="RedLights" index="1" instance=ExtResource("2_jy2p3")]
+position = Vector2(2432, 432)
+
+[node name="RedLight4" parent="RedLights" index="2" instance=ExtResource("2_jy2p3")]
+position = Vector2(2688, 208)
+
+[node name="RedLight5" parent="RedLights" index="3" instance=ExtResource("2_jy2p3")]
+position = Vector2(2944, 432)
+
+[node name="RedLight6" parent="RedLights" index="4" instance=ExtResource("2_jy2p3")]
+position = Vector2(3200, 208)
+
+[node name="RedLight7" parent="RedLights" index="5" instance=ExtResource("2_jy2p3")]
+position = Vector2(3456, 432)
+
+[node name="RedLights2" type="Node2D" parent="." index="6"]
+position = Vector2(1512, 0)
+
+[node name="RedLight2" parent="RedLights2" index="0" instance=ExtResource("2_jy2p3")]
+position = Vector2(2176, 208)
+
+[node name="RedLight3" parent="RedLights2" index="1" instance=ExtResource("2_jy2p3")]
+position = Vector2(2432, 432)
+
+[node name="RedLight4" parent="RedLights2" index="2" instance=ExtResource("2_jy2p3")]
+position = Vector2(2688, 208)
+
+[node name="RedLight5" parent="RedLights2" index="3" instance=ExtResource("2_jy2p3")]
+position = Vector2(2944, 432)
+
+[node name="RedLight6" parent="RedLights2" index="4" instance=ExtResource("2_jy2p3")]
+position = Vector2(3200, 208)
+
+[node name="RedLight7" parent="RedLights2" index="5" instance=ExtResource("2_jy2p3")]
+position = Vector2(3456, 432)
+
+[node name="RedLights3" type="Node2D" parent="." index="7"]
+position = Vector2(3040, 8)
+
+[node name="RedLight2" parent="RedLights3" index="0" instance=ExtResource("2_jy2p3")]
+position = Vector2(2176, 208)
+
+[node name="RedLight3" parent="RedLights3" index="1" instance=ExtResource("2_jy2p3")]
+position = Vector2(2432, 432)
+
+[node name="RedLight4" parent="RedLights3" index="2" instance=ExtResource("2_jy2p3")]
+position = Vector2(2688, 208)
+
+[node name="RedLight5" parent="RedLights3" index="3" instance=ExtResource("2_jy2p3")]
+position = Vector2(2944, 432)
+
+[node name="RedLight6" parent="RedLights3" index="4" instance=ExtResource("2_jy2p3")]
+position = Vector2(3200, 208)
+
+[node name="RedLight7" parent="RedLights3" index="5" instance=ExtResource("2_jy2p3")]
+position = Vector2(3456, 432)
+
+[node name="RedLights4" type="Node2D" parent="." index="8"]
+position = Vector2(4568, 8)
+
+[node name="RedLight2" parent="RedLights4" index="0" instance=ExtResource("2_jy2p3")]
+position = Vector2(2176, 208)
+
+[node name="RedLight3" parent="RedLights4" index="1" instance=ExtResource("2_jy2p3")]
+position = Vector2(2432, 432)
+
+[node name="RedLight4" parent="RedLights4" index="2" instance=ExtResource("2_jy2p3")]
+position = Vector2(2688, 208)
+
+[node name="RedLight5" parent="RedLights4" index="3" instance=ExtResource("2_jy2p3")]
+position = Vector2(2944, 432)
+
+[node name="RedLight6" parent="RedLights4" index="4" instance=ExtResource("2_jy2p3")]
+position = Vector2(3200, 208)
+
+[node name="RedLight7" parent="RedLights4" index="5" instance=ExtResource("2_jy2p3")]
+position = Vector2(3456, 432)
+
+[node name="Lights" parent="." index="9"]
+visible = false
+
+[node name="EnemyGroup" type="Node2D" parent="." index="10"]
+position = Vector2(-3136, -1064)
+
+[node name="Enemy2" parent="EnemyGroup" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5816, 1401)
+metadata/_edit_group_ = true
+
+[node name="Enemy3" parent="EnemyGroup" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1352)
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroup" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroup" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroup" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6104, 1344)
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroup" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroup" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(6112, 1434)
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroup" index="7" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1434)
+metadata/_edit_group_ = true
+
+[node name="Enemy9" parent="EnemyGroup" index="8" instance=ExtResource("3_yyjbs")]
+position = Vector2(6200, 1384)
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupGreen" type="Node2D" parent="." index="11"]
+position = Vector2(-2176, -1064)
+
+[node name="Enemy2" parent="EnemyGroupGreen" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5816, 1401)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy3" parent="EnemyGroupGreen" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1352)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupGreen" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupGreen" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupGreen" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6104, 1344)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupGreen" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupGreen" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(6112, 1434)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupGreen" index="7" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1434)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="Enemy9" parent="EnemyGroupGreen" index="8" instance=ExtResource("3_yyjbs")]
+position = Vector2(6200, 1384)
+enemy_type = 1
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupBlue" type="Node2D" parent="." index="12"]
+position = Vector2(-920, -1064)
+
+[node name="Enemy2" parent="EnemyGroupBlue" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5816, 1401)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy3" parent="EnemyGroupBlue" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1352)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupBlue" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupBlue" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupBlue" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6104, 1344)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupBlue" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupBlue" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(6112, 1434)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupBlue" index="7" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1434)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy9" parent="EnemyGroupBlue" index="8" instance=ExtResource("3_yyjbs")]
+position = Vector2(6200, 1384)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupBlue2" type="Node2D" parent="." index="13"]
+position = Vector2(-440, -1072)
+
+[node name="Enemy2" parent="EnemyGroupBlue2" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5816, 1401)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy3" parent="EnemyGroupBlue2" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1352)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupBlue2" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupBlue2" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupBlue2" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6104, 1344)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupBlue2" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupBlue2" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(6112, 1434)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupBlue2" index="7" instance=ExtResource("3_yyjbs")]
+position = Vector2(5904, 1434)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="Enemy9" parent="EnemyGroupBlue2" index="8" instance=ExtResource("3_yyjbs")]
+position = Vector2(6200, 1384)
+enemy_type = 2
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom" type="Node2D" parent="." index="14"]
+position = Vector2(720, -1072)
+
+[node name="Enemy3" parent="EnemyGroupRandom" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom2" type="Node2D" parent="." index="15"]
+position = Vector2(1104, -808)
+
+[node name="Enemy3" parent="EnemyGroupRandom2" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom2" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom2" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom2" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom2" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom2" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom2" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom3" type="Node2D" parent="." index="16"]
+position = Vector2(1600, -1296)
+
+[node name="Enemy3" parent="EnemyGroupRandom3" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom3" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom3" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom3" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom3" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom3" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom3" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom4" type="Node2D" parent="." index="17"]
+position = Vector2(2120, -832)
+
+[node name="Enemy3" parent="EnemyGroupRandom4" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom4" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom4" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom4" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom4" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom4" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom4" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom5" type="Node2D" parent="." index="18"]
+position = Vector2(2624, -1296)
+
+[node name="Enemy3" parent="EnemyGroupRandom5" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom5" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom5" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom5" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom5" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom5" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom5" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom6" type="Node2D" parent="." index="19"]
+position = Vector2(1800, -1064)
+
+[node name="Enemy3" parent="EnemyGroupRandom6" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom6" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom6" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom6" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom6" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom6" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom6" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom7" type="Node2D" parent="." index="20"]
+position = Vector2(2368, -1064)
+
+[node name="Enemy3" parent="EnemyGroupRandom7" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom7" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom7" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom7" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom7" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom7" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom7" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom8" type="Node2D" parent="." index="21"]
+position = Vector2(1344, -1064)
+
+[node name="Enemy3" parent="EnemyGroupRandom8" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom8" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom8" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom8" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom8" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom8" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom8" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="EnemyGroupRandom9" type="Node2D" parent="." index="22"]
+position = Vector2(2904, -1064)
+
+[node name="Enemy3" parent="EnemyGroupRandom9" index="0" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy4" parent="EnemyGroupRandom9" index="1" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1374)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy10" parent="EnemyGroupRandom9" index="2" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1444)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy5" parent="EnemyGroupRandom9" index="3" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1351)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy6" parent="EnemyGroupRandom9" index="4" instance=ExtResource("3_yyjbs")]
+position = Vector2(6008, 1314)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy7" parent="EnemyGroupRandom9" index="5" instance=ExtResource("3_yyjbs")]
+position = Vector2(6081, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy8" parent="EnemyGroupRandom9" index="6" instance=ExtResource("3_yyjbs")]
+position = Vector2(5936, 1432)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy" parent="Enemies" index="0"]
+visible = false
+position = Vector2(240, -488)
 
 [editable path="CanvasLayer/HUD"]

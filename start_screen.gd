@@ -4,6 +4,8 @@ extends Control
 
 func _on_start_button_pressed():
 	click_sound.play()
+	Global.player_health = 10
+	Global.flashlight_battery = 100
 	Global.game_over = false
 	$AnimationPlayer.play("elevator_close")
 	await $AnimationPlayer.animation_finished

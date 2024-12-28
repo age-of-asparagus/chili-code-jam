@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="1_j84bo"]
 [ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="3_a84hv"]
 [ext_resource type="PackedScene" uid="uid://lv7u48txlta5" path="res://player.tscn" id="3_blni0"]
-[ext_resource type="PackedScene" path="res://LightingSystem/yellow_light.tscn" id="4_53jvy"]
+[ext_resource type="PackedScene" uid="uid://dalsxb5052uu8" path="res://LightingSystem/yellow_light.tscn" id="4_53jvy"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="4_ssojy"]
 [ext_resource type="PackedScene" path="res://LightingSystem/green_light.tscn" id="5_45fhm"]
 [ext_resource type="PackedScene" uid="uid://d3uclqwegwhlx" path="res://HUD.tscn" id="5_cfukg"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_fvjxe"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="2_bysrn"]
-[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
+[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="2_jy2p3"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="3_yyjbs"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]

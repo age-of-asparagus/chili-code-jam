@@ -2,7 +2,7 @@ extends Node2D
 
 enum EnemyType {RED, GREEN, BLUE, RANDOM}
 @export var enemy_spawn_type : EnemyType
-@export var spawn_rate : float 
+@export var spawn_rate := 3.5
 
 var can_spawn = true
 

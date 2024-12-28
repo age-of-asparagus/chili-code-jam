@@ -50,9 +50,6 @@ func _ready():
 
 func _physics_process(delta):
 	
-	if not Sound.playing:
-		Sound.play()
-	
 	if damaging:
 		Global.player_health -= 0.03
 		if not $"AudioStreamPlayer2D-Playerhit".playing:

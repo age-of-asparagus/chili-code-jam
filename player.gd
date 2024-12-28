@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var footsteps = $AudioStreamPlayer_Footsteps
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var speed = 300
 var moving_direction = Vector2.ZERO
@@ -39,7 +40,8 @@ func _physics_process(delta):
 			if not footsteps.playing:
 				footsteps.play()
 
-
+func hit():
+	animation_player.play("hit")
 
 func shoot_bullet():
 	can_shoot = false

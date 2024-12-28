@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://lv7u48txlta5"]
+[gd_scene load_steps=17 format=3 uid="uid://lv7u48txlta5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_w1kno"]
 [ext_resource type="Texture2D" uid="uid://b5bgbxfn1kxh1" path="res://Assets/Kenny/kenney_top-down-shooter/PNG/weapon_machine.png" id="3_8lygj"]
@@ -26,6 +26,44 @@ streams_count = 3
 stream_0/stream = ExtResource("6_0lian")
 stream_1/stream = ExtResource("9_4c107")
 stream_2/stream = ExtResource("10_1t2nj")
+
+[sub_resource type="Animation" id="Animation_hf303"]
+resource_name = "hit"
+length = 0.1
+step = 0.005
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p51cb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqs35"]
+_data = {
+"RESET": SubResource("Animation_p51cb"),
+"hit": SubResource("Animation_hf303")
+}
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
@@ -88,5 +126,10 @@ scale = Vector2(29.0199, 16.3978)
 stream = SubResource("AudioStreamRandomizer_ofjgq")
 volume_db = -10.0
 pitch_scale = 0.66
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dqs35")
+}
 
 [connection signal="timeout" from="firerate_timer" to="." method="_on_firerate_timer_timeout"]

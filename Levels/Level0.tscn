@@ -337,100 +337,107 @@ metadata/_edit_group_ = true
 
 [node name="Enemy25" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(294, 1293)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy26" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(240, 1272)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy27" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(290, 1240)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy28" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(468, 1818)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy29" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(505, 1772)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy30" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(431, 1772)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy34" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(895, 1768)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy35" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(945, 1768)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy36" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(849, 1772)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy40" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1460, 1770)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy41" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1509, 1768)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy42" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1413, 1772)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy49" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1862, 1755)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy50" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1911, 1754)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy51" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1815, 1758)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy43" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1716, 1905)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy44" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1765, 1904)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy45" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1669, 1908)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy37" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1210, 1900)
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy38" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1259, 1897)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy39" parent="Enemies1" instance=ExtResource("4_ssojy")]
 position = Vector2(1163, 1901)
-enemy_type = 1
+enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy20" parent="Enemies1" instance=ExtResource("4_ssojy")]
@@ -503,5 +510,23 @@ metadata/_edit_lock_ = true
 position = Vector2(7391, 707)
 index = 6
 metadata/_edit_lock_ = true
+
+[node name="BlueLight" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(6881, 659)
+
+[node name="BlueLight2" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(6772, 860)
+
+[node name="BlueLight3" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(6680, 1120)
+
+[node name="BlueLight4" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(6768, 1376)
+
+[node name="BlueLight5" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(6877, 1579)
+
+[node name="BlueLight6" parent="." instance=ExtResource("5_weldx")]
+position = Vector2(7136, 1488)
 
 [editable path="CanvasLayer/HUD"]

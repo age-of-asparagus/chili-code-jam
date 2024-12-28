@@ -6,6 +6,6 @@
 offset_top = -193.0
 
 [node name="Label" parent="NinePatchRect/MarginContainer" index="0"]
-text = "There is an elevator at the end of the corridor, but no lighting.  You'll need to use your FlashTorch the rest of the way.  
+text = "There is only blue lighting ahead, but we are detecing chromadrones of all colors.
 
-We're only detecting red and  green chromadrones ahead, so your yellow light should be enough to detect both of them."
+If you set your flashtorch to yellow by turning on the red and green components, then you'll be able to detect all chromadrones and also conserve some battery"

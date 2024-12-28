@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_nnk38"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="2_e1awb"]
 [ext_resource type="PackedScene" uid="uid://uq75qgrdmoon" path="res://battery_orb.tscn" id="3_lucjl"]
-[ext_resource type="PackedScene" uid="uid://t5sbwp1htlrb" path="res://LightingSystem/blue_light.tscn" id="4_xxp73"]
-[ext_resource type="PackedScene" uid="uid://dlnvoeuuf5fec" path="res://LightingSystem/cyan_light.tscn" id="5_cttby"]
-[ext_resource type="PackedScene" uid="uid://cb1d55qlrog6l" path="res://LightingSystem/green_light.tscn" id="6_ea27o"]
-[ext_resource type="PackedScene" uid="uid://d0kc583v8qc8n" path="res://LightingSystem/red_light.tscn" id="7_ou10l"]
-[ext_resource type="PackedScene" uid="uid://e3u8t10chenn" path="res://LightingSystem/white_light.tscn" id="8_bnkju"]
+[ext_resource type="PackedScene" path="res://LightingSystem/blue_light.tscn" id="4_xxp73"]
+[ext_resource type="PackedScene" path="res://LightingSystem/cyan_light.tscn" id="5_cttby"]
+[ext_resource type="PackedScene" path="res://LightingSystem/green_light.tscn" id="6_ea27o"]
+[ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="7_ou10l"]
+[ext_resource type="PackedScene" path="res://LightingSystem/white_light.tscn" id="8_bnkju"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="11_vpujd"]
 [ext_resource type="PackedScene" uid="uid://ccf2ig23ak528" path="res://enemy_spawner.tscn" id="12_iwpte"]
 
@@ -196,9 +196,6 @@ position = Vector2(1036, -36)
 [node name="Battery_Orb64" parent="OrbPile" index="53" instance=ExtResource("3_lucjl")]
 position = Vector2(1031, 4)
 
-[node name="Lights" parent="." index="5"]
-metadata/_edit_group_ = true
-
 [node name="BlueLight2" parent="Lights" index="0" instance=ExtResource("4_xxp73")]
 position = Vector2(3902, 304)
 
@@ -226,106 +223,79 @@ position = Vector2(8167, 3101)
 [node name="CyanLight7" parent="Lights" index="8" instance=ExtResource("5_cttby")]
 position = Vector2(8061, 3002)
 
-[node name="CyanLight8" parent="Lights" index="9" instance=ExtResource("5_cttby")]
-position = Vector2(8236, 3415)
+[node name="CyanLight11" parent="Lights" index="9" instance=ExtResource("5_cttby")]
+position = Vector2(8326, 4848)
 
-[node name="CyanLight9" parent="Lights" index="10" instance=ExtResource("5_cttby")]
-position = Vector2(8113, 3489)
-
-[node name="CyanLight12" parent="Lights" index="11" instance=ExtResource("5_cttby")]
-position = Vector2(8113, 3489)
-
-[node name="CyanLight10" parent="Lights" index="12" instance=ExtResource("5_cttby")]
-position = Vector2(8142, 3334)
-
-[node name="GreenLight2" parent="Lights" index="13" instance=ExtResource("6_ea27o")]
+[node name="GreenLight2" parent="Lights" index="10" instance=ExtResource("6_ea27o")]
 position = Vector2(3670, 302)
 
-[node name="GreenLight3" parent="Lights" index="14" instance=ExtResource("6_ea27o")]
+[node name="GreenLight3" parent="Lights" index="11" instance=ExtResource("6_ea27o")]
 position = Vector2(5880, 306)
 
-[node name="GreenLight4" parent="Lights" index="15" instance=ExtResource("6_ea27o")]
+[node name="GreenLight4" parent="Lights" index="12" instance=ExtResource("6_ea27o")]
 position = Vector2(6583, 2926)
 
-[node name="GreenLight5" parent="Lights" index="16" instance=ExtResource("6_ea27o")]
+[node name="GreenLight5" parent="Lights" index="13" instance=ExtResource("6_ea27o")]
 position = Vector2(6583, 2659)
 
-[node name="GreenLight6" parent="Lights" index="17" instance=ExtResource("6_ea27o")]
+[node name="GreenLight6" parent="Lights" index="14" instance=ExtResource("6_ea27o")]
 position = Vector2(6576, 2392)
 
-[node name="GreenLight7" parent="Lights" index="18" instance=ExtResource("6_ea27o")]
+[node name="GreenLight7" parent="Lights" index="15" instance=ExtResource("6_ea27o")]
 position = Vector2(6858, 2951)
 
-[node name="GreenLight8" parent="Lights" index="19" instance=ExtResource("6_ea27o")]
+[node name="GreenLight8" parent="Lights" index="16" instance=ExtResource("6_ea27o")]
 position = Vector2(6356, 2965)
 
-[node name="GreenLight9" parent="Lights" index="20" instance=ExtResource("6_ea27o")]
+[node name="GreenLight9" parent="Lights" index="17" instance=ExtResource("6_ea27o")]
 position = Vector2(6349, 3271)
 
-[node name="GreenLight10" parent="Lights" index="21" instance=ExtResource("6_ea27o")]
-position = Vector2(6680, 3214)
-
-[node name="GreenLight11" parent="Lights" index="22" instance=ExtResource("6_ea27o")]
-position = Vector2(6680, 3214)
-
-[node name="GreenLight12" parent="Lights" index="23" instance=ExtResource("6_ea27o")]
-position = Vector2(7043, 3189)
-
-[node name="GreenLight13" parent="Lights" index="24" instance=ExtResource("6_ea27o")]
+[node name="GreenLight13" parent="Lights" index="18" instance=ExtResource("6_ea27o")]
 position = Vector2(7196, 2972)
 
-[node name="GreenLight14" parent="Lights" index="25" instance=ExtResource("6_ea27o")]
-position = Vector2(7517, 2940)
+[node name="GreenLight14" parent="Lights" index="19" instance=ExtResource("6_ea27o")]
+position = Vector2(7502, 2957)
 
-[node name="GreenLight15" parent="Lights" index="26" instance=ExtResource("6_ea27o")]
-position = Vector2(7325, 3246)
-
-[node name="GreenLight16" parent="Lights" index="27" instance=ExtResource("6_ea27o")]
-position = Vector2(6723, 3496)
-
-[node name="GreenLight17" parent="Lights" index="28" instance=ExtResource("6_ea27o")]
+[node name="GreenLight17" parent="Lights" index="20" instance=ExtResource("6_ea27o")]
 position = Vector2(6345, 3432)
 
-[node name="GreenLight18" parent="Lights" index="29" instance=ExtResource("6_ea27o")]
+[node name="GreenLight18" parent="Lights" index="21" instance=ExtResource("6_ea27o")]
 position = Vector2(6320, 3150)
 
-[node name="GreenLight19" parent="Lights" index="30" instance=ExtResource("6_ea27o")]
+[node name="GreenLight22" parent="Lights" index="22" instance=ExtResource("6_ea27o")]
+position = Vector2(6562, 3210)
+
+[node name="GreenLight19" parent="Lights" index="23" instance=ExtResource("6_ea27o")]
 position = Vector2(6338, 2833)
 
-[node name="GreenLight20" parent="Lights" index="31" instance=ExtResource("6_ea27o")]
+[node name="GreenLight20" parent="Lights" index="24" instance=ExtResource("6_ea27o")]
 position = Vector2(6869, 2794)
 
-[node name="GreenLight21" parent="Lights" index="32" instance=ExtResource("6_ea27o")]
+[node name="GreenLight21" parent="Lights" index="25" instance=ExtResource("6_ea27o")]
 position = Vector2(6334, 3624)
 
-[node name="GreenLight22" parent="Lights" index="33" instance=ExtResource("6_ea27o")]
-position = Vector2(7072, 3414)
-
-[node name="GreenLight23" parent="Lights" index="34" instance=ExtResource("6_ea27o")]
-position = Vector2(7293, 3557)
-
-[node name="RedLight2" parent="Lights" index="35" instance=ExtResource("7_ou10l")]
+[node name="RedLight2" parent="Lights" index="26" instance=ExtResource("7_ou10l")]
 position = Vector2(3500, 320)
 
-[node name="RedLight3" parent="Lights" index="36" instance=ExtResource("7_ou10l")]
+[node name="RedLight3" parent="Lights" index="27" instance=ExtResource("7_ou10l")]
 position = Vector2(4604, 302)
 
-[node name="RedLight4" parent="Lights" index="37" instance=ExtResource("7_ou10l")]
+[node name="RedLight4" parent="Lights" index="28" instance=ExtResource("7_ou10l")]
 position = Vector2(10243, 3329)
 
-[node name="WhiteLight2" parent="Lights" index="38" instance=ExtResource("8_bnkju")]
+[node name="WhiteLight2" parent="Lights" index="29" instance=ExtResource("8_bnkju")]
 position = Vector2(2017, 207)
 
-[node name="WhiteLight3" parent="Lights" index="39" instance=ExtResource("8_bnkju")]
+[node name="WhiteLight3" parent="Lights" index="30" instance=ExtResource("8_bnkju")]
 position = Vector2(2031, 315)
 
-[node name="WhiteLight4" parent="Lights" index="40" instance=ExtResource("8_bnkju")]
+[node name="WhiteLight4" parent="Lights" index="31" instance=ExtResource("8_bnkju")]
 position = Vector2(2391, 333)
 
-[node name="WhiteLight5" parent="Lights" index="41" instance=ExtResource("8_bnkju")]
+[node name="WhiteLight5" parent="Lights" index="32" instance=ExtResource("8_bnkju")]
 position = Vector2(2916, 290)
 
-[node name="WhiteLight9" parent="Lights" index="42" instance=ExtResource("8_bnkju")]
+[node name="WhiteLight9" parent="Lights" index="33" instance=ExtResource("8_bnkju")]
 position = Vector2(2273, 268)
 
 [node name="Enemy87" parent="Enemies" index="0" instance=ExtResource("11_vpujd")]
@@ -788,6 +758,9 @@ metadata/_edit_group_ = true
 position = Vector2(10438, 3601)
 enemy_type = 3
 metadata/_edit_group_ = true
+
+[node name="Player" parent="." index="7"]
+position = Vector2(1859, 316)
 
 [node name="CanvasLayer" parent="." index="9"]
 visible = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://clw7eb262gwg2"]
+[gd_scene load_steps=12 format=4 uid="uid://clw7eb262gwg2"]
 
 [ext_resource type="PackedScene" uid="uid://dm2hp2q4x0pgf" path="res://Levels/BaseLevel.tscn" id="1_nnk38"]
 [ext_resource type="PackedScene" uid="uid://et0g050dh00r" path="res://Navigation/tile_map_layer_with_nav.tscn" id="2_e1awb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://LightingSystem/red_light.tscn" id="7_ou10l"]
 [ext_resource type="PackedScene" path="res://LightingSystem/white_light.tscn" id="8_bnkju"]
 [ext_resource type="PackedScene" uid="uid://bong5i513sa8s" path="res://enemy.tscn" id="11_vpujd"]
+[ext_resource type="PackedScene" uid="uid://ccf2ig23ak528" path="res://enemy_spawner.tscn" id="12_iwpte"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ybu1w"]
 vertices = PackedVector2Array(7066.57, 2985.57, 7066.57, 3670.43, 7013.43, 3414.43, 7013.43, 3241.57, 7013.43, 3158.43, 7013.43, 2985.57, 7525.43, 3670.43, 7578.57, 3670.43, 7593.57, 3685.43, 7510.43, 3685.43, 7269.43, 3670.43, 7322.57, 3670.43, 7337.57, 3685.43, 7254.43, 3685.43, 7013.43, 3670.43, 7081.57, 3685.43, 6998.43, 3685.43, 10266.6, 1765.43, 10266.6, 2330.57, 10213.4, 2262.43, 10213.4, 1833.57, 6998.43, 3173.43, 6998.43, 3226.57, 6998.43, 3429.43, 7013.43, 3497.57, 10198.4, 1818.57, 9769.57, 1765.43, 9769.57, 1818.57, 10198.4, 2277.43, 9769.57, 2330.57, 9769.57, 2277.43, 4261.43, 86.4297, 4261.43, -26.5703, 6938.57, -26.5703, 6938.57, 602.57, 6633.57, 602.57, 6618.57, 617.57, 6550.43, 602.57, 6757.43, 2902.43, 6757.43, 1445.43, 6938.57, 1445.43, 6938.57, 2902.43, 8278.43, 3162.57, 7973.43, 3162.57, 7973.43, 2917.43, 8538.57, 2917.43, 8538.57, 3354.57, 8293.43, 3177.57, 8361.57, 3354.57, 8293.43, 3286.43, 8229.43, 3369.57, 8278.43, 3301.43, 8346.57, 3369.57, 8229.43, 3478.43, 8346.57, 3546.57, 7973.43, 3546.57, 7973.43, 3493.43, 8214.43, 3493.43, 8214.43, 3354.57, 7849.57, 3301.43, 7849.57, 3354.57, 7834.57, 3369.57, 7834.57, 3670.43, 7781.43, 3670.43, 7781.43, 2985.57, 7578.57, 2985.57, 7525.43, 2985.57, 7322.57, 2985.57, 7269.43, 2985.57, 6441.57, 3173.43, 6441.57, 3226.57, 6998.43, 3482.57, 6441.57, 3429.43, 6441.57, 3482.57, 9253.43, 2522.57, 9253.43, 2085.43, 9306.57, 2085.43, 9306.57, 2454.43, 9321.57, 2469.43, 9686.43, 2522.57, 9686.43, 2469.43, 9001.57, 2725.43, 9434.57, 2725.43, 9434.57, 2778.57, 8933.43, 2778.57, 8986.57, 2710.43, 8933.43, 1765.43, 8986.57, 1833.57, 9001.57, 1818.57, 9686.43, 1765.43, 9686.43, 1818.57, 9701.43, 37.4297, 10010.6, 37.4297, 10010.6, 90.5703, 9769.57, 90.5703, 9754.57, 105.57, 9701.43, 1750.43, 9754.57, 1750.43, 9769.57, 2789.43, 10138.6, 2789.43, 10138.6, 2842.57, 9769.57, 2842.57, 11034.6, 3045.43, 11034.6, 3162.57, 10981.4, 3162.57, 10981.4, 3113.57, 10966.4, 3098.57, 10085.4, 3045.43, 10153.6, 3098.57, 10085.4, 3158.43, 10138.6, 3113.57, 10070.4, 3173.43, 10138.6, 3286.43, 10085.4, 3241.57, 10070.4, 3226.57, 10153.6, 3301.43, 11226.6, 3301.43, 11226.6, 3354.57, 10085.4, 3354.57, 9769.57, 3173.43, 9769.57, 3226.57, 9754.57, 3482.57, 9253.43, 3482.57, 9253.43, 3429.43, 9686.43, 3429.43, 9701.43, 3414.43, 9754.57, 3241.57, 9701.43, 3241.57, 8997.43, 3734.43, 8997.43, 3301.43, 9050.57, 3301.43, 9050.57, 3734.43, 9253.43, 3734.43, 9253.43, 3621.43, 9754.57, 3621.43, 9754.57, 3670.43, 9893.43, 3670.43, 9893.43, 3365.43, 9946.57, 3365.43, 9946.57, 3670.43, 10149.4, 3670.43, 10149.4, 3557.43, 10202.6, 3557.43, 10202.6, 3670.43, 10405.4, 3670.43, 10405.4, 3557.43, 10458.6, 3557.43, 10458.6, 3670.43, 10473.6, 3685.43, 11034.6, 3685.43, 11034.6, 3738.57, 9769.57, 3738.57, 9238.43, 3749.43, 9754.57, 3753.57, 9754.57, 3802.57, 6245.43, 3802.57, 9065.57, 3749.43, 6230.43, 2586.57, 5797.43, 2586.57, 5797.43, 2533.43, 6230.43, 2533.43, 6230.43, 2394.57, 5797.43, 2394.57, 5797.43, 2341.43, 6230.43, 2341.43, 6245.43, 2326.43, 6245.43, 1445.43, 6426.57, 1445.43, 6426.57, 2902.43, 6245.43, 2409.57, 4261.43, 602.57, 4261.43, 489.57, 3162.57, 489.57, 3162.57, 602.57, 1957.43, 602.57, 1957.43, 361.57, 1942.43, 346.57, 1829.43, 346.57, 1829.43, 293.43, 1942.43, 293.43, 1957.43, 278.43, 1957.43, -26.5703, 3162.57, -26.5703, 3162.57, 86.4297, 3177.57, 101.43, 3177.57, 474.57, 9769.57, 3685.43, 6742.43, 2917.43, 6953.57, 2917.43, 7834.57, 3286.43, 7834.57, 2917.43, 7766.43, 2970.57, 7593.57, 2970.57, 7510.43, 2970.57, 7337.57, 2970.57, 7254.43, 2970.57, 7081.57, 2970.57, 6998.43, 2970.57, 6441.57, 2970.57, 6633.57, 2917.43, 6618.57, 2902.43, 6550.43, 2917.43, 6426.57, 3158.43, 6426.57, 3241.57, 6426.57, 3414.43, 6426.57, 3497.57, 7766.43, 3685.43, 7849.57, 3685.43, 9701.43, 2537.57, 9701.43, 2454.43, 9701.43, 1833.57, 9754.57, 1833.57, 9754.57, 2262.43, 9754.57, 2345.57, 9754.57, 2774.43, 9701.43, 3158.43, 9754.57, 2857.57, 9754.57, 3158.43, 9686.43, 3173.43, 9686.43, 3226.57, 9321.57, 3173.43, 9253.43, 3226.57, 9253.43, 3113.57, 9306.57, 3158.43, 9306.57, 3045.43, 9238.43, 3098.57, 8741.43, 3045.43, 8809.57, 3098.57, 8794.57, 3113.57, 8741.43, 3478.43, 8794.57, 3546.57, 8726.43, 3493.43, 8553.57, 3546.57, 8485.43, 3493.43, 8538.57, 3561.57, 8485.43, 3670.43, 8538.57, 3734.43, 8470.43, 3685.43, 8982.43, 3749.43, 9878.43, 3685.43, 9961.57, 3685.43, 10134.4, 3685.43, 10217.6, 3685.43, 10390.4, 3685.43, 8553.57, 3749.43, 6441.57, 3685.43, 6426.57, 3670.43, 6245.43, 2601.57, 6426.57, 2985.57, 6245.43, 2518.43, 6441.57, 2917.43, 6565.43, 2902.43, 6565.43, 617.57, 4246.43, 101.43, 4246.43, 474.57)
@@ -28,10 +29,172 @@ tile_map_data = PackedByteArray("AAAjAAgAAAAPAAYAAAAjAAcAAAAPAAYAAAAjAAYAAAAPAAY
 position = Vector2(11200, 3328)
 
 [node name="OrbPile" parent="." index="4"]
-position = Vector2(8910, 59)
+position = Vector2(8910, 74)
 
 [node name="Battery_Orb45" parent="OrbPile" index="0" instance=ExtResource("3_lucjl")]
 position = Vector2(1012, -9)
+
+[node name="Battery_Orb46" parent="OrbPile" index="1" instance=ExtResource("3_lucjl")]
+position = Vector2(931, -6)
+
+[node name="Battery_Orb47" parent="OrbPile" index="2" instance=ExtResource("3_lucjl")]
+position = Vector2(966, -3)
+
+[node name="Battery_Orb48" parent="OrbPile" index="3" instance=ExtResource("3_lucjl")]
+position = Vector2(967, -16)
+
+[node name="Battery_Orb49" parent="OrbPile" index="4" instance=ExtResource("3_lucjl")]
+position = Vector2(989, -9)
+
+[node name="Battery_Orb50" parent="OrbPile" index="5" instance=ExtResource("3_lucjl")]
+position = Vector2(995, 5)
+
+[node name="Battery_Orb51" parent="OrbPile" index="6" instance=ExtResource("3_lucjl")]
+position = Vector2(1029, 5)
+
+[node name="Battery_Orb52" parent="OrbPile" index="7" instance=ExtResource("3_lucjl")]
+position = Vector2(1047, 21)
+
+[node name="Battery_Orb53" parent="OrbPile" index="8" instance=ExtResource("3_lucjl")]
+position = Vector2(1073, 19)
+
+[node name="Battery_Orb54" parent="OrbPile" index="9" instance=ExtResource("3_lucjl")]
+position = Vector2(1093, 19)
+
+[node name="Battery_Orb55" parent="OrbPile" index="10" instance=ExtResource("3_lucjl")]
+position = Vector2(1100, 3)
+
+[node name="Battery_Orb58" parent="OrbPile" index="11" instance=ExtResource("3_lucjl")]
+position = Vector2(1100, 3)
+
+[node name="Battery_Orb56" parent="OrbPile" index="12" instance=ExtResource("3_lucjl")]
+position = Vector2(1058, 5)
+
+[node name="Battery_Orb57" parent="OrbPile" index="13" instance=ExtResource("3_lucjl")]
+position = Vector2(1070, -30)
+
+[node name="Battery_Orb59" parent="OrbPile" index="14" instance=ExtResource("3_lucjl")]
+position = Vector2(1087, -20)
+
+[node name="Battery_Orb60" parent="OrbPile" index="15" instance=ExtResource("3_lucjl")]
+position = Vector2(943, -34)
+
+[node name="Battery_Orb65" parent="OrbPile" index="16" instance=ExtResource("3_lucjl")]
+position = Vector2(-562, 2995)
+
+[node name="Battery_Orb66" parent="OrbPile" index="17" instance=ExtResource("3_lucjl")]
+position = Vector2(-511, 2991)
+
+[node name="Battery_Orb67" parent="OrbPile" index="18" instance=ExtResource("3_lucjl")]
+position = Vector2(-511, 3057)
+
+[node name="Battery_Orb68" parent="OrbPile" index="19" instance=ExtResource("3_lucjl")]
+position = Vector2(-563, 3104)
+
+[node name="Battery_Orb69" parent="OrbPile" index="20" instance=ExtResource("3_lucjl")]
+position = Vector2(-628, 3061)
+
+[node name="Battery_Orb70" parent="OrbPile" index="21" instance=ExtResource("3_lucjl")]
+position = Vector2(-649, 2990)
+
+[node name="Battery_Orb71" parent="OrbPile" index="22" instance=ExtResource("3_lucjl")]
+position = Vector2(-688, 3050)
+
+[node name="Battery_Orb72" parent="OrbPile" index="23" instance=ExtResource("3_lucjl")]
+position = Vector2(-788, 2989)
+
+[node name="Battery_Orb73" parent="OrbPile" index="24" instance=ExtResource("3_lucjl")]
+position = Vector2(-805, 3058)
+
+[node name="Battery_Orb74" parent="OrbPile" index="25" instance=ExtResource("3_lucjl")]
+position = Vector2(-888, 3061)
+
+[node name="Battery_Orb75" parent="OrbPile" index="26" instance=ExtResource("3_lucjl")]
+position = Vector2(-916, 2957)
+
+[node name="Battery_Orb76" parent="OrbPile" index="27" instance=ExtResource("3_lucjl")]
+position = Vector2(-852, 2950)
+
+[node name="Battery_Orb77" parent="OrbPile" index="28" instance=ExtResource("3_lucjl")]
+position = Vector2(-895, 2897)
+
+[node name="Battery_Orb78" parent="OrbPile" index="29" instance=ExtResource("3_lucjl")]
+position = Vector2(-848, 2874)
+
+[node name="Battery_Orb79" parent="OrbPile" index="30" instance=ExtResource("3_lucjl")]
+position = Vector2(-767, 2888)
+
+[node name="Battery_Orb80" parent="OrbPile" index="31" instance=ExtResource("3_lucjl")]
+position = Vector2(-763, 2951)
+
+[node name="Battery_Orb81" parent="OrbPile" index="32" instance=ExtResource("3_lucjl")]
+position = Vector2(-694, 2888)
+
+[node name="Battery_Orb82" parent="OrbPile" index="33" instance=ExtResource("3_lucjl")]
+position = Vector2(-667, 2929)
+
+[node name="Battery_Orb83" parent="OrbPile" index="34" instance=ExtResource("3_lucjl")]
+position = Vector2(-623, 2905)
+
+[node name="Battery_Orb84" parent="OrbPile" index="35" instance=ExtResource("3_lucjl")]
+position = Vector2(-623, 2872)
+
+[node name="Battery_Orb85" parent="OrbPile" index="36" instance=ExtResource("3_lucjl")]
+position = Vector2(-523, 2876)
+
+[node name="Battery_Orb86" parent="OrbPile" index="37" instance=ExtResource("3_lucjl")]
+position = Vector2(-522, 2940)
+
+[node name="Battery_Orb87" parent="OrbPile" index="38" instance=ExtResource("3_lucjl")]
+position = Vector2(-473, 2904)
+
+[node name="Battery_Orb88" parent="OrbPile" index="39" instance=ExtResource("3_lucjl")]
+position = Vector2(-444, 2887)
+
+[node name="Battery_Orb89" parent="OrbPile" index="40" instance=ExtResource("3_lucjl")]
+position = Vector2(-429, 2958)
+
+[node name="Battery_Orb90" parent="OrbPile" index="41" instance=ExtResource("3_lucjl")]
+position = Vector2(-405, 3017)
+
+[node name="Battery_Orb91" parent="OrbPile" index="42" instance=ExtResource("3_lucjl")]
+position = Vector2(-453, 3022)
+
+[node name="Battery_Orb92" parent="OrbPile" index="43" instance=ExtResource("3_lucjl")]
+position = Vector2(-425, 3101)
+
+[node name="Battery_Orb93" parent="OrbPile" index="44" instance=ExtResource("3_lucjl")]
+position = Vector2(-497, 3125)
+
+[node name="Battery_Orb94" parent="OrbPile" index="45" instance=ExtResource("3_lucjl")]
+position = Vector2(-517, 3692)
+
+[node name="Battery_Orb95" parent="OrbPile" index="46" instance=ExtResource("3_lucjl")]
+position = Vector2(-631, 3690)
+
+[node name="Battery_Orb96" parent="OrbPile" index="47" instance=ExtResource("3_lucjl")]
+position = Vector2(-761, 3693)
+
+[node name="Battery_Orb97" parent="OrbPile" index="48" instance=ExtResource("3_lucjl")]
+position = Vector2(-855, 3685)
+
+[node name="Battery_Orb98" parent="OrbPile" index="49" instance=ExtResource("3_lucjl")]
+position = Vector2(-926, 3682)
+
+[node name="Battery_Orb61" parent="OrbPile" index="50" instance=ExtResource("3_lucjl")]
+position = Vector2(1017, 26)
+
+[node name="Battery_Orb62" parent="OrbPile" index="51" instance=ExtResource("3_lucjl")]
+position = Vector2(1046, -26)
+
+[node name="Battery_Orb63" parent="OrbPile" index="52" instance=ExtResource("3_lucjl")]
+position = Vector2(1036, -36)
+
+[node name="Battery_Orb64" parent="OrbPile" index="53" instance=ExtResource("3_lucjl")]
+position = Vector2(1031, 4)
+
+[node name="Lights" parent="." index="5"]
+metadata/_edit_group_ = true
 
 [node name="BlueLight2" parent="Lights" index="0" instance=ExtResource("4_xxp73")]
 position = Vector2(3902, 304)
@@ -587,38 +750,106 @@ enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="Enemy117" parent="Enemies" index="89" instance=ExtResource("11_vpujd")]
-position = Vector2(9984, 60)
+position = Vector2(9956, 69)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy55" parent="Enemies" index="90" instance=ExtResource("11_vpujd")]
+[node name="Enemy120" parent="Enemies" index="90" instance=ExtResource("11_vpujd")]
+position = Vector2(9898, 72)
+enemy_type = 3
+metadata/_edit_group_ = true
+
+[node name="Enemy55" parent="Enemies" index="91" instance=ExtResource("11_vpujd")]
 position = Vector2(9351, 3711)
 metadata/_edit_group_ = true
 
-[node name="Enemy56" parent="Enemies" index="91" instance=ExtResource("11_vpujd")]
+[node name="Enemy56" parent="Enemies" index="92" instance=ExtResource("11_vpujd")]
 position = Vector2(9602, 3756)
 metadata/_edit_group_ = true
 
-[node name="Enemy57" parent="Enemies" index="92" instance=ExtResource("11_vpujd")]
+[node name="Enemy57" parent="Enemies" index="93" instance=ExtResource("11_vpujd")]
 position = Vector2(9467, 3670)
 metadata/_edit_group_ = true
 
-[node name="Enemy58" parent="Enemies" index="93" instance=ExtResource("11_vpujd")]
+[node name="Enemy58" parent="Enemies" index="94" instance=ExtResource("11_vpujd")]
 position = Vector2(9921, 3412)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy59" parent="Enemies" index="94" instance=ExtResource("11_vpujd")]
+[node name="Enemy59" parent="Enemies" index="95" instance=ExtResource("11_vpujd")]
 position = Vector2(10183, 3594)
 enemy_type = 3
 metadata/_edit_group_ = true
 
-[node name="Enemy60" parent="Enemies" index="95" instance=ExtResource("11_vpujd")]
+[node name="Enemy60" parent="Enemies" index="96" instance=ExtResource("11_vpujd")]
 position = Vector2(10438, 3601)
 enemy_type = 3
 metadata/_edit_group_ = true
 
 [node name="CanvasLayer" parent="." index="9"]
 visible = true
+
+[node name="Enemy_Spawner" parent="Enemy_spawners" index="0" instance=ExtResource("12_iwpte")]
+position = Vector2(4324, 20)
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner3" parent="Enemy_spawners" index="1" instance=ExtResource("12_iwpte")]
+position = Vector2(5891, 301)
+enemy_spawn_type = 1
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner4" parent="Enemy_spawners" index="2" instance=ExtResource("12_iwpte")]
+position = Vector2(6569, 309)
+enemy_spawn_type = 2
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner5" parent="Enemy_spawners" index="3" instance=ExtResource("12_iwpte")]
+position = Vector2(6331, 3592)
+enemy_spawn_type = 1
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner8" parent="Enemy_spawners" index="4" instance=ExtResource("12_iwpte")]
+position = Vector2(9335, 2743)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner9" parent="Enemy_spawners" index="5" instance=ExtResource("12_iwpte")]
+position = Vector2(9726, 1807)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner10" parent="Enemy_spawners" index="6" instance=ExtResource("12_iwpte")]
+position = Vector2(8260, 3073)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner11" parent="Enemy_spawners" index="7" instance=ExtResource("12_iwpte")]
+position = Vector2(11002, 3121)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner12" parent="Enemy_spawners" index="8" instance=ExtResource("12_iwpte")]
+position = Vector2(10914, 3708)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner13" parent="Enemy_spawners" index="9" instance=ExtResource("12_iwpte")]
+position = Vector2(9472, 3748)
+enemy_spawn_type = 3
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner6" parent="Enemy_spawners" index="10" instance=ExtResource("12_iwpte")]
+position = Vector2(6306, 3335)
+enemy_spawn_type = 1
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner7" parent="Enemy_spawners" index="11" instance=ExtResource("12_iwpte")]
+position = Vector2(6319, 3069)
+enemy_spawn_type = 1
+spawn_rate = 7.5
+
+[node name="Enemy_Spawner2" parent="Enemy_spawners" index="12" instance=ExtResource("12_iwpte")]
+position = Vector2(4326, 550)
+spawn_rate = 7.5
 
 [editable path="CanvasLayer/HUD"]
